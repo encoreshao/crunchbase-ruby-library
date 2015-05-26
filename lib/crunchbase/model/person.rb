@@ -28,7 +28,7 @@ module Crunchbase::Model
         set_relationships_object(Crunchbase::Model::Website, 'websites', relationships['websites'])
         set_relationships_object(Crunchbase::Model::Degree, 'degrees', relationships['degrees'])
         set_relationships_object(Crunchbase::Model::Job, 'jobs', relationships['jobs'])
-        set_relationships_object(Crunchbase::Model::AdvisoryRole, 'advisory_roles', relationships['advisory_roles'])
+        set_relationships_object(Crunchbase::Model::AdvisoryRole, 'advisory_roles', relationships['advisor_at'])
         set_relationships_object(Crunchbase::Model::FoundedCompany, 'founded_companies', relationships['founded_companies'])
         set_relationships_object(Crunchbase::Model::Investment, 'investments', relationships['investments'])
         set_relationships_object(Crunchbase::Model::Membership, 'memberships', relationships['memberships'])

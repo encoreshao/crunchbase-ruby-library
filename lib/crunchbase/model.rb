@@ -30,6 +30,7 @@ module Crunchbase
     autoload :New,                          "crunchbase/model/new"
     autoload :Office,                       "crunchbase/model/office"
     autoload :Organization,                 "crunchbase/model/organization"
+    autoload :OrganizationSummary,          "crunchbase/model/organization_summary"
     autoload :OwnedBy,                      "crunchbase/model/owned_by"
     autoload :PastTeam,                     "crunchbase/model/past_team"
     autoload :Person,                       "crunchbase/model/person"

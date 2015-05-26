@@ -31,5 +31,34 @@ module Crunchbase::Model
       @sort_order       = json['paging']['sort_order']
     end
 
+    # Finds an entity by its name. Uses two HTTP requests; one to find the
+    # permalink, and another to request the actual entity.
+    def self.search(options, resource_list)
+      model_name = get_model_name(resource_list)
+
+      raise 'Unknown type error!' if model_name.nil?
+
+      return Search.new options, Crunchbase::API.search( options, resource_list ), model_name
+    end
+
+    # Factory method to return an instance from a permalink  
+    def self.get(permalink)
+      nil
+    end
+
+    private
+    def self.get_model_name(resource_list)
+      return nil unless ['organizations', 'people'].include?(resource_list)
+
+      case resource_list 
+      when 'organizations' 
+        OrganizationSummary
+      when 'people'
+        PersonSummary
+      else
+        nil
+      end
+    end
+
   end
 end

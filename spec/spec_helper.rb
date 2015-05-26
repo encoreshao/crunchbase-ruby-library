@@ -2,7 +2,7 @@ $LOAD_PATH << File.join(File.dirname(__FILE__), "..", "lib")
 require 'rspec'
 require 'rspec/its'
 require 'crunchbase'
-require 'date'
+require 'time'
 require 'yaml'
 
 yaml = YAML.load_file(File.join(File.dirname(__FILE__),'crunchbase.yml'))

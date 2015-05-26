@@ -16,5 +16,13 @@ module Crunchbase::Model
       instance_variable_set "@#{key}", ( object_name.new(json) || nil )
     end
 
+    def person?
+      (object.type_name == "Person")
+    end
+
+    def organization?
+      (object.type_name == "Organization")
+    end
+    
   end
 end

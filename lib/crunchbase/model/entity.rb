@@ -18,7 +18,11 @@ module Crunchbase::Model
       } 
 
       %w[created_at updated_at].each { |v| 
-        instance_variable_set("@#{v}", Time.at(json['properties'][v])) 
+        if json['properties'][v].kind_of?(String)
+          instance_variable_set( "@#{v}", begin Time.parse(json['properties'][v]) rescue nil end ) 
+        else  
+          instance_variable_set( "@#{v}", begin Time.at(json['properties'][v]) rescue nil end ) 
+        end
       } 
     end
     
@@ -26,17 +30,13 @@ module Crunchbase::Model
     def self.get(permalink)
       result = Crunchbase::API.single_entity(permalink, self::RESOURCE_NAME)
 
-      return self.new( result ) if result["error"].nil?
-
-      return Crunchbase::Model::Error.new( result["error"] ) 
+      return self.new( result )
     end
 
     def self.list(page=nil)
       results = Crunchbase::API.list( { page: page, model_name: self }, self::RESOURCE_LIST )
 
-      return self.new( results ) if results["error"].nil?
-
-      return Crunchbase::Model::Error.new( results["error"] ) 
+      return self.new( results ) 
     end
 
     def self.organization_lists(permalink, options={})
@@ -45,14 +45,10 @@ module Crunchbase::Model
       return Crunchbase::API.organization_lists(permalink, self::RESOURCE_LIST, options)
     end
 
-    def self.lists_for_person_permalink(permalink, options={})
-      return Crunchbase::API.person_lists(permalink, self::RESOURCE_LIST, options)
-    end
+    def self.person_lists(permalink, options={})
+      options = options.merge({ model_name: self })
 
-    # Finds an entity by its name. Uses two HTTP requests; one to find the
-    # permalink, and another to request the actual entity.
-    def self.search(options)
-      return Search.new options, Crunchbase::API.search( options, self::RESOURCE_LIST ), self
+      return Crunchbase::API.person_lists(permalink, self::RESOURCE_LIST, options)
     end
 
     def fetch
@@ -113,6 +109,12 @@ module Crunchbase::Model
 
       instance_variable_set "@#{key}", list['items'].inject([]) { |v, i| v << object_name.new(i) }
       instance_variable_set "@#{key}_total_items", list['paging']['total_items'] 
+    end
+    
+    def instance_relationships_object(object_name, key, item)
+      return unless item
+
+      instance_variable_set "@#{key}", ( object_name.new(item) || nil )
     end
 
   end

@@ -15,6 +15,14 @@ module Crunchbase::Model
 
     attr_reader :acquirer_total_items, :acquiree_total_items
 
+    def initialize(json)
+      super
+
+      unless (relationships = json['relationships']).nil?
+        instance_relationships_object(Crunchbase::Model::Organization, 'acquiree', relationships['acquiree'])
+      end
+    end
+
     def property_keys
       %w[
         api_path web_path price price_currency_code price_usd 

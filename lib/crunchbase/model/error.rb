@@ -2,6 +2,7 @@
 
 module Crunchbase::Model
   class Error < Crunchbase::Model::Entity
+
     attr_reader :message, :code
 
     def initialize(json)

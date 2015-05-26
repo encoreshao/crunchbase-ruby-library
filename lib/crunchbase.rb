@@ -1,4 +1,5 @@
 require 'singleton'
+require 'time'
 
 require "crunchbase/version"
 require 'crunchbase/api'
@@ -7,7 +8,5 @@ require "crunchbase/exception"
 
 module Crunchbase
   class << self
-    # autoload :API,        "crunchbase/api"
-    # autoload :Model,      "crunchbase/model"
   end
 end

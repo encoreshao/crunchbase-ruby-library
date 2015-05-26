@@ -15,7 +15,7 @@ module Crunchbase::Model
       super
 
       unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::School, 'school', relationships['school'])
+        instance_relationships_object(Crunchbase::Model::School, 'school', relationships['school'])
       end
     end
 
@@ -25,12 +25,6 @@ module Crunchbase::Model
         completed_on completed_on_trust_code 
         created_at updated_at
       ]
-    end
-
-    def set_relationships_object(object_name, key, item)
-      return unless item
-
-      instance_variable_set "@#{key}", ( object_name.new(item) || nil )
     end
 
   end

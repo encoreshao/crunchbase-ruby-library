@@ -33,8 +33,7 @@ module Crunchbase
     ORDER_UPDATED_AT_DESC = 'updated_at desc'
 
     class << self
-      attr_accessor :timeout_limit, :redirect_limit, :key, :base_url, :version, 
-                    :debug, :image_url, :site_url
+      attr_accessor :timeout_limit, :redirect_limit, :key, :base_url, :version, :debug, :image_url, :site_url
 
       def api_url
         base_url.gsub(/\/$/, '') + '/v/' + version + '/'
@@ -121,7 +120,7 @@ module Crunchbase
       }
       response = parser.parse(resp)["data"]
 
-      # raise Crunchbase::Exception, response["error"] if response.class == Hash && response["error"]
+      raise Crunchbase::Exception, response["error"] if response.class == Hash && response["error"] && response["error"]["code"] != 500
 
       response
     end
