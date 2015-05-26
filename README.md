@@ -27,9 +27,8 @@ Config your user_key, debug somewhere like development.rb, Recommended directory
 
 ## Search Organization OR Person
 
-Retrieve the way, Please use Search Class. The Search Will Return a list consisting of objects of the OrganizationSummary | PersonSummary type.
+Retrieve the way, Please use Search Class. The Search Will Return a list consisting of objects of the OrganizationSummary | PersonSummary type. Example:
     
-  
   Query Orgnization
 
   Method 1
@@ -43,9 +42,6 @@ Retrieve the way, Please use Search Class. The Search Will Return a list consist
 
   response.total_items || response.per_page || response.pages || response.current_page
   response.results.each { |r| puts r.name }
-
-
-  ==========================================================================================
 
 
   Query Person
@@ -76,7 +72,9 @@ Get information by the permalink, Example:
     ....
 
 ## Person
-    
+
+Get information by the permalink, Example:
+
   person = Crunchbase::Model::Person.get( permalink )
 
   #<Crunchbase::Model::Person:0x007fc185215f68 @type_name="Person", @uuid="a578dcf9859ec8b52182e3aa3c383b13", ...>
