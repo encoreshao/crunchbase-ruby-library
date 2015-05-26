@@ -80,7 +80,7 @@ module Crunchbase
       
       uri = api_url + "#{resource_list}?" + collect_parameters(options)
 
-      Crunchbase::Search.new options, get_json_response(uri), SearchResult
+      Crunchbase::Model::Search.new options, get_json_response(uri), model_name
     end
     
     def self.collect_parameters(options)

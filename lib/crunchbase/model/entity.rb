@@ -34,9 +34,9 @@ module Crunchbase::Model
     end
 
     def self.list(page=nil)
-      results = Crunchbase::API.list( { page: page, model_name: self }, self::RESOURCE_LIST )
-
-      return self.new( results ) 
+      model_name = get_model_name(self::RESOURCE_LIST)
+      
+      return Crunchbase::API.list( { page: page, model_name: model_name }, self::RESOURCE_LIST )
     end
 
     def self.organization_lists(permalink, options={})
@@ -115,6 +115,19 @@ module Crunchbase::Model
       return unless item
 
       instance_variable_set "@#{key}", ( object_name.new(item) || nil )
+    end
+
+    def self.get_model_name(resource_list)
+      return nil unless ['organizations', 'people'].include?(resource_list)
+
+      case resource_list 
+      when 'organizations' 
+        OrganizationSummary
+      when 'people'
+        PersonSummary
+      else
+        nil
+      end
     end
 
   end

@@ -46,19 +46,5 @@ module Crunchbase::Model
       nil
     end
 
-    private
-    def self.get_model_name(resource_list)
-      return nil unless ['organizations', 'people'].include?(resource_list)
-
-      case resource_list 
-      when 'organizations' 
-        OrganizationSummary
-      when 'people'
-        PersonSummary
-      else
-        nil
-      end
-    end
-
   end
 end
