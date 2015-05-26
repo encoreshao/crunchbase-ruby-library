@@ -1,4 +1,4 @@
-# Crunchbase::Ruby::Library
+# Crunchbase
 
 Crunchbase API Version 3 - Ruby Library [CrunchBase Data Hub](http://data.crunchbase.com/v3).
 
@@ -20,39 +20,35 @@ Or install it yourself as:
 
 Config your user_key, debug somewhere like development.rb, Recommended directory config/initializers/crunchbase.rb
 
-  require 'crunchbase'
+    require 'crunchbase'
 
-  Crunchbase::API.key   = 'user_key'
-  Crunchbase::API.debug = false
+    Crunchbase::API.key   = 'user_key'
+    Crunchbase::API.debug = false
 
 ## Search Organization OR Person
 
-Retrieve the way, Please use Search Class. The Search Will Return a list consisting of objects of the OrganizationSummary | PersonSummary type.
+Retrieve the way, Please use Search Class. The Search Will Return a list consisting of objects of the OrganizationSummary | PersonSummary type. Example:
     
-  
-  Query Orgnization
+    Query Orgnization
 
-  Method 1
-  response = Crunchbase::Model::Search.search({query: "Google"}, 'organizations')  
+    Method 1
+    response = Crunchbase::Model::Search.search({query: "Google"}, 'organizations')  
 
-  Method 2
-  response = Crunchbase::Model::Search.search({name: "Google"}, 'organizations')  
+    Method 2
+    response = Crunchbase::Model::Search.search({name: "Google"}, 'organizations')  
 
-  Method 3
-  response = Crunchbase::Model::Search.search({domain_name: "google.com"}, 'organizations')  
+    Method 3
+    response = Crunchbase::Model::Search.search({domain_name: "google.com"}, 'organizations')  
 
-  response.total_items || response.per_page || response.pages || response.current_page
-  response.results.each { |r| puts r.name }
-
-
-  ==========================================================================================
+    response.total_items || response.per_page || response.pages || response.current_page
+    response.results.each { |r| puts r.name }
 
 
-  Query Person
+    Query Person
 
-  response = Crunchbase::Model::Search.search({query: "encore"}, 'people')  
+    response = Crunchbase::Model::Search.search({query: "encore"}, 'people')  
 
-  response.results.each { |i| [i.first_name, i.last_name] }
+    response.results.each { |i| [i.first_name, i.last_name] }
 
 ## Get Organization && RelationShips
 
@@ -76,20 +72,22 @@ Get information by the permalink, Example:
     ....
 
 ## Person
-    
-  person = Crunchbase::Model::Person.get( permalink )
 
-  #<Crunchbase::Model::Person:0x007fc185215f68 @type_name="Person", @uuid="a578dcf9859ec8b52182e3aa3c383b13", ...>
+Get information by the permalink, Example:
 
-  people = Crunchbase::Model::Person.list( page )
+    person = Crunchbase::Model::Person.get( permalink )
 
-  people.results
- 
-  [ #<Crunchbase::Model::PersonSummary:...>, 
-  #<Crunchbase::Model::PersonSummary: ...>, 
-  #<Crunchbase::Model::PersonSummary: ...>, 
-  #<Crunchbase::Model::PersonSummary: ...>
-  ...... ]
+    #<Crunchbase::Model::Person:0x007fc185215f68 @type_name="Person", @uuid="a578dcf9859ec8b52182e3aa3c383b13", ...>
+
+    people = Crunchbase::Model::Person.list( page )
+
+    people.results
+   
+    [ #<Crunchbase::Model::PersonSummary:...>, 
+    #<Crunchbase::Model::PersonSummary: ...>, 
+    #<Crunchbase::Model::PersonSummary: ...>, 
+    #<Crunchbase::Model::PersonSummary: ...>
+    ...... ]
 
 ## Contributing
 
