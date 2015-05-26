@@ -1,7 +1,5 @@
 # encoding: utf-8
 
-# https://api.crunchbase.com/v/2/organization/#{permalink}/news
-
 module Crunchbase::Model
   class New < Crunchbase::Model::Entity
 

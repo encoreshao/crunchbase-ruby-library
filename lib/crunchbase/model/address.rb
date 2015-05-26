@@ -13,7 +13,6 @@ module Crunchbase::Model
       %w[
         name street_1 street_2 city city_web_path region region_web_path 
         country country_web_path latitude longitude created_at updated_at
-
       ]
     end
 

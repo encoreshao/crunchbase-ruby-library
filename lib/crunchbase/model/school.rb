@@ -1,7 +1,6 @@
 # encoding: utf-8
 
 module Crunchbase::Model
-  class PrimaryImage < Crunchbase::Model::Image
-    
+  class School < Crunchbase::Model::Organization
   end
 end

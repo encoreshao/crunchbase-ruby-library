@@ -1,9 +1,9 @@
 # encoding: utf-8
 
 module Crunchbase::Model
-  class CurrentTeam < Crunchbase::Model::Job
-
-    RESOURCE_LIST = 'current_team'
+  class PastTeam < Crunchbase::Model::Job
+    
+    RESOURCE_LIST = 'past_team'
 
     attr_reader :person
 

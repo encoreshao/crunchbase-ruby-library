@@ -3,7 +3,7 @@
 module Crunchbase::Model
   class Ipo < Crunchbase::Model::Entity
     
-    RESOURCE_LIST = 'ipo'
+    RESOURCE_LIST = 'ipos'
 
     attr_reader :api_path, :web_path, :went_public_on, :went_public_on_trust_code, 
                 :stock_exchange_symbol, :stock_symbol, 
@@ -14,8 +14,6 @@ module Crunchbase::Model
                 :created_at, :updated_at
 
     attr_reader :funded_company, :stock_exchange, :images, :videos, :news
-
-    
 
     def property_keys
       %w[

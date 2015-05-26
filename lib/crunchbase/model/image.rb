@@ -5,11 +5,11 @@ module Crunchbase::Model
 
     RESOURCE_LIST = 'images'
 
-    attr_reader :asset_path, :content_type, :height, :width, :filesize, :created_at, :updated_at
+    attr_reader :asset_path, :asset_url, :content_type, :height, :width, :filesize, :created_at, :updated_at
     
     def property_keys
       %w[
-        asset_path content_type height width filesize created_at updated_at
+        asset_url asset_path content_type height width filesize created_at updated_at
       ]
     end
     

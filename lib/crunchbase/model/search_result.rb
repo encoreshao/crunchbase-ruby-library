@@ -1,10 +1,9 @@
 # encoding: utf-8
 
 module Crunchbase::Model
-  class SearchResult < Relationship
+  class SearchResult < Crunchbase::Model::Entity
 
-    def initialize(json)
-      super(json)
+    def initialize
     end
 
   end

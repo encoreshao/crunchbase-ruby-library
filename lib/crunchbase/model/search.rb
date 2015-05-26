@@ -13,6 +13,15 @@ module Crunchbase::Model
     def initialize(query, json, _model)
       @query            = query
       @results          = []
+      @total_items      = 0
+
+      populate_results(json, _model) if json['error'].nil?
+    end
+
+
+    def populate_results(json, _model)
+      @results = json["items"].map{|r| _model.new(r)}
+      
       @total_items      = json['paging']['total_items']
       @per_page         = json['paging']['items_per_page']
       @pages            = json['paging']['number_of_pages']
@@ -20,13 +29,6 @@ module Crunchbase::Model
       @prev_page_url    = json['paging']['prev_page_url']
       @next_page_url    = json['paging']['next_page_url']
       @sort_order       = json['paging']['sort_order']
-
-      populate_results(json, _model)
-    end
-
-
-    def populate_results(json, _model)
-      @results = json["items"].map{|r| _model.new(r)}
     end
 
   end

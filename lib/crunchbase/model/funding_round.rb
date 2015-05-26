@@ -19,13 +19,14 @@ module Crunchbase::Model
     def initialize(json)
       super
 
-      relationships  = json['relationships']
+      unless (relationships = json['relationships']).nil?
+        set_relationships_object(Crunchbase::Model::Investment, 'investments', relationships['investments'])
+        set_relationships_object(Crunchbase::Model::Organization, 'funded_organization', relationships['funded_organization'])
+        set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
+        set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
+        set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
+      end
 
-      set_relationships_object(Crunchbase::Model::Investment, 'investments', relationships['investments'])
-      set_relationships_object(Crunchbase::Model::Organization, 'funded_organization', relationships['funded_organization'])
-      set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
-      set_relationships_object(Crunchbase::Model::video, 'videos', relationships['videos'])
-      set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
     end
     
     def property_keys
@@ -41,6 +42,17 @@ module Crunchbase::Model
     def date_keys
       %w[ announced_on closed_on ]
     end
+
+
+    def set_relationships_object(object_name, key, item)
+      return unless item
+
+      instance_variable_set "@#{key}", ( object_name.new(item) || nil )
+      instance_variable_set "@#{key}_total_items", 1
+      
+      super
+    end
+
 
   end
 end

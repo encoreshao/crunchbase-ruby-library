@@ -5,11 +5,16 @@ module Crunchbase::Model
     
     RESOURCE_LIST = 'investors'
 
-    attr_reader :name, :type_name, :path, :permalink, :first_name, :last_name, :type
+    attr_reader :object
 
-    def initialize(hash)
-
+    def initialize(json)
+      set_relationship_object('object', Crunchbase::Model::Person, json) if json['type'] == 'Person'
+      set_relationship_object('object', Crunchbase::Model::Organization, json) if json['type'] == 'Organization'
     end
-    
+
+    def set_relationship_object(key, object_name, json)
+      instance_variable_set "@#{key}", ( object_name.new(json) || nil )
+    end
+
   end
 end

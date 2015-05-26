@@ -32,34 +32,35 @@ module Crunchbase::Model
     def initialize(json)
       super
 
-      relationships  = json['relationships']
+      unless (relationships = json['relationships']).nil?
 
-      set_relationships_object(Crunchbase::Model::PrimaryImage, 'primary_image', relationships['primary_image'])
-      set_relationships_object(Crunchbase::Model::Founder, 'founders', relationships['founders'])
-      set_relationships_object(Crunchbase::Model::CurrentTeam, 'current_team', relationships['current_team'])
-      # set_relationships_object(PrimaryImage, 'past_team', relationships['past_team'])
-      # set_relationships_object(PrimaryImage, 'board_members_and_advisors', relationships['board_members_and_advisors'])
-      set_relationships_object(Crunchbase::Model::Investor, 'investors', relationships['investors'])
-      # set_relationships_object(PrimaryImage, 'owned_by', relationships['owned_by'])
-      # set_relationships_object(PrimaryImage, 'sub_organizations', relationships['sub_organizations'])
-      set_relationships_object(Crunchbase::Model::Headquarter, 'headquarters', relationships['headquarters'])
-      set_relationships_object(Crunchbase::Model::Office, 'offices', relationships['offices'])
-      set_relationships_object(Crunchbase::Model::Product, 'products', relationships['products'])
-      set_relationships_object(Crunchbase::Model::Category, 'categories', relationships['categories'])
-      # set_relationships_object(PrimaryImage, 'customers', relationships['customers'])
-      # set_relationships_object(PrimaryImage, 'competitors', relationships['competitors'])
-      # set_relationships_object(PrimaryImage, 'members', relationships['members'])
-      # set_relationships_object(PrimaryImage, 'memberships', relationships['memberships'])
-      # set_relationships_object(PrimaryImage, 'funding_rounds', relationships['funding_rounds'])
-      # set_relationships_object(PrimaryImage, 'investments', relationships['investments'])
-      # set_relationships_object(PrimaryImage, 'acquisitions', relationships['acquisitions'])
-      set_relationships_object(Crunchbase::Model::AcquiredBy, 'acquired_by', relationships['acquired_by'])
-      set_relationships_object(Crunchbase::Model::Ipo, 'ipo', relationships['ipo'])
-      set_relationships_object(Crunchbase::Model::Fund, 'funds', relationships['funds'])
-      set_relationships_object(Crunchbase::Model::Website, 'websites', relationships['websites'])
-      set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
-      set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
-      set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
+        set_relationships_object(Crunchbase::Model::PrimaryImage, 'primary_image', relationships['primary_image'])
+        set_relationships_object(Crunchbase::Model::Founder, 'founders', relationships['founders'])
+        set_relationships_object(Crunchbase::Model::CurrentTeam, 'current_team', relationships['current_team'])
+        set_relationships_object(Crunchbase::Model::PastTeam, 'past_team', relationships['past_team'])
+        # set_relationships_object(PrimaryImage, 'board_members_and_advisors', relationships['board_members_and_advisors'])
+        set_relationships_object(Crunchbase::Model::Investor, 'investors', relationships['investors'])
+        set_relationships_object(Crunchbase::Model::OwnedBy, 'owned_by', relationships['owned_by'])
+        set_relationships_object(Crunchbase::Model::SubOrganization, 'sub_organizations', relationships['sub_organizations'])
+        set_relationships_object(Crunchbase::Model::Headquarter, 'headquarters', relationships['headquarters'])
+        set_relationships_object(Crunchbase::Model::Office, 'offices', relationships['offices'])
+        set_relationships_object(Crunchbase::Model::Product, 'products', relationships['products'])
+        set_relationships_object(Crunchbase::Model::Category, 'categories', relationships['categories'])
+        set_relationships_object(Crunchbase::Model::Customer, 'customers', relationships['customers'])
+        set_relationships_object(Crunchbase::Model::Competitor, 'competitors', relationships['competitors'])
+        # set_relationships_object(PrimaryImage, 'members', relationships['members'])
+        set_relationships_object(Crunchbase::Model::Membership, 'memberships', relationships['memberships'])
+        set_relationships_object(Crunchbase::Model::FundingRound, 'funding_rounds', relationships['funding_rounds'])
+        set_relationships_object(Crunchbase::Model::Investment, 'investments', relationships['investments'])
+        set_relationships_object(Crunchbase::Model::Acquisition, 'acquisitions', relationships['acquisitions'])
+        set_relationships_object(Crunchbase::Model::AcquiredBy, 'acquired_by', relationships['acquired_by'])
+        set_relationships_object(Crunchbase::Model::Ipo, 'ipo', relationships['ipo'])
+        set_relationships_object(Crunchbase::Model::Fund, 'funds', relationships['funds'])
+        set_relationships_object(Crunchbase::Model::Website, 'websites', relationships['websites'])
+        set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
+        set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
+        set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
+      end
     end
 
     def property_keys
@@ -77,6 +78,10 @@ module Crunchbase::Model
 
     def date_keys
       %w[founded_on closed_on]
+    end
+
+    def self.organization_lists(permalink, options={})
+      return []
     end
 
   end

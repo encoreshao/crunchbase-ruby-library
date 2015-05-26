@@ -14,9 +14,9 @@ module Crunchbase::Model
     def initialize(json)
       super
 
-      relationships  = json['relationships']
-
-      set_relationships_object(Crunchbase::Model::FundingRound, 'funding_round', relationships['funding_round'])
+      unless (relationships = json['relationships']).nil?
+        set_relationships_object(Crunchbase::Model::FundingRound, 'funding_round', relationships['funding_round'])
+      end
     end
 
     def property_keys
@@ -25,6 +25,12 @@ module Crunchbase::Model
       ]
     end
 
+    def set_relationships_object(object_name, key, item)
+      return unless item
+
+      instance_variable_set "@#{key}", ( object_name.new(item) || nil )
+      instance_variable_set "@#{key}_total_items", 1
+    end
 
   end
 end

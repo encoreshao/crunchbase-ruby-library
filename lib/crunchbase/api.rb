@@ -13,7 +13,7 @@ require 'timeout'
 module Crunchbase
   class API
 
-    SUPPORTED_ENTITIES = ['organizations', 'people', 'person', 'products', 'funding_rounds', 'funding-round', 'acquisition', 'ipo', 'fund-raise', 'locations', 'categories', 'offices', 'customers', 'degrees', 'experience', 'primary_affiliation', 'videos', 'founded_companies', 'primary_location', 'advisor_at']
+    SUPPORTED_ENTITIES = ['organizations', 'people', 'products', 'funding_rounds', 'acquisitions', 'ipos', 'locations', 'categories', 'offices', 'customers', 'degrees', 'experience', 'primary_affiliation', 'videos', 'founded_companies', 'primary_location', 'advisor_at']
 
     @timeout_limit  = 60
     @redirect_limit = 2
@@ -46,10 +46,6 @@ module Crunchbase
 
       fetch(permalink, entity_name)
     end
-    
-    def self.all(entity)
-      get_json_response( api_url + entity )
-    end
 
     private
     
@@ -64,28 +60,26 @@ module Crunchbase
 
     # Fetches URI for the permalink interface.
     def self.fetch(permalink, object_name)
-      uri = api_url + "#{object_name}/#{permalink}"
-
-      get_json_response(uri)
+      get_json_response( api_url + "#{object_name}/#{permalink}" )
     end
     
     # Fetches URI for the search interface.
-    def self.search(options, object_lists)
+    def self.search(options, resource_list)
       options[:page] = 1 if options[:page].nil?
       options[:order] = ORDER_CREATED_AT_ASC if options[:order].nil?
       
-      uri = api_url + "#{object_lists}?" + collect_parameters(options)
+      uri = api_url + "#{resource_list}?" + collect_parameters(options)
 
       get_json_response(uri)
     end
     
     
     # Fetches URI for the search interface.
-    def self.list(options, object_lists)
+    def self.list(options, resource_list)
       options[:page]  = 1 if options[:page].nil?
       model_name      = options.delete(:model_name)
       
-      uri = api_url + "#{object_lists}?" + collect_parameters(options)
+      uri = api_url + "#{resource_list}?" + collect_parameters(options)
 
       Crunchbase::Search.new options, get_json_response(uri), SearchResult
     end
@@ -96,20 +90,13 @@ module Crunchbase
       options.map{|k,v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}"}.join('&')
     end
 
-    # Searches for a permalink in a particular category.
-    # Demo: https://api.crunchbase.com/v/2/organization/#{organization-permalink}/offices?user_key=key
-    def self.lists_for_permalink(permalink, category, options)
-      lists_for_category('organization', permalink, category, options)
+    def self.organization_lists(permalink, category, options)
+      lists_for_category('organizations', permalink, category, options)
     end
 
-    # Demo: https://api.crunchbase.com/v/2/person/#{person-permalink}/offices?user_key=key
-    def self.lists_for_person_permalink(permalink, category, options)
-      lists_for_category('person', permalink, category, options)
-    end
-
-    class << self
-      alias_method :category_lists_by_organization, :lists_for_permalink
-      alias_method :category_lists_by_person, :lists_for_person_permalink
+    # Demo: https://api.crunchbase.com/v/#{version}/person/#{person-permalink}/offices?user_key=key
+    def self.person_lists(permalink, category, options)
+      lists_for_category('people', permalink, category, options)
     end
 
     def self.lists_for_category(classify_name, permalink, category, options)
@@ -126,7 +113,7 @@ module Crunchbase
     # if request time exceeds set limit. Raises Crunchbase::Exception if returned
     # JSON contains an error.
     def self.get_json_response(uri)
-      raise Crunchbase::Exception, "User key required, visit http://developer.crunchbase.com" unless @key
+      raise Crunchbase::Exception, "User key required, visit http://data.crunchbase.com" unless @key
       uri = uri + "#{uri.match('\?') ? "&" : "?"}user_key=#{@key}"
 
       resp = Timeout::timeout(@timeout_limit) {
@@ -134,7 +121,7 @@ module Crunchbase
       }
       response = parser.parse(resp)["data"]
 
-      raise Crunchbase::Exception, response["error"] if response.class == Hash && response["error"]
+      # raise Crunchbase::Exception, response["error"] if response.class == Hash && response["error"]
 
       response
     end
@@ -145,11 +132,8 @@ module Crunchbase
       raise Crunchbase::Exception, 'HTTP redirect too deep' if limit == 0
 
       uri = URI.parse(uri_str)
-      if self.debug
-        puts "*"*120
-        puts "***  #{uri}  ***"
-        puts "*"*120
-      end
+
+      debug_log!(uri) if debug
 
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true if uri.scheme == 'https'
@@ -158,13 +142,19 @@ module Crunchbase
       end
 
       case response
-        when Net::HTTPSuccess, Net::HTTPNotFound
+        when Net::HTTPSuccess, Net::HTTPNotFound, Net::HTTPInternalServerError
           response.body
         when Net::HTTPRedirection
           get_url_following_redirects(response['location'], limit - 1)
         else
           response.error!
       end
+    end
+
+    def self.debug_log!(uri)
+      puts "*"*120
+      puts "***  #{uri}  ***"
+      puts "*"*120
     end
 
   end

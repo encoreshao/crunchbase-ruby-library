@@ -1,17 +1,15 @@
 # encoding: utf-8
 
 module Crunchbase::Model
-  class CurrentTeam < Crunchbase::Model::Job
+  class PrimaryAffiliation < Crunchbase::Model::Job
 
-    RESOURCE_LIST = 'current_team'
-
-    attr_reader :person
+    attr_reader :organization
 
     def initialize(json)
       super
 
       unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::Person, 'person', relationships['person'])
+        set_relationships_object(Crunchbase::Model::Organization, 'organization', relationships['organization'])
       end
     end
 
@@ -20,6 +18,5 @@ module Crunchbase::Model
 
       instance_variable_set "@#{key}", ( object_name.new(item) || nil )
     end
-
   end
 end

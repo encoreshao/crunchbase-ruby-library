@@ -1,9 +1,9 @@
 # encoding: utf-8
 
 module Crunchbase::Model
-  class CurrentTeam < Crunchbase::Model::Job
-
-    RESOURCE_LIST = 'current_team'
+  class BoardMembersAndAdvisor < Crunchbase::Model::Job
+    
+    RESOURCE_LIST = 'board_members_and_advisors'
 
     attr_reader :person
 
