@@ -14,8 +14,8 @@ module Crunchbase::Model
       super
 
       unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::Person, 'person', relationships['person'])
-        set_relationships_object(Crunchbase::Model::Organization, 'organization', relationships['organization'])
+        instance_relationships_object(Crunchbase::Model::Person, 'person', relationships['person'])
+        instance_relationships_object(Crunchbase::Model::Organization, 'organization', relationships['organization'])
       end
     end
     
@@ -27,12 +27,6 @@ module Crunchbase::Model
 
     def date_keys
       %w[ started_on ended_on ]
-    end
-
-    def set_relationships_object(object_name, key, item)
-      return unless item
-      
-      instance_variable_set "@#{key}", ( object_name.new(item) || nil )
     end
 
   end

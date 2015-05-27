@@ -116,7 +116,7 @@ module Crunchbase::Model
 
       instance_variable_set "@#{key}", ( object_name.new(item) || nil )
     end
-
+    
     def self.get_model_name(resource_list)
       return nil unless ['organizations', 'people'].include?(resource_list)
 

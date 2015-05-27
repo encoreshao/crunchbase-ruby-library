@@ -7,7 +7,7 @@ module Crunchbase
 
       before(:all) do
         begin
-          @past_team = PastTeam.organization_lists("apple2")
+          @past_team = PastTeam.organization_lists("apple")
         rescue Exception => e
           @past_team = nil
         end

@@ -14,6 +14,7 @@ module Crunchbase::Model
       @query            = query
       @results          = []
       @total_items      = 0
+      @pages            = 0
 
       populate_results(json, _model) if json['error'].nil?
     end

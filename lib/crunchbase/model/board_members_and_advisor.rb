@@ -11,14 +11,13 @@ module Crunchbase::Model
       super
 
       unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::Person, 'person', relationships['person'])
+        instance_relationships_object(Crunchbase::Model::Person, 'person', relationships['person'])
       end
     end
 
-    def set_relationships_object(object_name, key, item)
-      return unless item
-
-      instance_variable_set "@#{key}", ( object_name.new(item) || nil )
+    # Factory method to return an instance from a permalink  
+    def self.get(permalink)
+      nil
     end
 
   end
