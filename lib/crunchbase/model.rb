@@ -17,6 +17,7 @@ module Crunchbase
     autoload :FoundedCompany,               "crunchbase/model/founded_company"
     autoload :Founder,                      "crunchbase/model/founder"
     autoload :Fund,                         "crunchbase/model/fund"
+    autoload :FundedOrganization,           "crunchbase/model/funded_organization"
     autoload :FundingRound,                 "crunchbase/model/funding_round"
     autoload :Headquarter,                  "crunchbase/model/headquarter"
     autoload :Image,                        "crunchbase/model/image"

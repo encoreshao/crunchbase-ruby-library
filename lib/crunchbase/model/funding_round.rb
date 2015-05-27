@@ -4,6 +4,7 @@ module Crunchbase::Model
   class FundingRound < Crunchbase::Model::Entity
     
     RESOURCE_LIST = 'funding_rounds'
+    RESOURCE_NAME = 'funding-rounds'
 
     attr_reader :api_path, :web_path, :funding_type, :series, :series_qualifier, 
                 :announced_on, :announced_on_trust_code, :closed_on, :closed_on_trust_code, 
@@ -21,7 +22,7 @@ module Crunchbase::Model
 
       unless (relationships = json['relationships']).nil?
         set_relationships_object(Crunchbase::Model::Investment, 'investments', relationships['investments'])
-        set_relationships_object(Crunchbase::Model::Organization, 'funded_organization', relationships['funded_organization'])
+        set_relationships_object(Crunchbase::Model::FundedOrganization, 'funded_organization', relationships['funded_organization'])
         set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
         set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
         set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
@@ -42,17 +43,6 @@ module Crunchbase::Model
     def date_keys
       %w[ announced_on closed_on ]
     end
-
-
-    def set_relationships_object(object_name, key, item)
-      return unless item
-
-      instance_variable_set "@#{key}", ( object_name.new(item) || nil )
-      instance_variable_set "@#{key}_total_items", 1
-      
-      super
-    end
-
 
   end
 end

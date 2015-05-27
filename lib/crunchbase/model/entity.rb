@@ -51,6 +51,12 @@ module Crunchbase::Model
       return Crunchbase::API.person_lists(permalink, self::RESOURCE_LIST, options)
     end
 
+    def self.funding_rounds_lists(permalink, options={})
+      options = options.merge({ model_name: self })
+
+      return Crunchbase::API.funding_rounds_lists(permalink, self::RESOURCE_LIST.gsub('_', '-'), options)
+    end
+
     def fetch
       fetch_object = get_fetch_object
       return [] if fetch_object.empty?

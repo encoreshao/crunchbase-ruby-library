@@ -13,7 +13,7 @@ require 'timeout'
 module Crunchbase
   class API
 
-    SUPPORTED_ENTITIES = ['organizations', 'people', 'products', 'funding_rounds', 'acquisitions', 'ipos', 'locations', 'categories', 'offices', 'customers', 'degrees', 'experience', 'primary_affiliation', 'videos', 'founded_companies', 'primary_location', 'advisor_at']
+    SUPPORTED_ENTITIES = ['organizations', 'people', 'products', 'funding_rounds', 'funding-rounds', 'acquisitions', 'ipos', 'locations', 'categories', 'offices', 'customers', 'degrees', 'experience', 'primary_affiliation', 'videos', 'founded_companies', 'primary_location', 'advisor_at']
 
     @timeout_limit  = 60
     @redirect_limit = 2
@@ -93,9 +93,14 @@ module Crunchbase
       lists_for_category('organizations', permalink, category, options)
     end
 
-    # Demo: https://api.crunchbase.com/v/#{version}/person/#{person-permalink}/offices?user_key=key
+    # Visit: https://api.crunchbase.com/v/#{version}/people/#{permalink}/#{category}?user_key=key
     def self.person_lists(permalink, category, options)
       lists_for_category('people', permalink, category, options)
+    end
+
+    # Visit: https://api.crunchbase.com/v/#{version}/funding-rounds/#{permalink}/#{category}?user_key=key
+    def self.funding_rounds_lists(permalink, category, options)
+      lists_for_category('funding-rounds', permalink, category, options)
     end
 
     def self.lists_for_category(classify_name, permalink, category, options)
