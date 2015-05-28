@@ -66,8 +66,7 @@ module Crunchbase::Model
         permalink api_path web_path name also_known_as short_description description 
         primary_role role_company role_investor role_group role_school 
         founded_on founded_on_trust_code is_closed closed_on closed_on_trust_code 
-        num_employees_min num_employees_max 
-        total_funding_usd 
+        num_employees_min num_employees_max total_funding_usd 
         stock_exchange stock_symbol 
         number_of_investments homepage_url 
         created_at updated_at
@@ -76,10 +75,6 @@ module Crunchbase::Model
 
     def date_keys
       %w[founded_on closed_on]
-    end
-
-    def self.organization_lists(permalink, options={})
-      return []
     end
 
   end
