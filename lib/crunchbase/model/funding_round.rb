@@ -22,7 +22,19 @@ module Crunchbase::Model
 
       unless (relationships = json['relationships']).nil?
         set_relationships_object(Crunchbase::Model::Investment, 'investments', relationships['investments'])
-        set_relationships_object(Crunchbase::Model::FundedOrganization, 'funded_organization', relationships['funded_organization'])
+
+        unless relationships['funded_organization'].nil?
+          if relationships['funded_organization']['item'].nil?
+
+            # Get organization's  (investments - funding - organization)
+            instance_relationships_object(Crunchbase::Model::FundingRoundOrganization, 'funded_organization', relationships['funded_organization'])
+          else
+            # Get funding-rounds (funded_organization - item)
+
+            set_relationships_object(Crunchbase::Model::FundedOrganization, 'funded_organization', relationships['funded_organization'])
+          end
+        end
+
         set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
         set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
         set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])

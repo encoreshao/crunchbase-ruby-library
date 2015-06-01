@@ -20,6 +20,7 @@ module Crunchbase
     autoload :FundRaise,                    "crunchbase/model/fund_raise"
     autoload :FundedOrganization,           "crunchbase/model/funded_organization"
     autoload :FundingRound,                 "crunchbase/model/funding_round"
+    autoload :FundingRoundOrganization,     "crunchbase/model/funding_round_organization"
     autoload :Headquarter,                  "crunchbase/model/headquarter"
     autoload :Image,                        "crunchbase/model/image"
     autoload :Investment,                   "crunchbase/model/investment"
