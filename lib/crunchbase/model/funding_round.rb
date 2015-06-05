@@ -27,11 +27,11 @@ module Crunchbase::Model
           if relationships['funded_organization']['item'].nil?
 
             # Get organization's  (investments - funding - organization)
-            instance_relationships_object(Crunchbase::Model::FundingRoundOrganization, 'funded_organization', relationships['funded_organization'])
+            instance_relationships_object(Crunchbase::Model::Organization, 'funded_organization', relationships['funded_organization'])
           else
             # Get funding-rounds (funded_organization - item)
 
-            set_relationships_object(Crunchbase::Model::FundedOrganization, 'funded_organization', relationships['funded_organization'])
+            set_relationships_object(Crunchbase::Model::Organization, 'funded_organization', relationships['funded_organization'])
           end
         end
 

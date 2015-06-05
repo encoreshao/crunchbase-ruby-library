@@ -5,8 +5,14 @@ module Crunchbase
 
     describe FundingRound, "#get" do
       round = FundingRound.get('c31e2cc41e8f30c6da0aaf6b395469e5')
-      
+        
       puts round.inspect
+      
+      round.investments.map {|e|
+        e.investors.each do |investor|
+          puts investor.object.inspect
+        end unless e.investors.nil?
+      } unless round.investments.nil?
     end
 
     describe FundingRound, "#organization_lists" do

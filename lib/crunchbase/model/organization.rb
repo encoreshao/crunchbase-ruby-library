@@ -37,6 +37,8 @@ module Crunchbase::Model
         set_relationships_object(Crunchbase::Model::PrimaryImage, 'primary_image', relationships['primary_image'])
         set_relationships_object(Crunchbase::Model::Founder, 'founders', relationships['founders'])
         set_relationships_object(Crunchbase::Model::CurrentTeam, 'current_team', relationships['current_team'])
+        set_relationships_object(Crunchbase::Model::PastTeam, 'past_team', relationships['past_team'])
+        set_relationships_object(Crunchbase::Model::BoardMembersAndAdvisor, 'board_members_and_advisors', relationships['board_members_and_advisors'])
         set_relationships_object(Crunchbase::Model::Investor, 'investors', relationships['investors'])
         set_relationships_object(Crunchbase::Model::OwnedBy, 'owned_by', relationships['owned_by'])
         set_relationships_object(Crunchbase::Model::SubOrganization, 'sub_organizations', relationships['sub_organizations'])
