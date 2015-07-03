@@ -2,30 +2,30 @@
 
 module Crunchbase::Model
   class Organization < Crunchbase::Model::Entity
-    
+
     RESOURCE_LIST = RESOURCE_NAME = 'organizations'
 
-    attr_reader :permalink, :api_path, :web_path, :name, :also_known_as, :short_description, :description, 
-                :primary_role, :role_company, :role_investor, :role_group, :role_school, 
-                :founded_on, :founded_on_trust_code, :is_closed, :closed_on, :closed_on_trust_code, 
-                :num_employees_min, :num_employees_max, 
-                :total_funding_usd, 
-                :stock_exchange, :stock_symbol, 
-                :number_of_investments, :homepage_url, 
+    attr_reader :permalink, :api_path, :web_path, :name, :also_known_as, :short_description, :description,
+                :primary_role, :role_company, :role_investor, :role_group, :role_school,
+                :founded_on, :founded_on_trust_code, :is_closed, :closed_on, :closed_on_trust_code,
+                :num_employees_min, :num_employees_max,
+                :total_funding_usd,
+                :stock_exchange, :stock_symbol,
+                :number_of_investments, :homepage_url,
                 :created_at, :updated_at
 
-    attr_reader :primary_image, :founders, :current_team, :past_team, :board_members_and_advisors, 
-                :investors, :owned_by, :sub_organizations, :headquarters, :offices, :products, 
-                :categories, :customers, :competitors, :members, :memberships, :funding_rounds, :investments, 
+    attr_reader :primary_image, :founders, :current_team, :past_team, :board_members_and_advisors,
+                :investors, :owned_by, :sub_organizations, :headquarters, :offices, :products,
+                :categories, :customers, :competitors, :members, :memberships, :funding_rounds, :investments,
                 :acquisitions, :acquired_by, :ipo, :funds, :websites, :images, :videos, :news
 
-    attr_reader :primary_image_total_items, :founders_total_items, :current_team_total_items, 
-                :past_team_total_items, :board_members_and_advisors_total_items, :investors_total_items, 
-                :owned_by_total_items, :sub_organizations_total_items, :headquarters_total_items, 
-                :offices_total_items, :products_total_items, :categories_total_items, 
-                :customers_total_items, :competitors_total_items, :members_total_items, 
-                :memberships_total_items, :funding_rounds_total_items, :investments_total_items, 
-                :acquisitions_total_items, :acquired_by_total_items, 
+    attr_reader :primary_image_total_items, :founders_total_items, :current_team_total_items,
+                :past_team_total_items, :board_members_and_advisors_total_items, :investors_total_items,
+                :owned_by_total_items, :sub_organizations_total_items, :headquarters_total_items,
+                :offices_total_items, :products_total_items, :categories_total_items,
+                :customers_total_items, :competitors_total_items, :members_total_items,
+                :memberships_total_items, :funding_rounds_total_items, :investments_total_items,
+                :acquisitions_total_items, :acquired_by_total_items,
                 :ipo_total_items, :funds_total_items, :websites_total_items, :images_total_items,
                 :videos_total_items, :news_total_items
 
@@ -64,12 +64,12 @@ module Crunchbase::Model
 
     def property_keys
       %w[
-        permalink api_path web_path name also_known_as short_description description 
-        primary_role role_company role_investor role_group role_school 
-        founded_on founded_on_trust_code is_closed closed_on closed_on_trust_code 
-        num_employees_min num_employees_max total_funding_usd 
-        stock_exchange stock_symbol 
-        number_of_investments homepage_url 
+        permalink api_path web_path name also_known_as short_description description
+        primary_role role_company role_investor role_group role_school
+        founded_on founded_on_trust_code is_closed closed_on closed_on_trust_code
+        num_employees_min num_employees_max total_funding_usd
+        stock_exchange stock_symbol
+        number_of_investments homepage_url
         created_at updated_at
       ]
     end

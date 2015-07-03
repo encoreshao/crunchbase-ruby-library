@@ -6,27 +6,27 @@ module Crunchbase::Model
     attr_reader :type_name, :uuid
 
     def initialize(json)
-      instance_variable_set("@type_name",  json['type'] || nil) 
-      instance_variable_set("@uuid",  json['uuid'] || nil) 
+      instance_variable_set("@type_name",  json['type'] || nil)
+      instance_variable_set("@uuid",  json['uuid'] || nil)
 
-      property_keys.each { |v| 
-        instance_variable_set("@#{v}", json['properties'][v] || nil) 
-      } 
+      property_keys.each { |v|
+        instance_variable_set("@#{v}", json['properties'][v] || nil)
+      }
 
-      date_keys.each { |v| 
-        instance_variable_set("@#{v}", json['properties'][v].nil? ? nil : Date.parse(json['properties'][v])) 
-      } 
+      date_keys.each { |v|
+        instance_variable_set("@#{v}", json['properties'][v].nil? ? nil : Date.parse(json['properties'][v]))
+      }
 
-      %w[created_at updated_at].each { |v| 
+      %w[created_at updated_at].each { |v|
         if json['properties'][v].kind_of?(String)
-          instance_variable_set( "@#{v}", begin Time.parse(json['properties'][v]) rescue nil end ) 
-        else  
-          instance_variable_set( "@#{v}", begin Time.at(json['properties'][v]) rescue nil end ) 
+          instance_variable_set( "@#{v}", begin Time.parse(json['properties'][v]) rescue nil end )
+        else
+          instance_variable_set( "@#{v}", begin Time.at(json['properties'][v]) rescue nil end )
         end
-      } 
+      }
     end
-    
-    # Factory method to return an instance from a permalink  
+
+    # Factory method to return an instance from a permalink
     def self.get(permalink)
       result = Crunchbase::API.single_entity(permalink, self::RESOURCE_NAME)
 
@@ -35,7 +35,7 @@ module Crunchbase::Model
 
     def self.list(page=nil)
       model_name = get_model_name(self::RESOURCE_LIST)
-      
+
       return Crunchbase::API.list( { page: page, model_name: model_name }, self::RESOURCE_LIST )
     end
 
@@ -74,7 +74,7 @@ module Crunchbase::Model
 
     def self.parsing_from_list(list)
       return [] if list.nil?
-      
+
       list.map do |l|
         self.new l if l.kind_of?(Hash)
       end.compact
@@ -82,7 +82,7 @@ module Crunchbase::Model
 
     def self.total_items_from_list(list)
       return 0 if list.nil?
-      
+
       list['paging']['total_items']
     end
 
@@ -95,7 +95,7 @@ module Crunchbase::Model
     def date_keys
       []
     end
-    
+
     def set_relationships_object(object_name, key, list)
       return unless list
 
@@ -114,20 +114,20 @@ module Crunchbase::Model
       return unless list['items'].respond_to?(:each)
 
       instance_variable_set "@#{key}", list['items'].inject([]) { |v, i| v << object_name.new(i) }
-      instance_variable_set "@#{key}_total_items", list['paging']['total_items'] 
+      instance_variable_set "@#{key}_total_items", list['paging']['total_items']
     end
-    
+
     def instance_relationships_object(object_name, key, item)
       return unless item
 
       instance_variable_set "@#{key}", ( object_name.new(item) || nil )
     end
-    
+
     def self.get_model_name(resource_list)
       return nil unless ['organizations', 'people'].include?(resource_list)
 
-      case resource_list 
-      when 'organizations' 
+      case resource_list
+      when 'organizations'
         OrganizationSummary
       when 'people'
         PersonSummary

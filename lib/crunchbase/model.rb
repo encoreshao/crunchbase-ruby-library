@@ -3,6 +3,8 @@
 module Crunchbase
   module Model
     autoload :AcquiredBy,                   "crunchbase/model/acquired_by"
+    autoload :Acquiree,                     "crunchbase/model/acquiree"
+    autoload :Acquirer,                     "crunchbase/model/acquirer"
     autoload :Acquisition,                  "crunchbase/model/acquisition"
     autoload :Address,                      "crunchbase/model/address"
     autoload :AdvisoryRole,                 "crunchbase/model/advisory_role"
@@ -43,6 +45,7 @@ module Crunchbase
     autoload :School,                       "crunchbase/model/school"
     autoload :Search,                       "crunchbase/model/search"
     autoload :SearchResult,                 "crunchbase/model/search_result"
+    autoload :SimpleOrganization,           "crunchbase/model/simple_organization"
     autoload :SubOrganization,              "crunchbase/model/sub_organization"
     autoload :Video,                        "crunchbase/model/video"
     autoload :Website,                      "crunchbase/model/website"

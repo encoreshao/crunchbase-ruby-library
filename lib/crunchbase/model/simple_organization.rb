@@ -1,11 +1,9 @@
 # encoding: utf-8
 
 module Crunchbase::Model
-  class AcquiredBy < Crunchbase::Model::Entity
+  class SimpleOrganization < Crunchbase::Model::Entity
 
-    RESOURCE_LIST = 'acquired_by'
-
-    attr_reader :announced_on, :name, :path, :created_at, :updated_at
+    attr_reader :type, :name, :path, :created_at, :updated_at
 
     def initialize(json)
       property_keys.each { |v|
@@ -18,11 +16,9 @@ module Crunchbase::Model
     end
 
     def property_keys
-      %w[ announced_on name path created_at updated_at ]
-    end
-
-    def date_keys
-      %w[ announced_on ]
+      %w[
+        type name path created_at updated_at
+      ]
     end
 
   end
