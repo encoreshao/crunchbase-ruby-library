@@ -135,7 +135,7 @@ module Crunchbase
     def self.get_url_following_redirects(uri_str, limit = 10)
       raise Crunchbase::Exception, 'HTTP redirect too deep' if limit == 0
 
-      uri = URI.parse(uri_str)
+      uri = URI.parse(URI.encode(uri_str))
 
       debug_log!(uri) if debug
 
