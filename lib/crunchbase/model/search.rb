@@ -3,7 +3,7 @@
 module Crunchbase::Model
   class Search < Crunchbase::Model::Entity
     include Enumerable
-    
+
     attr_reader :total_items, :per_page, :pages, :current_page, :prev_page_url, :next_page_url, :sort_order, :results
 
     alias :length :total_items
@@ -21,8 +21,12 @@ module Crunchbase::Model
 
 
     def populate_results(json, _model)
-      @results = json["items"].map{|r| _model.new(r)}
-      
+      @results = if json["items"].nil?
+        []
+      else
+        json["items"].map{|r| _model.new(r)}
+      end
+
       @total_items      = json['paging']['total_items']
       @per_page         = json['paging']['items_per_page']
       @pages            = json['paging']['number_of_pages']
@@ -42,7 +46,7 @@ module Crunchbase::Model
       return Search.new options, Crunchbase::API.search( options, resource_list ), model_name
     end
 
-    # Factory method to return an instance from a permalink  
+    # Factory method to return an instance from a permalink
     def self.get(permalink)
       nil
     end
