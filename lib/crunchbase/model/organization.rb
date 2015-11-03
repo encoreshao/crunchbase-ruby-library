@@ -54,7 +54,7 @@ module Crunchbase::Model
         set_relationships_object(Crunchbase::Model::Acquisition, 'acquisitions', relationships['acquisitions'])
         set_relationships_object(Crunchbase::Model::AcquiredBy, 'acquired_by', relationships['acquired_by'])
         set_relationships_object(Crunchbase::Model::Ipo, 'ipo', relationships['ipo'])
-        set_relationships_object(Crunchbase::Model::FundRaise, 'funds', relationships['funds'])
+        set_relationships_object(Crunchbase::Model::Fund, 'funds', relationships['funds'])
         set_relationships_object(Crunchbase::Model::Website, 'websites', relationships['websites'])
         set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
         set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
