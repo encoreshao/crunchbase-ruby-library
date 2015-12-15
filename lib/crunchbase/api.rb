@@ -47,7 +47,7 @@ module Crunchbase
     end
 
     private
-    
+
     # Returns the JSON parser, whether that's an instance of Yajl or JSON
     def self.parser
       if defined?(Yajl)
@@ -61,28 +61,28 @@ module Crunchbase
     def self.fetch(permalink, object_name)
       get_json_response( api_url + "#{object_name}/#{permalink}" )
     end
-    
+
     # Fetches URI for the search interface.
     def self.search(options, resource_list)
       options[:page] = 1 if options[:page].nil?
       options[:order] = ORDER_CREATED_AT_ASC if options[:order].nil?
-      
+
       uri = api_url + "#{resource_list}?" + collect_parameters(options)
 
       get_json_response(uri)
     end
-    
-    
+
+
     # Fetches URI for the search interface.
     def self.list(options, resource_list)
       options[:page]  = 1 if options[:page].nil?
       model_name      = options.delete(:model_name)
-      
+
       uri = api_url + "#{resource_list}?" + collect_parameters(options)
 
       Crunchbase::Model::Search.new options, get_json_response(uri), model_name
     end
-    
+
     def self.collect_parameters(options)
       require "cgi"
 
@@ -112,8 +112,8 @@ module Crunchbase
 
       Crunchbase::Model::Search.new options, get_json_response(uri), model_name
     end
-    
-    # Gets specified URI, then parses the returned JSON. Raises Timeout error 
+
+    # Gets specified URI, then parses the returned JSON. Raises Timeout error
     # if request time exceeds set limit. Raises Crunchbase::Exception if returned
     # JSON contains an error.
     def self.get_json_response(uri)
@@ -123,8 +123,11 @@ module Crunchbase
       resp = Timeout::timeout(@timeout_limit) {
         get_url_following_redirects(uri, @redirect_limit)
       }
-      response = parser.parse(resp)["data"]
 
+      _response = parser.parse(resp)
+      raise Crunchbase::Exception, { message: _response["error"], code: _response["status"].to_i } unless _response["error"].blank?
+
+      response = _response["data"]
       raise Crunchbase::Exception, response["error"] if response.class == Hash && response["error"] && response["error"]["code"] != 500
 
       response
