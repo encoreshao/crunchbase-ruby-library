@@ -65,7 +65,7 @@ module Crunchbase
     # Fetches URI for the search interface.
     def self.search(options, resource_list)
       options[:page] = 1 if options[:page].nil?
-      options[:order] = ORDER_CREATED_AT_ASC if options[:order].nil?
+      options[:sort_order] = ORDER_CREATED_AT_ASC if options[:sort_order].nil?
 
       uri = api_url + "#{resource_list}?" + collect_parameters(options)
 
@@ -76,6 +76,7 @@ module Crunchbase
     # Fetches URI for the search interface.
     def self.list(options, resource_list)
       options[:page]  = 1 if options[:page].nil?
+      options[:sort_order] = ORDER_CREATED_AT_ASC if options[:sort_order].nil?
       model_name      = options.delete(:model_name)
 
       uri = api_url + "#{resource_list}?" + collect_parameters(options)
@@ -105,7 +106,7 @@ module Crunchbase
 
     def self.lists_for_category(classify_name, permalink, category, options)
       options[:page]  = 1 if options[:page].nil?
-      options[:order] = ORDER_CREATED_AT_ASC if options[:order].nil?
+      options[:sort_order] = ORDER_CREATED_AT_ASC if options[:sort_order].nil?
       model_name      = options.delete(:model_name)
 
       uri = api_url + "#{classify_name}/#{permalink}/#{category}?#{collect_parameters(options)}"
