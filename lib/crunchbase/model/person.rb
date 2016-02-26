@@ -5,7 +5,7 @@ module Crunchbase::Model
 
     RESOURCE_LIST = RESOURCE_NAME = 'people'
 
-    attr_reader :permalink, :api_path, :web_path, :first_name, :last_name, :also_known_as, :bio, :profile_image_url,
+    attr_reader :permalink, :api_path, :web_path, :first_name, :last_name, :gender, :also_known_as, :bio, :profile_image_url,
                 :role_investor, :born_on, :born_on_trust_code, :is_deceased, :died_on, :died_on_trust_code,
                 :created_at, :updated_at
 
@@ -40,7 +40,7 @@ module Crunchbase::Model
 
     def property_keys
       %w[
-        permalink api_path web_path first_name last_name also_known_as bio profile_image_url
+        permalink api_path web_path first_name last_name gender also_known_as bio profile_image_url
         role_investor born_on born_on_trust_code is_deceased died_on died_on_trust_code
         created_at updated_at
       ]

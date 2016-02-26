@@ -6,7 +6,7 @@ module Crunchbase::Model
     RESOURCE_LIST = RESOURCE_NAME = 'organizations'
 
     attr_reader :permalink, :api_path, :web_path, :name, :also_known_as, :short_description, :description,
-                :primary_role, :role_company, :role_investor, :role_group, :role_school,
+                :profile_image_url, :primary_role, :role_company, :role_investor, :role_group, :role_school,
                 :founded_on, :founded_on_trust_code, :is_closed, :closed_on, :closed_on_trust_code,
                 :num_employees_min, :num_employees_max,
                 :total_funding_usd,
@@ -65,7 +65,7 @@ module Crunchbase::Model
     def property_keys
       %w[
         permalink api_path web_path name also_known_as short_description description
-        primary_role role_company role_investor role_group role_school
+        profile_image_url primary_role role_company role_investor role_group role_school
         founded_on founded_on_trust_code is_closed closed_on closed_on_trust_code
         num_employees_min num_employees_max total_funding_usd
         stock_exchange stock_symbol

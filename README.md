@@ -15,7 +15,7 @@ And then execute:
 Or install it yourself as:
 
     $ gem install crunchbase-ruby-library
-    
+
 ## Usage Examples
 
 Config your user_key, debug somewhere like development.rb, Recommended directory config/initializers/crunchbase.rb
@@ -28,17 +28,17 @@ Config your user_key, debug somewhere like development.rb, Recommended directory
 ## Search Organization OR Person
 
 Retrieve the way, Please use Search Class. The Search Will Return a list consisting of objects of the OrganizationSummary | PersonSummary type. Example:
-    
+
     Query Orgnization
 
     Method 1
-    response = Crunchbase::Model::Search.search({query: "Google"}, 'organizations')  
+    response = Crunchbase::Model::Search.search({query: "Google"}, 'organizations')
 
     Method 2
-    response = Crunchbase::Model::Search.search({name: "Google"}, 'organizations')  
+    response = Crunchbase::Model::Search.search({name: "Google"}, 'organizations')
 
     Method 3
-    response = Crunchbase::Model::Search.search({domain_name: "google.com"}, 'organizations')  
+    response = Crunchbase::Model::Search.search({domain_name: "google.com"}, 'organizations')
 
     response.total_items || response.per_page || response.pages || response.current_page
     response.results.each { |r| puts r.name }
@@ -46,7 +46,7 @@ Retrieve the way, Please use Search Class. The Search Will Return a list consist
 
     Query Person
 
-    response = Crunchbase::Model::Search.search({query: "encore"}, 'people')  
+    response = Crunchbase::Model::Search.search({query: "encore"}, 'people')
 
     response.results.each { |i| [i.first_name, i.last_name] }
 
@@ -82,10 +82,10 @@ Get information by the permalink, Example:
     people = Crunchbase::Model::Person.list( page )
 
     people.results
-   
-    [ #<Crunchbase::Model::PersonSummary:...>, 
-    #<Crunchbase::Model::PersonSummary: ...>, 
-    #<Crunchbase::Model::PersonSummary: ...>, 
+
+    [ #<Crunchbase::Model::PersonSummary:...>,
+    #<Crunchbase::Model::PersonSummary: ...>,
+    #<Crunchbase::Model::PersonSummary: ...>,
     #<Crunchbase::Model::PersonSummary: ...>
     ...... ]
 

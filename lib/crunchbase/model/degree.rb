@@ -5,8 +5,8 @@ module Crunchbase::Model
 
     RESOURCE_LIST = 'degrees'
 
-    attr_reader :degree_type_name, :degree_subject, :started_on, :started_on_trust_code, :is_completed, 
-                :completed_on, :completed_on_trust_code, 
+    attr_reader :degree_type_name, :degree_subject, :started_on, :started_on_trust_code, :is_completed,
+                :completed_on, :completed_on_trust_code,
                 :created_at, :updated_at
 
     attr_reader :school
@@ -21,8 +21,8 @@ module Crunchbase::Model
 
     def property_keys
       %w[
-        degree_type_name degree_subject started_on started_on_trust_code is_completed 
-        completed_on completed_on_trust_code 
+        degree_type_name degree_subject started_on started_on_trust_code is_completed
+        completed_on completed_on_trust_code
         created_at updated_at
       ]
     end

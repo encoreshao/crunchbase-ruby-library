@@ -2,10 +2,10 @@
 
 module Crunchbase::Model
   class Job < Crunchbase::Model::Entity
-    
+
     RESOURCE_LIST = 'jobs'
 
-    attr_reader :title, :started_on, :started_on_trust_code, :ended_on, :ended_on_trust_code, 
+    attr_reader :title, :started_on, :started_on_trust_code, :ended_on, :ended_on_trust_code,
                 :created_at, :updated_at
 
     attr_reader :person, :organization
@@ -18,7 +18,7 @@ module Crunchbase::Model
         instance_relationships_object(Crunchbase::Model::Organization, 'organization', relationships['organization'])
       end
     end
-    
+
     def property_keys
       %w[
         title started_on started_on_trust_code ended_on ended_on_trust_code created_at updated_at

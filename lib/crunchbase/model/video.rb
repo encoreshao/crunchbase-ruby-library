@@ -9,9 +9,9 @@ module Crunchbase::Model
 
     def property_keys
       %w[
-        title service_name url created_at updated_at 
+        title service_name url created_at updated_at
       ]
     end
-    
+
   end
 end
