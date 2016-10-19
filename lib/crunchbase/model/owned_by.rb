@@ -3,23 +3,15 @@
 module Crunchbase::Model
   class OwnedBy < Crunchbase::Model::Entity
 
-    attr_reader :name, :path, :created_at, :updated_at
+    attr_reader :name, :api_path, :web_path, :created_at, :updated_at
 
     def initialize(json)
-      instance_variable_set("@type_name",  json['type'] || nil)
-
-      property_keys.each { |v| 
-        instance_variable_set("@#{v}", json[v] || nil) 
-      }
-
-      %w[created_at updated_at].each { |v| 
-        instance_variable_set("@#{v}", Time.at(json[v])) 
-      }
+      super
     end
 
     def property_keys
       %w[
-        name path created_at updated_at
+        name api_path web_path created_at updated_at
       ]
     end
 
