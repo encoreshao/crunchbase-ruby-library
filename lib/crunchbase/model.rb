@@ -42,6 +42,7 @@ module Crunchbase
     autoload :PrimaryImage,                 "crunchbase/model/primary_image"
     autoload :PrimaryLocation,              "crunchbase/model/primary_location"
     autoload :Product,                      "crunchbase/model/product"
+    autoload :ProductSummary,               "crunchbase/model/product_summary"
     autoload :School,                       "crunchbase/model/school"
     autoload :Search,                       "crunchbase/model/search"
     autoload :SearchResult,                 "crunchbase/model/search_result"
