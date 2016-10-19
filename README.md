@@ -25,7 +25,7 @@ Config your user_key, debug somewhere like development.rb, Recommended directory
     Crunchbase::API.key   = 'user_key'
     Crunchbase::API.debug = false
 
-## Search Organization OR Person OR Product OR IPO
+## Search Organization OR Person OR Product OR IPO OR Acquisitions
 
 Retrieve the way, Please use Search Class. The Search Will Return a list consisting of objects of the OrganizationSummary | PersonSummary | ProductSummary type. Example:
 
@@ -61,6 +61,10 @@ Retrieve the way, Please use Search Class. The Search Will Return a list consist
     response = Crunchbase::Model::Search.search({}, 'ipos')
 
     response.results.each { |i| i.name }
+
+    Query Acquisition
+
+    response = Crunchbase::Model::Search.search({}, 'acquisitions')
 
 ## Get Organization && RelationShips
 
