@@ -5,6 +5,8 @@ module Crunchbase::Model
 
     attr_reader :type_name, :uuid
 
+    VALID_SEARCH_MODELS = ['organizations', 'people', 'products', 'ipos', 'acquisitions', 'funding-rounds']
+
     def initialize(json)
       instance_variable_set("@type_name",  json['type'] || nil)
       instance_variable_set("@uuid",  json['uuid'] || nil)
@@ -124,7 +126,7 @@ module Crunchbase::Model
     end
 
     def self.get_model_name(resource_list)
-      return nil unless ['organizations', 'people', 'products', 'ipos', 'acquisitions'].include?(resource_list)
+      return nil unless VALID_SEARCH_MODELS.include?(resource_list)
 
       case resource_list
       when 'organizations'
@@ -137,6 +139,8 @@ module Crunchbase::Model
         Ipo
       when 'acquisitions'
         Acquisition
+      when 'funding-rounds'
+        FundingRound
       else
         nil
       end
