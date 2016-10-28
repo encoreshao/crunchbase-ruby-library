@@ -2,8 +2,8 @@
 
 module Crunchbase::Model
   class Category < Crunchbase::Model::Entity
-    
-    RESOURCE_LIST = 'categories'
+
+    RESOURCE_LIST = RESOURCE_NAME = 'categories'
 
     attr_reader :web_path, :name, :organizations_in_category, :products_in_category, :created_at, :updated_at
 
@@ -12,6 +12,6 @@ module Crunchbase::Model
         web_path name organizations_in_category products_in_category created_at updated_at
       ]
     end
-    
+
   end
 end

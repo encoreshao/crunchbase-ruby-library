@@ -1,9 +1,9 @@
-require 'singleton'
-require 'time'
+require "singleton"
+require "time"
 
 require "crunchbase/version"
-require 'crunchbase/api'
-require 'crunchbase/model'
+require "crunchbase/model"
+require "crunchbase/api"
 require "crunchbase/exception"
 
 module Crunchbase
