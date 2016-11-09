@@ -11,8 +11,10 @@ module Crunchbase::Model
       instance_variable_set("@type_name",  json['type'] || nil)
       instance_variable_set("@uuid",  json['uuid'] || nil)
 
+      json['properties'] ||= {}
+
       property_keys.each { |v|
-        instance_variable_set("@#{v}", json['properties'][v] || nil)
+        instance_variable_set("@#{v}", json['properties'][v] || nil) if json.key? 'properties'
       }
 
       date_keys.each { |v|
