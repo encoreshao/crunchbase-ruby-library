@@ -11,7 +11,7 @@ module Crunchbase::Model
       }
 
       %w[created_at updated_at].each { |v|
-        instance_variable_set("@#{v}", Time.at(json[v]))
+        instance_variable_set("@#{v}", Time.at(json[v])) unless json[v].nil?
       }
     end
 
