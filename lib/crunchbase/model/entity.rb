@@ -9,21 +9,21 @@ module Crunchbase::Model
       instance_variable_set("@type_name",  json['type'] || nil)
       instance_variable_set("@uuid",  json['uuid'] || nil)
 
-      property_keys.each { |v|
-        instance_variable_set("@#{v}", json['properties'][v] || nil)
-      }
+      properties = json['properties']
+      property_keys.each { |v| instance_variable_set("@#{v}", properties[v]) }
+      date_keys.each { |v| instance_variable_set("@#{v}", properties[v].nil? ? nil : Date.parse(properties[v])) }
 
-      date_keys.each { |v|
-        instance_variable_set("@#{v}", json['properties'][v].nil? ? nil : Date.parse(json['properties'][v]))
-      }
+      instance_timestamps(properties)
+    end
 
-      %w[created_at updated_at].each { |v|
-        if json['properties'][v].kind_of?(String)
-          instance_variable_set( "@#{v}", begin Time.parse(json['properties'][v]) rescue nil end )
+    def instance_timestamps(properties)
+      %w[created_at updated_at].each do |v|
+        if properties[v].kind_of?(String)
+          instance_variable_set( "@#{v}", begin Time.parse(properties[v]) rescue nil end )
         else
-          instance_variable_set( "@#{v}", begin Time.at(json['properties'][v]) rescue nil end )
+          instance_variable_set( "@#{v}", begin Time.at(properties[v]) rescue nil end )
         end
-      }
+      end
     end
 
     # Factory method to return an instance from a permalink
