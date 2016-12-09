@@ -124,7 +124,7 @@ module Crunchbase::Model
     end
 
     def self.get_model_name(resource_list)
-      return nil unless ['organizations', 'people', 'products', 'ipos'].include?(resource_list)
+      return nil unless ['organizations', 'people', 'products', 'ipos', 'acquisitions'].include?(resource_list)
 
       case resource_list
       when 'organizations'
@@ -135,6 +135,8 @@ module Crunchbase::Model
         ProductSummary
       when 'ipos'
         Ipo
+      when 'acquisitions'
+        Acquisition
       else
         nil
       end
