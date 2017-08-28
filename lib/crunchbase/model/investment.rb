@@ -2,10 +2,10 @@
 
 module Crunchbase::Model
   class Investment < Crunchbase::Model::Entity
-    
+
     RESOURCE_LIST = 'investments'
 
-    attr_reader :money_invested, :money_invested_currency_code, :money_invested_usd, :created_at, :updated_at
+    attr_reader :money_invested, :money_invested_currency_code, :money_invested_usd, :is_lead_investor, :created_at, :updated_at
 
     attr_reader :funding_round, :invested_in, :investors
 
@@ -26,6 +26,7 @@ module Crunchbase::Model
     def property_keys
       %w[
         money_invested money_invested_currency_code money_invested_usd created_at updated_at
+        is_lead_investor
       ]
     end
 

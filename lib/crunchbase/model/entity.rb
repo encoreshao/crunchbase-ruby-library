@@ -5,11 +5,13 @@ module Crunchbase::Model
 
     attr_reader :type_name, :uuid
 
+    VALID_SEARCH_MODELS = ['organizations', 'people', 'products', 'ipos', 'acquisitions', 'funding-rounds']
+
     def initialize(json)
       instance_variable_set("@type_name",  json['type'] || nil)
       instance_variable_set("@uuid",  json['uuid'] || nil)
 
-      properties = json['properties']
+      properties = json['properties'] || {}
       property_keys.each { |v| instance_variable_set("@#{v}", properties[v]) }
       date_keys.each { |v| instance_variable_set("@#{v}", properties[v].nil? ? nil : Date.parse(properties[v])) }
 
