@@ -126,24 +126,7 @@ module Crunchbase::Model
     end
 
     def self.get_model_name(resource_list)
-      return nil unless VALID_SEARCH_MODELS.include?(resource_list)
-
-      case resource_list
-      when 'organizations'
-        OrganizationSummary
-      when 'people'
-        PersonSummary
-      when 'products'
-        ProductSummary
-      when 'ipos'
-        Ipo
-      when 'acquisitions'
-        Acquisition
-      when 'funding-rounds'
-        FundingRound
-      else
-        nil
-      end
+      Crunchbase::API::SUPPORTED_ENTITIES[resource_list] || nil
     end
 
   end

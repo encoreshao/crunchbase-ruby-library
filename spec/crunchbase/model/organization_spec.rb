@@ -17,7 +17,7 @@ module Crunchbase
 
       context "TODO" do
         before(:all) do
-          @organization = Organization.get("abovenet")  
+          @organization = Organization.get("next-thing")
         end
 
         it 'show all products name' do
