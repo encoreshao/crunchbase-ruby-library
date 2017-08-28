@@ -13,7 +13,26 @@ require 'timeout'
 module Crunchbase
   class API
 
-    SUPPORTED_ENTITIES = ['organizations', 'people', 'products', 'funding_rounds', 'funding-rounds', 'acquisitions', 'ipos', 'locations', 'categories', 'offices', 'customers', 'degrees', 'experience', 'primary_affiliation', 'videos', 'founded_companies', 'primary_location', 'advisor_at']
+    SUPPORTED_ENTITIES = {
+      'categories' => Model::Category,
+      'organizations' => Model::OrganizationSummary,
+      'people' => Model::PersonSummary,
+      'products' => Model::ProductSummary,
+      'ipos' => Model::Ipo,
+      'funding_rounds' => Model::FundingRound,
+      'funding-rounds' => Model::FundingRound,
+      'acquisitions' => Model::Acquisition,
+      'locations' => Model::Location,
+      'offices' => Model::Office,
+      'customers' => Model::Customer,
+      'degrees' => Model::Degree,
+      # 'experience' => nil,
+      'primary_affiliation' => Model::PrimaryAffiliation,
+      'videos' => Model::Video,
+      'founded_companies' => Model::FoundedCompany,
+      'primary_location' => Model::PrimaryLocation,
+      'advisor_at' => Model::AdvisoryRole
+    }
 
     @timeout_limit  = 60
     @redirect_limit = 2
@@ -41,7 +60,7 @@ module Crunchbase
     end
 
     def self.single_entity(permalink, entity_name)
-      raise CrunchException, "Unsupported Entity Type" unless SUPPORTED_ENTITIES.include?(entity_name)
+      raise CrunchException, "Unsupported Entity Type" unless SUPPORTED_ENTITIES.keys.include?(entity_name)
 
       fetch(permalink, entity_name)
     end
@@ -76,7 +95,7 @@ module Crunchbase
     # Fetches URI for the search interface.
     def self.list(options, resource_list)
       options[:page]  = 1 if options[:page].nil?
-      model_name      = options.delete(:model_name)
+      model_name      = options.delete(:model_name) || SUPPORTED_ENTITIES[resource_list]
 
       uri = api_url + "#{resource_list}?" + collect_parameters(options)
 
@@ -125,7 +144,7 @@ module Crunchbase
       }
 
       _response = parser.parse(resp)
-      raise Crunchbase::Exception, { message: _response["error"], code: _response["status"].to_i } unless _response["error"].blank?
+      raise Crunchbase::Exception, { message: _response["error"], code: _response["status"].to_i } unless _response["error"].nil?
 
       response = _response["data"]
       raise Crunchbase::Exception, response["error"] if response.class == Hash && response["error"] && response["error"]["code"] != 500

@@ -23,7 +23,7 @@ module Crunchbase::Model
 
       unless (relationships = json['relationships']).nil?
         set_relationships_object(Crunchbase::Model::PrimaryAffiliation, 'primary_affiliation', relationships['primary_affiliation'])
-        set_relationships_object(Crunchbase::Model::PrimaryAffiliation, 'primary_location', relationships['primary_location'])
+        set_relationships_object(Crunchbase::Model::PrimaryLocation, 'primary_location', relationships['primary_location'])
         set_relationships_object(Crunchbase::Model::PrimaryImage, 'primary_image', relationships['primary_image'])
         set_relationships_object(Crunchbase::Model::Website, 'websites', relationships['websites'])
         set_relationships_object(Crunchbase::Model::Degree, 'degrees', relationships['degrees'])
