@@ -1,8 +1,8 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase::Model
   class Ipo < Crunchbase::Model::Entity
-
     RESOURCE_LIST = RESOURCE_NAME = 'ipos'
 
     attr_reader :api_path, :web_path, :went_public_on, :went_public_on_trust_code,
@@ -25,9 +25,8 @@ module Crunchbase::Model
       end
     end
 
-
     def property_keys
-      %w[
+      %w(
         api_path web_path went_public_on went_public_on_trust_code
         stock_exchange_symbol stock_symbol
         shares_sold opening_share_price
@@ -35,12 +34,11 @@ module Crunchbase::Model
         opening_valuation_currency_code opening_valuation_usd
         money_raised money_raised_currency_code money_raised_usd
         created_at updated_at
-      ]
+      )
     end
 
     def date_keys
-      %w[went_public_on]
+      %w(went_public_on)
     end
-
   end
 end

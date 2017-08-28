@@ -1,8 +1,8 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase::Model
   class Acquisition < Crunchbase::Model::Entity
-
     RESOURCE_LIST = 'acquisitions'
     RESOURCE_NAME = 'acquisitions'
 
@@ -10,7 +10,6 @@ module Crunchbase::Model
                 :payment_type, :acquisition_type, :acquisition_status, :disposition_of_acquired,
                 :announced_on, :announced_on_trust_code, :completed_on, :completed_on_trust_code,
                 :created_at, :updated_at
-
 
     attr_reader :acquirer, :acquiree, :news
 
@@ -31,17 +30,16 @@ module Crunchbase::Model
     end
 
     def property_keys
-      %w[
+      %w(
         api_path web_path price price_currency_code price_usd
         payment_type acquisition_type acquisition_status disposition_of_acquired
         announced_on announced_on_trust_code completed_on completed_on_trust_code
         created_at updated_at
-      ]
+      )
     end
 
     def date_keys
-      %w[ announced_on completed_on ]
+      %w(announced_on completed_on)
     end
-
   end
 end

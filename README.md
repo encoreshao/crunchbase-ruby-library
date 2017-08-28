@@ -1,6 +1,6 @@
 # Crunchbase
 
-Crunchbase API Version 3 - Ruby Library [CrunchBase Data Hub](http://data.crunchbase.com/v3).
+Crunchbase API v3.1 - Ruby Library [CrunchBase Data Hub](https://data.crunchbase.com/v3.1/docs/using-the-api).
 
 ## Installation
 

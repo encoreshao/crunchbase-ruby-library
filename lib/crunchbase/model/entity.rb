@@ -1,13 +1,13 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase::Model
   class Entity
-
     attr_reader :type_name, :uuid
 
     def initialize(json)
-      instance_variable_set("@type_name",  json['type'] || nil)
-      instance_variable_set("@uuid",  json['uuid'] || nil)
+      instance_variable_set('@type_name', json['type'] || nil)
+      instance_variable_set('@uuid',  json['uuid'] || nil)
 
       properties = json['properties'] || {}
       property_keys.each { |v| instance_variable_set("@#{v}", properties[v]) }
@@ -17,11 +17,19 @@ module Crunchbase::Model
     end
 
     def instance_timestamps(properties)
-      %w[created_at updated_at].each do |v|
-        if properties[v].kind_of?(String)
-          instance_variable_set( "@#{v}", begin Time.parse(properties[v]) rescue nil end )
+      %w(created_at updated_at).each do |v|
+        if properties[v].is_a?(String)
+          instance_variable_set("@#{v}", begin begin
+                                                  Time.parse(properties[v])
+                                                rescue
+                                                  nil
+                                                end end)
         else
-          instance_variable_set( "@#{v}", begin Time.at(properties[v]) rescue nil end )
+          instance_variable_set("@#{v}", begin begin
+                                                  Time.at(properties[v])
+                                                rescue
+                                                  nil
+                                                end end)
         end
       end
     end
@@ -30,45 +38,45 @@ module Crunchbase::Model
     def self.get(permalink)
       result = Crunchbase::API.single_entity(permalink, self::RESOURCE_NAME)
 
-      return self.new( result )
+      new(result)
     end
 
-    def self.list(page=nil)
+    def self.list(page = nil)
       model_name = get_model_name(self::RESOURCE_LIST)
 
-      return Crunchbase::API.list( { page: page, model_name: model_name }, self::RESOURCE_LIST )
+      Crunchbase::API.list({ page: page, model_name: model_name }, self::RESOURCE_LIST)
     end
 
-    def self.organization_lists(permalink, options={})
-      options = options.merge({ model_name: self })
+    def self.organization_lists(permalink, options = {})
+      options = options.merge(model_name: self)
 
-      return Crunchbase::API.organization_lists(permalink, self::RESOURCE_LIST, options)
+      Crunchbase::API.organization_lists(permalink, self::RESOURCE_LIST, options)
     end
 
-    def self.person_lists(permalink, options={})
-      options = options.merge({ model_name: self })
+    def self.person_lists(permalink, options = {})
+      options = options.merge(model_name: self)
 
-      return Crunchbase::API.person_lists(permalink, self::RESOURCE_LIST, options)
+      Crunchbase::API.person_lists(permalink, self::RESOURCE_LIST, options)
     end
 
-    def self.funding_rounds_lists(permalink, options={})
-      options = options.merge({ model_name: self })
+    def self.funding_rounds_lists(permalink, options = {})
+      options = options.merge(model_name: self)
 
-      return Crunchbase::API.funding_rounds_lists(permalink, self::RESOURCE_LIST.gsub('_', '-'), options)
+      Crunchbase::API.funding_rounds_lists(permalink, self::RESOURCE_LIST.tr('_', '-'), options)
     end
 
     def fetch
       fetch_object = get_fetch_object
       return [] if fetch_object.empty?
 
-      return fetch_object[0].new API.fetch(self.permalink, fetch_object[1])
+      fetch_object[0].new API.fetch(permalink, fetch_object[1])
     end
 
     def self.array_from_list(list)
       return [] if list.nil?
 
       list['items'].map do |l|
-        self.new l if l.kind_of?(Hash)
+        new l if l.is_a?(Hash)
       end.compact
     end
 
@@ -76,7 +84,7 @@ module Crunchbase::Model
       return [] if list.nil?
 
       list.map do |l|
-        self.new l if l.kind_of?(Hash)
+        new l if l.is_a?(Hash)
       end.compact
     end
 
@@ -85,8 +93,6 @@ module Crunchbase::Model
 
       list['paging']['total_items']
     end
-
-    private
 
     def property_keys
       []
@@ -106,7 +112,7 @@ module Crunchbase::Model
     def one_to_one(object_name, key, item)
       return unless item
 
-      instance_variable_set "@#{key}", ( object_name.new( item ) || nil )
+      instance_variable_set "@#{key}", (object_name.new(item) || nil)
       instance_variable_set "@#{key}_total_items", (item ? 1 : 0)
     end
 
@@ -120,12 +126,11 @@ module Crunchbase::Model
     def instance_relationships_object(object_name, key, item)
       return unless item
 
-      instance_variable_set "@#{key}", ( object_name.new(item) || nil )
+      instance_variable_set "@#{key}", (object_name.new(item) || nil)
     end
 
     def self.get_model_name(resource_list)
       Crunchbase::API::SUPPORTED_ENTITIES[resource_list] || nil
     end
-
   end
 end

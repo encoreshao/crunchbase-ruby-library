@@ -1,8 +1,8 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase::Model
   class Person < Crunchbase::Model::Entity
-
     RESOURCE_LIST = RESOURCE_NAME = 'people'
 
     attr_reader :permalink, :api_path, :web_path, :first_name, :last_name, :gender, :also_known_as, :bio, :profile_image_url,
@@ -39,17 +39,15 @@ module Crunchbase::Model
     end
 
     def property_keys
-      %w[
+      %w(
         permalink api_path web_path first_name last_name gender also_known_as bio profile_image_url
         role_investor born_on born_on_trust_code is_deceased died_on died_on_trust_code
         created_at updated_at
-      ]
+      )
     end
 
     def date_keys
-      %w[ born_on died_on ]
+      %w(born_on died_on)
     end
-
-
   end
 end

@@ -1,18 +1,19 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase
-  class Exception < ::Exception
+  class Exception < RuntimeError
   end
 
-  class ConfigurationException < Exception
+  class ConfigurationException < RuntimeError
   end
 
-  class MissingParamsException < Exception
+  class MissingParamsException < RuntimeError
   end
 
-  class InvalidRequestException < Exception
+  class InvalidRequestException < RuntimeError
   end
 
-  class ResponseTypeException < Exception
+  class ResponseTypeException < RuntimeError
   end
 end

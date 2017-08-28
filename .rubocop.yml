@@ -1,0 +1,58 @@
+# This is the configuration used to check the rubocop source code.
+
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.3
+  Exclude:
+    - '**/*.yml'
+    - 'tmp/**/*'
+
+Style/StringLiterals:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+Style/FormatString:
+  Enabled: false
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Style/EmptyLinesAroundAccessModifier:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/NumericLiterals:
+  Exclude:
+    - 'spec/**/*'
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/CaseIndentation:
+  # Valid values are: case, end
+  IndentWhenRelativeTo: end
+  IndentOneStep: false
+
+Lint/EndAlignment:
+  AlignWith: variable
+
+Lint/UselessAssignment:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false

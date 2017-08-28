@@ -1,8 +1,8 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase::Model
   class FundingRound < Crunchbase::Model::Entity
-
     RESOURCE_LIST = 'funding_rounds'
     RESOURCE_NAME = 'funding-rounds'
 
@@ -39,22 +39,20 @@ module Crunchbase::Model
         set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
         set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
       end
-
     end
 
     def property_keys
-      %w[
+      %w(
         permalink api_path web_path funding_type series series_qualifier
         announced_on announced_on_trust_code closed_on closed_on_trust_code
         money_raised money_raised_currency_code money_raised_usd
         target_money_raised target_money_raised_currency_code target_money_raised_usd
         created_at updated_at
-      ]
+      )
     end
 
     def date_keys
-      %w[ announced_on closed_on ]
+      %w(announced_on closed_on)
     end
-
   end
 end

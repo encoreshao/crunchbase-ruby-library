@@ -1,4 +1,5 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase::Model
   class Search < Crunchbase::Model::Entity
@@ -6,26 +7,22 @@ module Crunchbase::Model
 
     attr_reader :total_items, :per_page, :pages, :current_page, :prev_page_url, :next_page_url, :sort_order, :results
 
-    alias :length :total_items
-    alias :size   :total_items
-    alias :items  :results
+    alias length total_items
+    alias size   total_items
+    alias items  results
 
-    def initialize(query, json, _model)
+    def initialize(query, json, kclass)
       @query            = query
       @results          = []
       @total_items      = 0
       @pages            = 0
 
-      populate_results(json, _model) if json['error'].nil?
+      populate_results(json, kclass) if json['error'].nil?
     end
 
-
-    def populate_results(json, _model)
-      @results = if json["items"].nil?
-        []
-      else
-        json["items"].map{|r| _model.new(r)}
-      end
+    def populate_results(json, kclass)
+      @results = []
+      @results = json['items'].map { |r| kclass.new(r) } unless json['items'].nil?
 
       @total_items      = json['paging']['total_items']
       @per_page         = json['paging']['items_per_page']
@@ -43,13 +40,12 @@ module Crunchbase::Model
 
       raise 'Unknown type error!' if model_name.nil?
 
-      return Search.new options, Crunchbase::API.search( options, resource_list ), model_name
+      Search.new options, Crunchbase::API.search(options, resource_list), model_name
     end
 
     # Factory method to return an instance from a permalink
-    def self.get(permalink)
+    def self.get(_permalink)
       nil
     end
-
   end
 end
