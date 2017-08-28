@@ -8,7 +8,7 @@ module Crunchbase
     #     person = Person.get("li-ka-shing")
 
     #     puts person.inspect
-        
+
     #   rescue Exception => e
     #     puts e.message
     #   end
@@ -22,7 +22,5 @@ module Crunchbase
         puts e.message
       end
     end
-
-
   end
 end
