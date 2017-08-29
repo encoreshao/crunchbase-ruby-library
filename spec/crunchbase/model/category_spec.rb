@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-module Crunchbase
-  module Model
-    describe Category do
-    end
+module Crunchbase::Model
+  RSpec.describe Category do
   end
 end

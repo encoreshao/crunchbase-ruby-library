@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-module Crunchbase
-  module Model
-    describe Investment do
-    end
+module Crunchbase::Model
+  RSpec.describe Investment do
   end
 end

@@ -17,7 +17,7 @@ module Crunchbase::Model
     def relationship_lists
       {
         'aquiree' => Organization,
-        'acquirer' => Organization,
+        'acquirer' => Organization
       }
     end
 

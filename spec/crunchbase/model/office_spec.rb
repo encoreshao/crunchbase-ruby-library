@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-module Crunchbase
-  module Model
-    describe Office do
-    end
+module Crunchbase::Model
+  RSpec.describe Office do
   end
 end

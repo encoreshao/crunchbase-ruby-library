@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-module Crunchbase
-  module Model
-    describe BoardMembersAndAdvisor do
-    end
+module Crunchbase::Model
+  RSpec.describe BoardMembersAndAdvisor do
   end
 end

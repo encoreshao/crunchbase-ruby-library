@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-module Crunchbase
-  module Model
-    describe PastTeam do
-    end
+module Crunchbase::Model
+  RSpec.describe PastTeam do
   end
 end
