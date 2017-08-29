@@ -2,7 +2,7 @@
 
 module ApiHelper
   def parse_json(endpoint, filename)
-    JSON.parse load_file(endpoint, filename)
+    JSON.parse(load_file(endpoint, filename))['data']
   end
 
   def load_file(endpoint, filename)

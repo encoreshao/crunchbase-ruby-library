@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class FundingRound < Crunchbase::Model::Entity
+  class FundingRound < Entity
     RESOURCE_LIST = 'funding_rounds'
     RESOURCE_NAME = 'funding-rounds'
 
@@ -20,25 +20,29 @@ module Crunchbase::Model
     def initialize(json)
       super
 
-      unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::Investment, 'investments', relationships['investments'])
+      relationships = json['relationships']
+      return if relationships.nil?
 
-        unless relationships['funded_organization'].nil?
-          if relationships['funded_organization']['item'].nil?
+      # set_relationships_object(Investment, 'investments', relationships['investments'])
 
-            # Get organization's  (investments - funding - organization)
-            instance_relationships_object(Crunchbase::Model::Organization, 'funded_organization', relationships['funded_organization'])
-          else
-            # Get funding-rounds (funded_organization - item)
+      return if relationships['funded_organization'].nil?
 
-            set_relationships_object(Crunchbase::Model::Organization, 'funded_organization', relationships['funded_organization'])
-          end
-        end
+      if relationships['funded_organization']['item'].nil?
+        # Get organization's  (investments - funding - organization)
+        instance_relationships_object(Organization, 'funded_organization', relationships['funded_organization'])
+      else
+        # Get funding-rounds (funded_organization - item)
 
-        set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
-        set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
-        set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
+        set_relationships_object(Organization, 'funded_organization', relationships['funded_organization'])
       end
+    end
+
+    def relationship_lists
+      {
+        'images' => Image,
+        'videos' => Video,
+        'news' => New
+      }
     end
 
     def property_keys

@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Person < Crunchbase::Model::Entity
+  class Person < Entity
     RESOURCE_LIST = RESOURCE_NAME = 'people'
 
     attr_reader :permalink, :api_path, :web_path, :first_name, :last_name, :gender, :also_known_as, :bio, :profile_image_url,
@@ -20,22 +20,24 @@ module Crunchbase::Model
 
     def initialize(json)
       super
+    end
 
-      unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::PrimaryAffiliation, 'primary_affiliation', relationships['primary_affiliation'])
-        set_relationships_object(Crunchbase::Model::PrimaryLocation, 'primary_location', relationships['primary_location'])
-        set_relationships_object(Crunchbase::Model::PrimaryImage, 'primary_image', relationships['primary_image'])
-        set_relationships_object(Crunchbase::Model::Website, 'websites', relationships['websites'])
-        set_relationships_object(Crunchbase::Model::Degree, 'degrees', relationships['degrees'])
-        set_relationships_object(Crunchbase::Model::Job, 'jobs', relationships['jobs'])
-        set_relationships_object(Crunchbase::Model::AdvisoryRole, 'advisory_roles', relationships['advisor_at'])
-        set_relationships_object(Crunchbase::Model::FoundedCompany, 'founded_companies', relationships['founded_companies'])
-        set_relationships_object(Crunchbase::Model::Investment, 'investments', relationships['investments'])
-        set_relationships_object(Crunchbase::Model::Membership, 'memberships', relationships['memberships'])
-        set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
-        set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
-        set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
-      end
+    def relationship_lists
+      {
+        'primary_affiliation' => PrimaryAffiliation,
+        'primary_location' => PrimaryLocation,
+        'primary_image' => PrimaryImage,
+        'websites' => Website,
+        'degrees' => Degree,
+        'jobs' => Job,
+        'advisory_roles' => AdvisoryRole,
+        'founded_companies' => FoundedCompany,
+        'investments' => Investment,
+        'memberships' => Membership,
+        'images' => Image,
+        'videos' => Video,
+        'news' => New
+      }
     end
 
     def property_keys

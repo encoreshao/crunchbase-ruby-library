@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class SearchResult < Crunchbase::Model::Entity
+  class SearchResult < Entity
     def initialize
     end
   end

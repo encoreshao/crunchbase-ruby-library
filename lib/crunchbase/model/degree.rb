@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Degree < Crunchbase::Model::Entity
+  class Degree < Entity
     RESOURCE_LIST = 'degrees'
 
     attr_reader :degree_type_name, :degree_subject, :started_on, :started_on_trust_code, :is_completed,

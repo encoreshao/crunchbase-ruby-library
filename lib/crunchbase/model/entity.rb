@@ -14,55 +14,29 @@ module Crunchbase::Model
       date_keys.each { |v| instance_variable_set("@#{v}", properties[v].nil? ? nil : Date.parse(properties[v])) }
 
       instance_timestamps(properties)
+
+      relationships = json['relationships']
+      return if relationships.nil? || relationship_lists.empty?
+
+      setup_relationships_data!(relationships)
+    end
+
+    def setup_relationships_data!(relationships)
+      relationship_lists.map { |key, kclass| set_relationships_object(kclass, key, relationships[key]) }
     end
 
     def instance_timestamps(properties)
       %w(created_at updated_at).each do |v|
-        if properties[v].is_a?(String)
-          instance_variable_set("@#{v}", begin begin
-                                                  Time.parse(properties[v])
-                                                rescue
-                                                  nil
-                                                end end)
-        else
-          instance_variable_set("@#{v}", begin begin
-                                                  Time.at(properties[v])
-                                                rescue
-                                                  nil
-                                                end end)
-        end
+        instance_variable_set("@#{v}", convert_date!(properties[v]))
       end
     end
 
-    # Factory method to return an instance from a permalink
-    def self.get(permalink)
-      result = Crunchbase::API.single_entity(permalink, self::RESOURCE_NAME)
+    def convert_date!(date)
+      return Time.parse(date) if date.is_a?(String)
 
-      new(result)
-    end
-
-    def self.list(page = nil)
-      model_name = get_model_name(self::RESOURCE_LIST)
-
-      Crunchbase::API.list({ page: page, model_name: model_name }, self::RESOURCE_LIST)
-    end
-
-    def self.organization_lists(permalink, options = {})
-      options = options.merge(model_name: self)
-
-      Crunchbase::API.organization_lists(permalink, self::RESOURCE_LIST, options)
-    end
-
-    def self.person_lists(permalink, options = {})
-      options = options.merge(model_name: self)
-
-      Crunchbase::API.person_lists(permalink, self::RESOURCE_LIST, options)
-    end
-
-    def self.funding_rounds_lists(permalink, options = {})
-      options = options.merge(model_name: self)
-
-      Crunchbase::API.funding_rounds_lists(permalink, self::RESOURCE_LIST.tr('_', '-'), options)
+      Time.at(date)
+    rescue
+      nil
     end
 
     def fetch
@@ -72,34 +46,17 @@ module Crunchbase::Model
       fetch_object[0].new API.fetch(permalink, fetch_object[1])
     end
 
-    def self.array_from_list(list)
-      return [] if list.nil?
-
-      list['items'].map do |l|
-        new l if l.is_a?(Hash)
-      end.compact
-    end
-
-    def self.parsing_from_list(list)
-      return [] if list.nil?
-
-      list.map do |l|
-        new l if l.is_a?(Hash)
-      end.compact
-    end
-
-    def self.total_items_from_list(list)
-      return 0 if list.nil?
-
-      list['paging']['total_items']
-    end
-
+    # TODO: need to be implement
     def property_keys
       []
     end
 
     def date_keys
       []
+    end
+
+    def relationship_lists
+      {}
     end
 
     def set_relationships_object(object_name, key, list)
@@ -129,8 +86,63 @@ module Crunchbase::Model
       instance_variable_set "@#{key}", (object_name.new(item) || nil)
     end
 
-    def self.get_model_name(resource_list)
-      Crunchbase::API::SUPPORTED_ENTITIES[resource_list] || nil
+    class << self
+      # Factory method to return an instance from a permalink
+      def get(permalink)
+        result = API.single_entity(permalink, self::RESOURCE_NAME)
+
+        new(result)
+      end
+
+      def list(page = nil)
+        model_name = kclass_name(self::RESOURCE_LIST)
+
+        API.list({ page: page, model_name: model_name }, self::RESOURCE_LIST)
+      end
+
+      def organization_lists(permalink, options = {})
+        options = options.merge(model_name: self)
+
+        API.organization_lists(permalink, self::RESOURCE_LIST, options)
+      end
+
+      def person_lists(permalink, options = {})
+        options = options.merge(model_name: self)
+
+        API.person_lists(permalink, self::RESOURCE_LIST, options)
+      end
+
+      def funding_rounds_lists(permalink, options = {})
+        options = options.merge(model_name: self)
+
+        API.funding_rounds_lists(permalink, self::RESOURCE_LIST.tr('_', '-'), options)
+      end
+
+      def array_from_list(list)
+        return [] if list.nil?
+
+        list['items'].map do |l|
+          new l if l.is_a?(Hash)
+        end.compact
+      end
+
+      def parsing_from_list(list)
+        return [] if list.nil?
+
+        list.map do |l|
+          new l if l.is_a?(Hash)
+        end.compact
+      end
+
+      def total_items_from_list(list)
+        return 0 if list.nil?
+
+        list['paging']['total_items']
+      end
+
+      def kclass_name(resource_list)
+        API::SUPPORTED_ENTITIES[resource_list] || nil
+      end
     end
   end
 end

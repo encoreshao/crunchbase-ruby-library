@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Organization < Crunchbase::Model::Entity
+  class Organization < Entity
     RESOURCE_LIST = RESOURCE_NAME = 'organizations'
 
     attr_reader :permalink, :api_path, :web_path, :name, :also_known_as, :short_description, :description,
@@ -31,39 +31,6 @@ module Crunchbase::Model
 
     def initialize(json)
       super
-
-      relationships = json['relationships']
-      return if relationships.nil?
-
-      setup_relationships!(relationships)
-    end
-
-    def setup_relationships!(relationships)
-      set_relationships_object(PrimaryImage, 'primary_image', relationships['primary_image'])
-      set_relationships_object(Founder, 'founders', relationships['founders'])
-      set_relationships_object(CurrentTeam, 'current_team', relationships['current_team'])
-      set_relationships_object(PastTeam, 'past_team', relationships['past_team'])
-      set_relationships_object(BoardMembersAndAdvisor, 'board_members_and_advisors', relationships['board_members_and_advisors'])
-      set_relationships_object(Investor, 'investors', relationships['investors'])
-      set_relationships_object(OwnedBy, 'owned_by', relationships['owned_by'])
-      set_relationships_object(SubOrganization, 'sub_organizations', relationships['sub_organizations'])
-      set_relationships_object(Headquarter, 'headquarters', relationships['headquarters'])
-      set_relationships_object(Office, 'offices', relationships['offices'])
-      set_relationships_object(Product, 'products', relationships['products'])
-      set_relationships_object(Category, 'categories', relationships['categories'])
-      set_relationships_object(Customer, 'customers', relationships['customers'])
-      set_relationships_object(Competitor, 'competitors', relationships['competitors'])
-      set_relationships_object(Membership, 'memberships', relationships['memberships'])
-      set_relationships_object(FundingRound, 'funding_rounds', relationships['funding_rounds'])
-      set_relationships_object(Investment, 'investments', relationships['investments'])
-      set_relationships_object(Acquisition, 'acquisitions', relationships['acquisitions'])
-      set_relationships_object(AcquiredBy, 'acquired_by', relationships['acquired_by'])
-      set_relationships_object(Ipo, 'ipo', relationships['ipo'])
-      set_relationships_object(Fund, 'funds', relationships['funds'])
-      set_relationships_object(Website, 'websites', relationships['websites'])
-      set_relationships_object(Image, 'images', relationships['images'])
-      set_relationships_object(Video, 'videos', relationships['videos'])
-      set_relationships_object(New, 'news', relationships['news'])
     end
 
     def property_keys
@@ -76,6 +43,36 @@ module Crunchbase::Model
         number_of_investments homepage_url
         created_at updated_at
       )
+    end
+
+    def relationship_lists
+      {
+        'primary_image' => PrimaryImage,
+        'founders' => Founder,
+        'current_team' => CurrentTeam,
+        'past_team' => PastTeam,
+        'board_members_and_advisors' => BoardMembersAndAdvisor,
+        'investors' => Investor,
+        'owned_by' => OwnedBy,
+        'sub_organizations' => SubOrganization,
+        'headquarters' => Headquarter,
+        'offices' => Office,
+        'products' => Product,
+        'categories' => Category,
+        'customers' => Customer,
+        'competitors' => Competitor,
+        'memberships' => Membership,
+        'funding_rounds' => FundingRound,
+        'investments' => Investment,
+        'acquisitions' => Acquisition,
+        'acquired_by' => AcquiredBy,
+        'ipo' => Ipo,
+        'funds' => Fund,
+        'websites' => Website,
+        'images' => Image,
+        'videos' => Video,
+        'news' => New
+      }
     end
 
     def date_keys

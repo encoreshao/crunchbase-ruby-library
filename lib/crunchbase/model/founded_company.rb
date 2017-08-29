@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class FoundedCompany < Crunchbase::Model::Organization
+  class FoundedCompany < Organization
     RESOURCE_LIST = 'founded_companies'
 
     #

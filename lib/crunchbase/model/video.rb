@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Video < Crunchbase::Model::Entity
+  class Video < Entity
     RESOURCE_LIST = 'videos'
 
     attr_reader :title, :service_name, :url, :created_at, :updated_at

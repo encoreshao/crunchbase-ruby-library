@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Location < Crunchbase::Model::Entity
+  class Location < Entity
     RESOURCE_LIST = 'locations'
 
     attr_reader :web_path, :name, :location_type, :parent_location_uuid,
@@ -18,10 +18,12 @@ module Crunchbase::Model
 
     def initialize(json)
       super
+    end
 
-      unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::ParentLocation, 'parent_locations', relationships['parent_locations'])
-      end
+    def relationship_lists
+      {
+        'parent_locations' => ParentLocation
+      }
     end
 
     def property_keys

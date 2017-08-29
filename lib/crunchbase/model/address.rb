@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Address < Crunchbase::Model::Entity
+  class Address < Entity
     RESOURCE_LIST = 'addresses'
 
     attr_reader :name, :street_1, :street_2, :postal_code, :city, :city_web_path, :region, :region_code2, :region_web_path,

@@ -2,26 +2,25 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Investment < Crunchbase::Model::Entity
+  class Investment < Entity
     RESOURCE_LIST = 'investments'
 
-    attr_reader :money_invested, :money_invested_currency_code, :money_invested_usd, :is_lead_investor, :created_at, :updated_at
-
-    attr_reader :funding_round, :invested_in, :investors
+    attr_reader :money_invested, :money_invested_currency_code, :money_invested_usd, :is_lead_investor,
+                :funding_round, :invested_in, :investors, :created_at, :updated_at
 
     def initialize(json)
       super
 
-      unless (relationships = json['relationships']).nil?
-        instance_relationships_object(Crunchbase::Model::FundingRound, 'funding_round', relationships['funding_round'])
+      relationships = json['relationships']
+      return if relationships.nil?
 
-        unless relationships['investors'].nil?
-          if relationships['investors'].is_a?(Array)
-            instance_multi_relationships_object(Crunchbase::Model::Investor, 'investors', relationships['investors'])
-          else
-            instance_relationships_object(Crunchbase::Model::Investor, 'investors', relationships['investors'])
-          end
-        end
+      instance_relationships_object(FundingRound, 'funding_round', relationships['funding_round'])
+      return if relationships['investors'].nil?
+
+      if relationships['investors'].is_a?(Array)
+        instance_multi_relationships_object(Investor, 'investors', relationships['investors'])
+      else
+        instance_relationships_object(Investor, 'investors', relationships['investors'])
       end
     end
 
@@ -33,7 +32,6 @@ module Crunchbase::Model
     end
 
     private
-
     def instance_multi_relationships_object(object_name, key, items)
       multi_items = []
 

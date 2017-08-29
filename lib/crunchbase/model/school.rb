@@ -2,6 +2,6 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class School < Crunchbase::Model::Organization
+  class School < Organization
   end
 end

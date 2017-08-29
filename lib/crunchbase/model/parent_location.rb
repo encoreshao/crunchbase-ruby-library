@@ -2,6 +2,6 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class ParentLocation < Crunchbase::Model::Location
+  class ParentLocation < Location
   end
 end

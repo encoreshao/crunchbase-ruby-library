@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Investor < Crunchbase::Model::Entity
+  class Investor < Entity
     RESOURCE_LIST = 'investors'
 
     attr_reader :object

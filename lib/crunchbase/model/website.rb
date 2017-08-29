@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Website < Crunchbase::Model::Entity
+  class Website < Entity
     RESOURCE_LIST = 'websites'
 
     attr_reader :url, :created_at, :updated_at

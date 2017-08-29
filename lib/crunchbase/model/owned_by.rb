@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class OwnedBy < Crunchbase::Model::Entity
+  class OwnedBy < Entity
     attr_reader :name, :api_path, :web_path, :created_at, :updated_at
 
     def initialize(json)

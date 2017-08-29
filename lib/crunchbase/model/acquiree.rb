@@ -2,6 +2,6 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Acquiree < Crunchbase::Model::Organization
+  class Acquiree < Organization
   end
 end

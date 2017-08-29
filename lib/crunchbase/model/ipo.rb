@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Ipo < Crunchbase::Model::Entity
+  class Ipo < Entity
     RESOURCE_LIST = RESOURCE_NAME = 'ipos'
 
     attr_reader :api_path, :web_path, :went_public_on, :went_public_on_trust_code,
@@ -17,12 +17,14 @@ module Crunchbase::Model
 
     def initialize(json)
       super
+    end
 
-      unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::Organization, 'funded_company', relationships['funded_company'])
-        set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
-        set_relationships_object(Crunchbase::Model::Video, 'videos', relationships['videos'])
-      end
+    def relationship_lists
+      {
+        'funded_company' => Organization,
+        'news' => New,
+        'videos' => Video
+      }
     end
 
     def property_keys

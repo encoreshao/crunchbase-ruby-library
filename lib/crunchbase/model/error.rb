@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Error < Crunchbase::Model::Entity
+  class Error < Entity
     attr_reader :message, :code
 
     def initialize(json)

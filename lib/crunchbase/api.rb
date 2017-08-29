@@ -36,7 +36,7 @@ module Crunchbase
 
     @timeout_limit  = 60
     @redirect_limit = 2
-    @debug          = false
+    @debug = false
 
     # Must be overridden in subclasses
     RESOURCE_NAME         = 'undefined'
@@ -51,7 +51,7 @@ module Crunchbase
       attr_accessor :timeout_limit, :redirect_limit, :key, :debug
 
       def api_url
-        API_BASE_URL.gsub(/\/$/, '') + '/' + API_VERSION + '/'
+        API_BASE_URL.gsub(/\/$/, '') + '/v' + API_VERSION + '/'
       end
 
       def single_entity(permalink, entity_name)
@@ -62,11 +62,9 @@ module Crunchbase
 
       # Returns the JSON parser, whether that's an instance of Yajl or JSON
       def parser
-        if defined?(Yajl)
-          Yajl::Parser
-        else
-          JSON
-        end
+        return Yajl::Parser if defined?(Yajl)
+
+        JSON
       end
 
       # Fetches URI for the permalink interface.

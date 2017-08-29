@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Founder < Crunchbase::Model::Person
+  class Founder < Person
     RESOURCE_LIST = 'founders'
   end
 end

@@ -2,14 +2,14 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class PrimaryAffiliation < Crunchbase::Model::Job
+  class PrimaryAffiliation < Job
     attr_reader :organization
 
     def initialize(json)
       super
 
       unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::Organization, 'organization', relationships['organization'])
+        set_relationships_object(Organization, 'organization', relationships['organization'])
       end
     end
 

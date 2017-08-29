@@ -2,7 +2,7 @@
 # encoding utf-8
 
 module Crunchbase::Model
-  class FundRaise < Crunchbase::Model::Entity
+  class FundRaise < Entity
     RESOURCE_LIST = 'funds'
 
     attr_reader :name, :path, :created_at, :updated_at

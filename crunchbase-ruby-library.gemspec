@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.version       = Crunchbase::VERSION
   spec.authors       = ['Encore Shao']
   spec.email         = ['encore.shao@gmail.com']
-  spec.summary       = ' A Ruby wrapper for Crunchbase API v3.1 '
-  spec.description   = ' A Ruby wrapper for Crunchbase API version 3.1 '
+  spec.summary       = 'A Ruby wrapper for Crunchbase API v3.1'
+  spec.description   = 'A Ruby wrapper for Crunchbase API version 3.1'
   spec.homepage      = 'https://github.com/encoreshao/crunchbase-ruby-library'
   spec.license       = 'MIT'
 

@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Product < Crunchbase::Model::Entity
+  class Product < Entity
     RESOURCE_LIST = RESOURCE_NAME = 'products'
 
     attr_reader :permalink, :api_path, :web_path, :name, :also_known_as,
@@ -20,14 +20,16 @@ module Crunchbase::Model
 
     def initialize(json)
       super
+    end
 
-      unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::Category, 'categories', relationships['categories'])
-        set_relationships_object(Crunchbase::Model::PrimaryImage, 'primary_image', relationships['primary_image'])
-        set_relationships_object(Crunchbase::Model::Image, 'images', relationships['images'])
-        set_relationships_object(Crunchbase::Model::Video, 'video', relationships['video'])
-        set_relationships_object(Crunchbase::Model::New, 'news', relationships['news'])
-      end
+    def relationship_lists
+      {
+        'categories' => Category,
+        'primary_image' => PrimaryImage,
+        'images' => Image,
+        'video' => Video,
+        'news' => New
+      }
     end
 
     def property_keys

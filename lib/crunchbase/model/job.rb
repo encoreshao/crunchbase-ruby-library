@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Crunchbase::Model
-  class Job < Crunchbase::Model::Entity
+  class Job < Entity
     RESOURCE_LIST = 'jobs'
 
     attr_reader :title, :started_on, :started_on_trust_code, :ended_on, :ended_on_trust_code,
@@ -12,11 +12,13 @@ module Crunchbase::Model
 
     def initialize(json)
       super
+    end
 
-      unless (relationships = json['relationships']).nil?
-        instance_relationships_object(Crunchbase::Model::Person, 'person', relationships['person'])
-        instance_relationships_object(Crunchbase::Model::Organization, 'organization', relationships['organization'])
-      end
+    def relationship_lists
+      {
+        'person' => Person,
+        'organization' => Organization
+      }
     end
 
     def property_keys
