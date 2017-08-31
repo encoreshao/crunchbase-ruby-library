@@ -2,6 +2,5 @@
 
 module Crunchbase::Model
   RSpec.describe FundRaise do
-
   end
 end
