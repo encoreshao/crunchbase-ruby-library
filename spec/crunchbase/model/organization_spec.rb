@@ -15,55 +15,22 @@ module Crunchbase
           allow(Organization).to receive(:get).and_return(result)
         end
 
-        it 'should return facebook as name from API' do
+        it 'should return facebook and Facebook from API' do
+          expect(without_organization.permalink).to eq('facebook')
           expect(without_organization.name).to eq('Facebook')
         end
 
-        it 'should return facebook as permalink from API' do
-          expect(without_organization.permalink).to eq('facebook')
-        end
-
-        it 'should return nil when without products relationships' do
+        it 'should return nil when without relationships' do
           expect(without_organization.products.nil?).to be_truthy
-        end
-
-        it 'should return nil when without offices relationships' do
           expect(without_organization.offices.nil?).to be_truthy
-        end
-
-        it 'should return nil when without funding_rounds relationships' do
           expect(without_organization.funding_rounds.nil?).to be_truthy
-        end
-
-        it 'should return nil when without competitors relationships' do
           expect(without_organization.competitors.nil?).to be_truthy
-        end
-
-        it 'should return nil when without investments relationships' do
           expect(without_organization.investments.nil?).to be_truthy
-        end
-
-        it 'should return nil when without acquisitions relationships' do
           expect(without_organization.acquisitions.nil?).to be_truthy
-        end
-
-        it 'should return nil when without ipo relationships' do
           expect(without_organization.ipo.nil?).to be_truthy
-        end
-
-        it 'should return nil when without categories relationships' do
           expect(without_organization.categories.nil?).to be_truthy
-        end
-
-        it 'should return nil when without news relationships' do
           expect(without_organization.news.nil?).to be_truthy
-        end
-
-        it 'should return nil when without current_team relationships' do
           expect(without_organization.current_team.nil?).to be_truthy
-        end
-
-        it 'should return nil when without websites relationships' do
           expect(without_organization.websites.nil?).to be_truthy
         end
       end
@@ -77,12 +44,9 @@ module Crunchbase
           allow(Organization).to receive(:get).and_return(result)
         end
 
-        it 'should return facebook as name from API' do
-          expect(organization.name).to eq('Facebook')
-        end
-
-        it 'should return facebook as permalink from API' do
+        it 'should return facebook and Facebook from API' do
           expect(organization.permalink).to eq('facebook')
+          expect(organization.name).to eq('Facebook')
         end
 
         it 'should return one primary_image' do
@@ -90,8 +54,9 @@ module Crunchbase
           expect(organization.primary_image_total_items).to eq(1)
         end
 
-        it 'should return 0 of products' do
+        it 'should return 0 of products and competitors' do
           expect(organization.products.size).to eq(0)
+          expect(organization.competitors.size).to eq(0)
         end
 
         it 'should return 1 of offices - OneToOne' do
@@ -101,10 +66,6 @@ module Crunchbase
 
         it 'should return 10 of funding_rounds' do
           expect(organization.funding_rounds.size).to eq(10)
-        end
-
-        it 'should return 0 of competitors' do
-          expect(organization.competitors.size).to eq(0)
         end
 
         it 'should return 9 of investments' do

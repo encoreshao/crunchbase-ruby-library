@@ -13,10 +13,10 @@ module Crunchbase::Model
       end
     end
 
-    def set_relationships_object(object_name, key, item)
+    def set_relationships_object(kclass_name, key, item)
       return unless item
 
-      instance_variable_set "@#{key}", (object_name.new(item) || nil)
+      instance_variable_set "@#{key}", (kclass_name.new(item) || nil)
     end
   end
 end

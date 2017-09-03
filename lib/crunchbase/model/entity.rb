@@ -43,7 +43,7 @@ module Crunchbase::Model
       fetch_object = get_fetch_object
       return [] if fetch_object.empty?
 
-      fetch_object[0].new API.fetch(permalink, fetch_object[1])
+      fetch_object[0].new Crunchbase::API.fetch(permalink, fetch_object[1])
     end
 
     # TODO: need to be implement
@@ -59,37 +59,45 @@ module Crunchbase::Model
       {}
     end
 
-    def set_relationships_object(object_name, key, list)
+    def set_relationships_object(kclass_name, key, list)
       return unless list
 
-      one_to_one(object_name, key, list['item']) if list['item']
-      one_to_many(object_name, key, list) if list['items']
+      one_to_one(kclass_name, key, list['item']) if list['item']
+      one_to_many(kclass_name, key, list) if list['items']
     end
 
-    def one_to_one(object_name, key, item)
+    def one_to_one(kclass_name, key, item)
       return unless item
 
-      instance_variable_set "@#{key}", (object_name.new(item) || nil)
+      instance_variable_set "@#{key}", (kclass_name.new(item) || nil)
       instance_variable_set "@#{key}_total_items", (item ? 1 : 0)
     end
 
-    def one_to_many(object_name, key, list)
+    def one_to_many(kclass_name, key, list)
       return unless list['items'].respond_to?(:each)
 
-      instance_variable_set "@#{key}", list['items'].inject([]) { |v, i| v << object_name.new(i) }
+      instance_variable_set "@#{key}", list['items'].inject([]) { |v, i| v << kclass_name.new(i) }
       instance_variable_set "@#{key}_total_items", list['paging']['total_items']
     end
 
-    def instance_relationships_object(object_name, key, item)
+    def instance_relationships_object(kclass, key, item)
       return unless item
 
-      instance_variable_set "@#{key}", (object_name.new(item) || nil)
+      instance_variable_set "@#{key}", (kclass.new(item) || nil)
+    end
+
+    def instance_multi_relationship_objects(kclass, key, items)
+      multi_items = []
+
+      items.map { |item| multi_items << kclass.new(item || nil) }
+      instance_variable_set "@#{key}", multi_items
+      instance_variable_set "@#{key}_total_items", multi_items.size
     end
 
     class << self
       # Factory method to return an instance from a permalink
       def get(permalink)
-        result = API.single_entity(permalink, self::RESOURCE_NAME)
+        result = Crunchbase::API.single_entity(permalink, self::RESOURCE_NAME)
 
         new(result)
       end
@@ -97,25 +105,25 @@ module Crunchbase::Model
       def list(page = nil)
         model_name = kclass_name(self::RESOURCE_LIST)
 
-        API.list({ page: page, model_name: model_name }, self::RESOURCE_LIST)
+        Crunchbase::API.list({ page: page, model_name: model_name }, self::RESOURCE_LIST)
       end
 
       def organization_lists(permalink, options = {})
         options = options.merge(model_name: self)
 
-        API.organization_lists(permalink, self::RESOURCE_LIST, options)
+        Crunchbase::API.organization_lists(permalink, self::RESOURCE_LIST, options)
       end
 
       def person_lists(permalink, options = {})
         options = options.merge(model_name: self)
 
-        API.person_lists(permalink, self::RESOURCE_LIST, options)
+        Crunchbase::API.person_lists(permalink, self::RESOURCE_LIST, options)
       end
 
       def funding_rounds_lists(permalink, options = {})
         options = options.merge(model_name: self)
 
-        API.funding_rounds_lists(permalink, self::RESOURCE_LIST.tr('_', '-'), options)
+        Crunchbase::API.funding_rounds_lists(permalink, self::RESOURCE_LIST.tr('_', '-'), options)
       end
 
       def array_from_list(list)

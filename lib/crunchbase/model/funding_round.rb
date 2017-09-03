@@ -23,10 +23,9 @@ module Crunchbase::Model
       relationships = json['relationships']
       return if relationships.nil?
 
-      # set_relationships_object(Investment, 'investments', relationships['investments'])
+      instance_multi_relationship_objects(Investment, 'investments', relationships['investments'])
 
       return if relationships['funded_organization'].nil?
-
       if relationships['funded_organization']['item'].nil?
         # Get organization's  (investments - funding - organization)
         instance_relationships_object(Organization, 'funded_organization', relationships['funded_organization'])
@@ -37,7 +36,8 @@ module Crunchbase::Model
       end
     end
 
-    def relationship_lists
+    def
+    def(_relationship_lists)
       {
         'images' => Image,
         'videos' => Video,

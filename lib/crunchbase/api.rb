@@ -31,7 +31,8 @@ module Crunchbase
       'videos' => Model::Video,
       'founded_companies' => Model::FoundedCompany,
       'primary_location' => Model::PrimaryLocation,
-      'advisor_at' => Model::AdvisoryRole
+      'advisor_at' => Model::AdvisoryRole,
+      'investors' => Model::Organization
     }.freeze
 
     @timeout_limit  = 60
@@ -68,8 +69,8 @@ module Crunchbase
       end
 
       # Fetches URI for the permalink interface.
-      def fetch(permalink, object_name)
-        get_json_response(api_url + "#{object_name}/#{permalink}")
+      def fetch(permalink, kclass_name)
+        get_json_response(api_url + "#{kclass_name}/#{permalink}")
       end
 
       # Fetches URI for the search interface.
@@ -102,12 +103,10 @@ module Crunchbase
         lists_for_category('organizations', permalink, category, options)
       end
 
-      # Visit: https://api.crunchbase.com/v/#{version}/people/#{permalink}/#{category}?user_key=key
       def person_lists(permalink, category, options)
         lists_for_category('people', permalink, category, options)
       end
 
-      # Visit: https://api.crunchbase.com/v/#{version}/funding-rounds/#{permalink}/#{category}?user_key=key
       def funding_rounds_lists(permalink, category, options)
         lists_for_category('funding-rounds', permalink, category, options)
       end
@@ -123,10 +122,10 @@ module Crunchbase
       end
 
       # Gets specified URI, then parses the returned JSON. Raises Timeout error
-      # if request time exceeds set limit. Raises Crunchbase::Exception if returned
-      # JSON contains an error.
+      #   if request time exceeds set limit. Raises Crunchbase::Exception if returned
+      #   JSON contains an error.
       def get_json_response(uri)
-        raise Crunchbase::Exception, 'User key required, visit http://data.crunchbase.com' unless @key
+        raise Crunchbase::Exception, 'User key required, visit https://data.crunchbase.com/v3.1/docs' unless @key
         uri += "#{uri =~ /\?/ ? '&' : '?'}user_key=#{@key}"
 
         resp = Timeout.timeout(@timeout_limit) do

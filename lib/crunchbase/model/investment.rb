@@ -6,7 +6,9 @@ module Crunchbase::Model
     RESOURCE_LIST = 'investments'
 
     attr_reader :money_invested, :money_invested_currency_code, :money_invested_usd, :is_lead_investor,
-                :funding_round, :invested_in, :investors, :created_at, :updated_at
+                :announced_on, :announced_on_trust_code, :created_at, :updated_at
+
+    attr_reader :investors, :partners
 
     def initialize(json)
       super
@@ -14,14 +16,8 @@ module Crunchbase::Model
       relationships = json['relationships']
       return if relationships.nil?
 
-      instance_relationships_object(FundingRound, 'funding_round', relationships['funding_round'])
-      return if relationships['investors'].nil?
-
-      if relationships['investors'].is_a?(Array)
-        instance_multi_relationships_object(Investor, 'investors', relationships['investors'])
-      else
-        instance_relationships_object(Investor, 'investors', relationships['investors'])
-      end
+      instance_relationships_object(Organization, 'investors', relationships['investors'])
+      instance_multi_relationship_objects(Person, 'partners', relationships['partners'])
     end
 
     def property_keys
@@ -31,15 +27,15 @@ module Crunchbase::Model
       )
     end
 
-    private
-    def instance_multi_relationships_object(object_name, key, items)
-      multi_items = []
-
-      items.each do |item|
-        multi_items << object_name.new(item || nil)
-      end
-
-      instance_variable_set "@#{key}", multi_items
+    def date_keys
+      %w(announced_on)
     end
+
+    # def relationship_lists
+    #   {
+    #     'investors' => Organization,
+    #     'partners' => Person
+    #   }
+    # end
   end
 end

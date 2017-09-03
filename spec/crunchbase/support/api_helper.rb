@@ -8,4 +8,8 @@ module ApiHelper
   def load_file(endpoint, filename)
     File.read(File.join(File.dirname(__FILE__), "../data/#{endpoint}", "#{filename}.json"))
   end
+
+  def search_results(data, kclass)
+    Crunchbase::Model::Search.new({}, data, kclass)
+  end
 end
