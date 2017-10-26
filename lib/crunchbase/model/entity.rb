@@ -98,9 +98,12 @@ module Crunchbase::Model
 
     def set_relationships_object(object_name, key, list)
       return unless list
-
-      one_to_one(object_name, key, list['item']) if list['item']
-      one_to_many(object_name, key, list) if list['items']
+      if list.is_a? Array
+        one_to_many(object_name, key, list)
+      elsif list.is_a? Hash
+        one_to_one(object_name, key, list['item']) if list['item']
+        one_to_many(object_name, key, list['items']) if list['items']
+      end
     end
 
     def one_to_one(object_name, key, item)
@@ -111,10 +114,14 @@ module Crunchbase::Model
     end
 
     def one_to_many(object_name, key, list)
-      return unless list['items'].respond_to?(:each)
+      return unless list.respond_to?(:each)
 
-      instance_variable_set "@#{key}", list['items'].inject([]) { |v, i| v << object_name.new(i) }
-      instance_variable_set "@#{key}_total_items", list['paging']['total_items']
+      instance_variable_set "@#{key}", list.inject([]) { |v, i| v << object_name.new(i) }
+      if list.is_a? Array
+        instance_variable_set "@#{key}_total_items", list.size
+      else
+        instance_variable_set "@#{key}_total_items", list['paging']['total_items']
+      end
     end
 
     def instance_relationships_object(object_name, key, item)
