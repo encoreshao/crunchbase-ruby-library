@@ -36,7 +36,7 @@ module Crunchbase
 
     @timeout_limit  = 60
     @redirect_limit = 2
-    @version        = '3'
+    @version        = '3.1'
     @base_url       = 'https://api.crunchbase.com'
     @site_url       = "https://www.crunchbase.com"
     @image_url      = "https://res.cloudinary.com/crunchbase-production/"
@@ -55,7 +55,7 @@ module Crunchbase
       attr_accessor :timeout_limit, :redirect_limit, :key, :base_url, :version, :debug, :image_url, :site_url
 
       def api_url
-        base_url.gsub(/\/$/, '') + '/v/' + version + '/'
+        base_url.gsub(/\/$/, '') + '/v' + version + '/'
       end
     end
 
@@ -144,6 +144,11 @@ module Crunchbase
       }
 
       _response = parser.parse(resp)
+      if _response.is_a? Array
+        _response = _response.first
+        _response['error'] = _response['message']
+      end
+
       raise Crunchbase::Exception, { message: _response["error"], code: _response["status"].to_i } unless _response["error"].nil?
 
       response = _response["data"]
