@@ -101,6 +101,11 @@ module Crunchbase
         it 'should return 10 of websites' do
           expect(organization.websites.size).to eq(4)
         end
+
+        it 'should return 10 of investors item and total pages count 20' do
+          expect(organization.investors.size).to eq(10)
+          expect(organization.investors_total_items).to eq(20)
+        end
       end
     end
   end

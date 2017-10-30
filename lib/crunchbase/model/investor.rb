@@ -8,8 +8,8 @@ module Crunchbase::Model
     attr_reader :object
 
     def initialize(json)
-      instance_relationships_object(Crunchbase::Model::Person, 'object', json) if json['type'] == 'Person'
-      instance_relationships_object(Crunchbase::Model::Organization, 'object', json) if json['type'] == 'Organization'
+      instance_relationships_object(Person, 'object', json) if json['type'] == 'Person'
+      instance_relationships_object(Organization, 'object', json) if json['type'] == 'Organization'
     end
 
     def person?
