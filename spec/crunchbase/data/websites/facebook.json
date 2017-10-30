@@ -1,0 +1,74 @@
+{
+  "metadata":
+  {
+    "version": 31,
+    "www_path_prefix": "https://www.crunchbase.com",
+    "api_path_prefix": "https://api.crunchbase.com",
+    "image_path_prefix": "http://public.crunchbase.com/t_api_images/"
+  },
+  "data":
+  {
+    "paging":
+    {
+      "total_items": 4,
+      "number_of_pages": 1,
+      "current_page": 1,
+      "sort_order": "created_at DESC",
+      "items_per_page": 100,
+      "next_page_url": null,
+      "prev_page_url": null,
+      "key_set_url": null,
+      "collection_url": "https://api.crunchbase.com/v3.1/organizations/facebook/websites",
+      "updated_since": null
+    },
+    "items": [
+    {
+      "type": "Website",
+      "uuid": "df6628127f970b439d3e12f64f504fbb",
+      "properties":
+      {
+        "website_type": "homepage",
+        "website_name": "homepage",
+        "url": "http://www.facebook.com",
+        "created_at": 1180153335,
+        "updated_at": 1509356721
+      }
+    },
+    {
+      "type": "Website",
+      "uuid": "df6628127f970b439d3e12f64f504fbb",
+      "properties":
+      {
+        "website_type": "facebook",
+        "website_name": "facebook",
+        "url": "https://www.facebook.com/facebook/",
+        "created_at": 1180153335,
+        "updated_at": 1509356721
+      }
+    },
+    {
+      "type": "Website",
+      "uuid": "df6628127f970b439d3e12f64f504fbb",
+      "properties":
+      {
+        "website_type": "twitter",
+        "website_name": "twitter",
+        "url": "https://twitter.com/facebook",
+        "created_at": 1180153335,
+        "updated_at": 1509356721
+      }
+    },
+    {
+      "type": "Website",
+      "uuid": "df6628127f970b439d3e12f64f504fbb",
+      "properties":
+      {
+        "website_type": "linkedin",
+        "website_name": "linkedin",
+        "url": "http://www.linkedin.com/company/facebook",
+        "created_at": 1180153335,
+        "updated_at": 1509356721
+      }
+    }]
+  }
+}

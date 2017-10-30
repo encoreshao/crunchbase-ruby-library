@@ -98,7 +98,7 @@ module Crunchbase
           expect(organization.current_team.size).to eq(10)
         end
 
-        it 'should return 10 of websites' do
+        it 'should return 4 of websites' do
           expect(organization.websites.size).to eq(4)
         end
 
