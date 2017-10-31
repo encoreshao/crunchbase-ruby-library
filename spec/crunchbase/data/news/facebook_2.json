@@ -1,0 +1,1426 @@
+{
+  "metadata":
+  {
+    "version": 31,
+    "www_path_prefix": "https://www.crunchbase.com",
+    "api_path_prefix": "https://api.crunchbase.com",
+    "image_path_prefix": "http://public.crunchbase.com/t_api_images/"
+  },
+  "data":
+  {
+    "paging":
+    {
+      "total_items": 263163,
+      "number_of_pages": 2632,
+      "current_page": 2,
+      "sort_order": "posted_on DESC",
+      "items_per_page": 100,
+      "next_page_url": "https://api.crunchbase.com/v3.1/organizations/facebook/news?page=3&sort_order=posted_on%20DESC&items_per_page=100",
+      "prev_page_url": "https://api.crunchbase.com/v3.1/organizations/facebook/news?page=1&sort_order=posted_on%20DESC&items_per_page=100",
+      "key_set_url": null,
+      "collection_url": "https://api.crunchbase.com/v3.1/organizations/facebook/news",
+      "updated_since": null
+    },
+    "items": [
+    {
+      "type": "News",
+      "uuid": "36474c1cd9acfc2717e1974fbc7f1bdb",
+      "properties":
+      {
+        "title": "Teens favoring Snapchat and Instagram over Facebook, says eMarketer",
+        "author": "Natasha Lomas",
+        "posted_on": "2017-08-22",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/22/teens-favoring-snapchat-and-instagram-over-facebook-says-emarketer/",
+        "created_at": 1503426171,
+        "updated_at": 1503426224
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "14c521b649b81accd858cba21bbb4614",
+      "properties":
+      {
+        "title": "Facebook’s Safety Check feature gets its own dedicated button, can be accessed anytime",
+        "author": "Sarah Perez",
+        "posted_on": "2017-08-21",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/21/facebooks-safety-check-feature-gets-its-own-dedicated-button-can-be-accessed-anytime/",
+        "created_at": 1503406275,
+        "updated_at": 1503406275
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d80d9bb4d5b7506018e572bb0a02146e",
+      "properties":
+      {
+        "title": "How Facebook prioritizes privacy when you die",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-18",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/18/facebook-after-death/",
+        "created_at": 1503078432,
+        "updated_at": 1503078432
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "05bb17ae95b94d049818a3cb2d3ce32f",
+      "properties":
+      {
+        "title": "Prefeitura lança a São Paulo Tech Week 2017",
+        "author": null,
+        "posted_on": "2017-08-18",
+        "posted_on_trust_code": 7,
+        "url": "https://imasters.com.br/noticia/prefeitura-lanca-sao-paulo-tech-week-2017/",
+        "created_at": 1507915685,
+        "updated_at": 1507915685
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e2a7ac00dc777ae831984a5ab886b4d6",
+      "properties":
+      {
+        "title": "Facebook downranks video clickbait and fake play buttons",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-17",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/17/facebook-fake-play-buttons/",
+        "created_at": 1502991841,
+        "updated_at": 1502991841
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "8cd64eeac0fd86543af0a3ef6637dee3",
+      "properties":
+      {
+        "title": "45 million people send birthday wishes on Facebook each day",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-16",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/16/facebook-birthday-video-fundraiser/",
+        "created_at": 1502901387,
+        "updated_at": 1502901387
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "5b42c520e0e0176b26747672bfc82651",
+      "properties":
+      {
+        "title": "Facebook adds eBay’s Daily Deals to its Marketplace on mobile",
+        "author": "Sarah Perez",
+        "posted_on": "2017-08-15",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/15/facebook-adds-ebays-daily-deals-to-its-marketplace-on-mobile/",
+        "created_at": 1502818318,
+        "updated_at": 1502818369
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "3c7d3bd689040b4ed424df88fc9158a4",
+      "properties":
+      {
+        "title": "Facebook and Instagram get redesigns for readability",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-15",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/15/facebook-instagram-comments/",
+        "created_at": 1502819286,
+        "updated_at": 1502819399
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "41058847ee207f8edd4b5a5599b74f65",
+      "properties":
+      {
+        "title": "Facebook boosts snubbed Stories Camera with Live, GIF, & text sharing",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-15",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/15/facebook-camera-gifs-live/",
+        "created_at": 1502819211,
+        "updated_at": 1502819211
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "c91beac402659531565484e5d5a4a3ef",
+      "properties":
+      {
+        "title": "What Facebook, Twitter, YouTube and others are doing to tackle hate speech",
+        "author": "Brian Heater",
+        "posted_on": "2017-08-15",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/15/what-facebook-twitter-youtube-and-others-are-doing-to-tackle-hate-speech/",
+        "created_at": 1502886319,
+        "updated_at": 1502886636
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "2492061c0b99b6eaa1d6e94603608df3",
+      "properties":
+      {
+        "title": "Mighty Hawthorn can't match the history of Jeff Kennett's new role at EQT",
+        "author": "Colin Kruger",
+        "posted_on": "2017-08-14",
+        "posted_on_trust_code": 7,
+        "url": "http://www.smh.com.au/business/mighty-hawthorn-cant-match-the-history-of-jeff-kennetts-new-role-at-eqt-20170814-gxvmy5.html",
+        "created_at": 1502728447,
+        "updated_at": 1502728447
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "6b545ea327c53a2172c0602590b1519f",
+      "properties":
+      {
+        "title": "Facebook is rolling out a Trending News section on mobile, now with its own link",
+        "author": "Sarah Perez",
+        "posted_on": "2017-08-14",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/14/facebook-is-rolling-out-a-trending-news-section-on-mobile-now-with-its-own-link/",
+        "created_at": 1502731938,
+        "updated_at": 1502731938
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "6b4687199caa46f3be7d3af480565ec9",
+      "properties":
+      {
+        "title": "Onavo: Facebooks VPN-Dienst spioniert Nutzer aus",
+        "author": "Denise Bergert |",
+        "posted_on": "2017-08-11",
+        "posted_on_trust_code": 7,
+        "url": "https://mobil.pcwelt.de/a/onavo-facebooks-vpn-dienst-spioniert-nutzer-aus,3447748",
+        "created_at": 1502522435,
+        "updated_at": 1502522435
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d440beb7edc1344d8c4f07b9c34c22ba",
+      "properties":
+      {
+        "title": "The 2017/2018 Premier League Kicks off on Flow",
+        "author": null,
+        "posted_on": "2017-08-10",
+        "posted_on_trust_code": 7,
+        "url": "http://www.marketwired.com/press-release/the-2017-2018-premier-league-kicks-off-on-flow-nasdaq-lbtya-2229801.htm",
+        "created_at": 1502635360,
+        "updated_at": 1502635360
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "aea16770201e489c8a0d0f389001c478",
+      "properties":
+      {
+        "title": "Facebook password stealing software comes packed with a trojan that steals your passwords",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-08-10",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/10/facebook-password-stealing-software-comes-packed-with-a-trojan-that-steals-your-passwords/",
+        "created_at": 1502386148,
+        "updated_at": 1502386148
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "dd0e1e27ca3b9aefb9beaa19b4334a8d",
+      "properties":
+      {
+        "title": "Exit Nation: Israeli Gaming Company Plarium Sold To Australia’s Aristocrat For $500M",
+        "author": null,
+        "posted_on": "2017-08-10",
+        "posted_on_trust_code": 7,
+        "url": "http://nocamels.com/2017/08/aristocrat-buys-israeli-gaming-plarium",
+        "created_at": 1502496106,
+        "updated_at": 1502496106
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "889b5e97f045c46070eedf44916fb89e",
+      "properties":
+      {
+        "title": "Google CEO cancels diversity all-hands meeting due to leaks",
+        "author": "Steven Musil",
+        "posted_on": "2017-08-10",
+        "posted_on_trust_code": 7,
+        "url": "https://www.cnet.com/news/google-cancels-all-hands-meeting-on-diversity-firestorm-james-damore/",
+        "created_at": 1502611757,
+        "updated_at": 1502611757
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "a52c377f384098c0fb1ccc4a74b3ebb6",
+      "properties":
+      {
+        "title": "Facebook bans ‘cloaking’ of spam sites that fool filters",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-09",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/09/facebook-cloaking/",
+        "created_at": 1502296109,
+        "updated_at": 1502296109
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "677b83f90c840c9e0dec37d8b0f1907c",
+      "properties":
+      {
+        "title": "Facebook launches Watch tab of original video shows",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-09",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/09/facebook-watch/",
+        "created_at": 1502367950,
+        "updated_at": 1502367950
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b7e7253e1474c919d26905324965485e",
+      "properties":
+      {
+        "title": "Leaders from Iconic Companies like Facebook & Airbnb Reveal Secrets to Product Design in 3 New Books from InVision",
+        "author": null,
+        "posted_on": "2017-08-08",
+        "posted_on_trust_code": 7,
+        "url": "http://www.prweb.com/releases/2017/08/prweb14581340.htm",
+        "created_at": 1502292795,
+        "updated_at": 1502292795
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "97492c58ba502ca8ecd4f93754977f84",
+      "properties":
+      {
+        "title": "Facebook shuts down its Snapchat competitor Lifestage and its standalone Groups app",
+        "author": "Sarah Perez",
+        "posted_on": "2017-08-08",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/08/facebook-shuts-down-its-snapchat-competitor-lifestage-and-its-standalone-groups-app/",
+        "created_at": 1502218684,
+        "updated_at": 1502218794
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d01fb30499a3ae58b3024319f86aceba",
+      "properties":
+      {
+        "title": "Upper Deck expands past tabletop games with Legendary DXP, a digital card battler",
+        "author": "Stephanie Chan",
+        "posted_on": "2017-08-08",
+        "posted_on_trust_code": 7,
+        "url": "https://venturebeat.com/2017/08/08/upper-deck-expands-past-tabletop-games-with-legendary-dxp-a-digital-card-battler/",
+        "created_at": 1502747288,
+        "updated_at": 1502747288
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "f3c25967502cdc031e97731f29d7ecb4",
+      "properties":
+      {
+        "title": "Google anti-diversity policy memo goes viral at tech giant",
+        "author": null,
+        "posted_on": "2017-08-08",
+        "posted_on_trust_code": 7,
+        "url": "http://www.edmontonsun.com/2017/08/07/google-anti-diversity-policy-memo-goes-viral-at-tech-giant",
+        "created_at": 1502323657,
+        "updated_at": 1502323657
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "ed3c93e060e82196a5b5ca501d05714e",
+      "properties":
+      {
+        "title": "Facebook says it’s removing accidental clicks from its ad network",
+        "author": "Anthony Ha",
+        "posted_on": "2017-08-08",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/08/facebook-unintentional-clicks/",
+        "created_at": 1502211201,
+        "updated_at": 1502211201
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "dc627e6fd761290b1df2d991679e3a77",
+      "properties":
+      {
+        "title": "Time Inc. launches PetHero in a consumer revenue push",
+        "author": "Max Willens",
+        "posted_on": "2017-08-07",
+        "posted_on_trust_code": 7,
+        "url": "https://digiday.com/media/time-inc-launches-pethero-consumer-revenue-push/",
+        "created_at": 1502309895,
+        "updated_at": 1502309895
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "7a3848668b1f64ed195752bd01622058",
+      "properties":
+      {
+        "title": "Beyond the boring blockchain bubble",
+        "author": "Jon Evans",
+        "posted_on": "2017-08-06",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/06/beyond-the-boring-blockchain-bubble/",
+        "created_at": 1502137355,
+        "updated_at": 1502137355
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "73068474218a024589b8535f16c08ea2",
+      "properties":
+      {
+        "title": "Facebook tests ‘going live’ from Facebook Camera, Live Stories like Instagram",
+        "author": "Sarah Perez",
+        "posted_on": "2017-08-04",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/04/facebook-tests-going-live-from-facebook-camera-live-stories-like-instagram/",
+        "created_at": 1501871756,
+        "updated_at": 1501871756
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d2ba37b6e6d31dfa0a4d3b78fe5f2478",
+      "properties":
+      {
+        "title": "Now it’s Snapchat copying Facebook’s ads Power Editor",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-04",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/04/snapchat-advanced-mode/",
+        "created_at": 1501868257,
+        "updated_at": 1501868317
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b2f346abd22a402da1d2bac8f04523b8",
+      "properties":
+      {
+        "title": "Google and Facebook envision Stories for news, not social",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-04",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/04/news-at-your-own-pace/",
+        "created_at": 1501911707,
+        "updated_at": 1502108785
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "2250ffda69ab066618f72aec82b76a75",
+      "properties":
+      {
+        "title": "Debenhams discount voucher codes: This is how beauty fans can get £10 worth of points",
+        "author": "Chantelle Symester",
+        "posted_on": "2017-08-04",
+        "posted_on_trust_code": 7,
+        "url": "http://www.mirror.co.uk/money/debenhams-discount-code-deals-august-5427751",
+        "created_at": 1501964191,
+        "updated_at": 1501964191
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "660bc91129c49e5101f1e7d36f4b6487",
+      "properties":
+      {
+        "title": "Facebook fights fake news with links to other angles",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-03",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/03/facebook-related-articles/",
+        "created_at": 1501765405,
+        "updated_at": 1501765405
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "1c86b90f744054d0969e4c006e1eb423",
+      "properties":
+      {
+        "title": "Facebook finishes its move to neural machine translation",
+        "author": "John Mannes",
+        "posted_on": "2017-08-03",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/03/facebook-finishes-its-move-to-neural-machine-translation/",
+        "created_at": 1501783756,
+        "updated_at": 1501783756
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e96471a965ac52c6aac400fbf99b8422",
+      "properties":
+      {
+        "title": "Facebook begins testing Stories on the desktop",
+        "author": "Sarah Perez",
+        "posted_on": "2017-08-03",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/03/facebook-begins-testing-stories-on-the-desktop/",
+        "created_at": 1501779108,
+        "updated_at": 1501779108
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "2bb3bdab54b862b3ad5c998f82b692d5",
+      "properties":
+      {
+        "title": "How to Win the Talent War - Webcast Announced",
+        "author": null,
+        "posted_on": "2017-08-03",
+        "posted_on_trust_code": 7,
+        "url": "http://www.prweb.com/releases/small-business/talent-webcast/prweb14570339.htm",
+        "created_at": 1501886535,
+        "updated_at": 1501886535
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e57fd7e1b15a0c7cf7a883bdbb6009d5",
+      "properties":
+      {
+        "title": "Facebook will soon start ranking faster loading webpages higher in News Feed",
+        "author": "Sarah Perez",
+        "posted_on": "2017-08-02",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/02/facebook-will-soon-start-ranking-faster-loading-webpages-higher-in-news-feed/",
+        "created_at": 1501695102,
+        "updated_at": 1501695102
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "1983a77150399a2deabc1bcf44c022dc",
+      "properties":
+      {
+        "title": "Twitter explains why it won’t disclose the number of daily users. Kinda.",
+        "author": "Chris O'Brien",
+        "posted_on": "2017-08-02",
+        "posted_on_trust_code": 7,
+        "url": "https://venturebeat.com/2017/08/02/twitter-explains-why-it-wont-disclose-the-number-of-daily-users-kinda/",
+        "created_at": 1502095869,
+        "updated_at": 1502095869
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e609f29af0696fae41ca101129804f16",
+      "properties":
+      {
+        "title": "Facebook’s black employee representation has increased for the first time since 2014",
+        "author": "Megan Rose Dickey",
+        "posted_on": "2017-08-02",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/02/facebooks-black-employee-representation-has-increased-for-the-first-time-since-2014/",
+        "created_at": 1501694995,
+        "updated_at": 1501694995
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "8bbc28014e9602e1bafaf5098fd297b6",
+      "properties":
+      {
+        "title": "Another black activist, Ijeoma Oluo, is suspended by Facebook for posting about racism",
+        "author": "Devin Coldewey",
+        "posted_on": "2017-08-02",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/02/another-black-activist-ijeoma-oluo-is-suspended-by-facebook-for-posting-about-racism/",
+        "created_at": 1501763269,
+        "updated_at": 1501763269
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "94353504f73b8567171a75dcc6ed324f",
+      "properties":
+      {
+        "title": "Real Estate Startup zavvie to Break with the Status Quo at Big Tech Show",
+        "author": "Noelle Bortfeld",
+        "posted_on": "2017-08-02",
+        "posted_on_trust_code": 7,
+        "url": "http://www.marketwired.com/press-release/real-estate-startup-zavvie-to-break-with-the-status-quo-at-big-tech-show-2228685.htm",
+        "created_at": 1501905960,
+        "updated_at": 1501905960
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "1de6deefa9878643ea24c7dfa1927440",
+      "properties":
+      {
+        "title": "YouTube Sweetens The Pot; Marketing Services Crop Up Around Amazon",
+        "author": null,
+        "posted_on": "2017-08-02",
+        "posted_on_trust_code": 7,
+        "url": "https://adexchanger.com/ad-exchange-news/wednesday-08022017/",
+        "created_at": 1501993338,
+        "updated_at": 1501993338
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "4679a0b365dd374d5b75e774a72fe4f2",
+      "properties":
+      {
+        "title": "Facebook said to be working on dedicated video chat device",
+        "author": "Darrell Etherington",
+        "posted_on": "2017-08-01",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/01/facebook-said-to-be-working-on-dedicated-video-chat-device/",
+        "created_at": 1501612252,
+        "updated_at": 1501612252
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "5adb27ebd5184a67dbb2150a22aaecde",
+      "properties":
+      {
+        "title": "Facebook buys Ozlo to boost its conversational AI efforts",
+        "author": "John Mannes",
+        "posted_on": "2017-08-01",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/31/facebook-buys-ozlo-to-boost-its-conversational-ai-efforts/",
+        "created_at": 1501566722,
+        "updated_at": 1501590867
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "4ce705c8c0dfdb4cf0cc16dd3808ffbe",
+      "properties":
+      {
+        "title": "Welcome to the Rise of the Machine-to-Machine. Isn't it time to 'block off' some data ducts?",
+        "author": "Trevor Pott",
+        "posted_on": "2017-08-01",
+        "posted_on_trust_code": 7,
+        "url": "https://www.theregister.co.uk/2017/08/01/isolation_based_security",
+        "created_at": 1501722257,
+        "updated_at": 1501722257
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "844bed5dc6dc7b6fcccfc2b115e1c94a",
+      "properties":
+      {
+        "title": "Snap joins rivals Facebook and YouTube to fight terrorism",
+        "author": "Josh Constine",
+        "posted_on": "2017-08-01",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/31/snap-fights-terrorism/",
+        "created_at": 1501593047,
+        "updated_at": 1501593461
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "bce19336f93cad577110029355873dbd",
+      "properties":
+      {
+        "title": "Why The Information Accelerator Was Always the Future of Journalism",
+        "author": "Adam Rowe",
+        "posted_on": "2017-07-31",
+        "posted_on_trust_code": 7,
+        "url": "https://tech.co/information-accelerator-future-journalism-2017-07",
+        "created_at": 1502425210,
+        "updated_at": 1502425210
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "7e2d9b3311acd7b36e79bb95ea73cc23",
+      "properties":
+      {
+        "title": "A letter from the editor: On tnooz and the journey ahead",
+        "author": null,
+        "posted_on": "2017-07-31",
+        "posted_on_trust_code": 7,
+        "url": "https://www.tnooz.com/article/a-letter-from-the-editor-on-tnooz-and-the-journey-ahead/",
+        "created_at": 1501805385,
+        "updated_at": 1501805385
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d2b0d95388b9376fc166de2726cb567d",
+      "properties":
+      {
+        "title": "How The Duplass Brothers Are Bringing Their Indie Creativity To Brands",
+        "author": "Nicole LaPorte",
+        "posted_on": "2017-07-31",
+        "posted_on_trust_code": 7,
+        "url": "https://www.fastcompany.com/40446366/how-the-duplass-brothers-are-bringing-their-indie-creativity-to-brands",
+        "created_at": 1501546333,
+        "updated_at": 1501546333
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b60c38df20f234666b486e6562bf3104",
+      "properties":
+      {
+        "title": "Facebook, Autodesk partner with a design organization geared toward underserved kids",
+        "author": "Megan Rose Dickey",
+        "posted_on": "2017-07-31",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/31/facebook-autodesk-inneract-project/",
+        "created_at": 1501534196,
+        "updated_at": 1501534237
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "473031da2d5b387dedfdad4083d8ac3e",
+      "properties":
+      {
+        "title": "Facebook Stories unlocks public sharing",
+        "author": "Josh Constine",
+        "posted_on": "2017-07-30",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/30/facebook-stories-public/",
+        "created_at": 1501506744,
+        "updated_at": 1501506744
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "21e10733af3d276a00bd42f9990a1c04",
+      "properties":
+      {
+        "title": "Kids in the House Announces Brooke Burke-Charvet and Leana Greene host live broadcast covering the latest in baby care with eight top experts.",
+        "author": null,
+        "posted_on": "2017-07-28",
+        "posted_on_trust_code": 7,
+        "url": "http://www.prnewswire.com/news-releases/kids-in-the-house-announces-brooke-burke-charvet-and-leana-greene-host-live-broadcast-covering-the-latest-in-baby-care-with-eight-top-experts-300496259.html",
+        "created_at": 1501482705,
+        "updated_at": 1501482705
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "f56a134662ad6aae4311c378586df124",
+      "properties":
+      {
+        "title": "Equity podcast: Facebook good, everyone else bad",
+        "author": "Alex Wilhelm",
+        "posted_on": "2017-07-28",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/28/equity-podcast-facebook-good-everyone-else-bad/",
+        "created_at": 1501250243,
+        "updated_at": 1501250243
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "2bace2cac29fe823710463598a21a3fc",
+      "properties":
+      {
+        "title": "Google Updates: SOS, OK, 60 and £19bn",
+        "author": "Chris Merriman",
+        "posted_on": "2017-07-28",
+        "posted_on_trust_code": 7,
+        "url": "https://www.theinquirer.net/inquirer/news/3014741/google-updates-sos-ok-60-and-19bn",
+        "created_at": 1501377718,
+        "updated_at": 1501377718
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "19024d603c2892790d6f1b811bcd0e66",
+      "properties":
+      {
+        "title": "Facebook’s Instant Articles restore subscription options they previously stripped",
+        "author": "Devin Coldewey",
+        "posted_on": "2017-07-28",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/27/facebooks-instant-articles-restore-subscription-options-they-previously-stripped/",
+        "created_at": 1501245860,
+        "updated_at": 1501245860
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "133ce57be4898cf0bee60d67bd9d76e9",
+      "properties":
+      {
+        "title": "How startup Kite tried to ruin two open source communities",
+        "author": "Matt Asay",
+        "posted_on": "2017-07-28",
+        "posted_on_trust_code": 7,
+        "url": "http://www.techrepublic.com/article/how-startup-kite-tried-to-ruin-two-open-source-communities/",
+        "created_at": 1501545820,
+        "updated_at": 1501545820
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "172f47d0665b44929294cc8419d2de53",
+      "properties":
+      {
+        "title": "VARStreet to Exhibit at CompTIA ChannelCon 2017 - Booth # 716",
+        "author": "VARStreet",
+        "posted_on": "2017-07-28",
+        "posted_on_trust_code": 7,
+        "url": "http://www.prnewswire.com/news-releases/varstreet-to-exhibit-at-comptia-channelcon-2017--booth--716-300496046.html",
+        "created_at": 1501326928,
+        "updated_at": 1501353622
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "51fbcad1cb89eac56ee1ad618453c002",
+      "properties":
+      {
+        "title": "Facebook to Launch Paywall in Response to Publisher Pushback",
+        "author": "David Jones",
+        "posted_on": "2017-07-26",
+        "posted_on_trust_code": 7,
+        "url": "http://www.ecommercetimes.com/story/social-media/84699.html",
+        "created_at": 1501200953,
+        "updated_at": 1501200953
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "77c5f26294149ccc8e40dbf73ae9a3e1",
+      "properties":
+      {
+        "title": "Facebook’s CSO: the security industry needs to change",
+        "author": "Jon Evans",
+        "posted_on": "2017-07-26",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/26/facebooks-cso-the-security-industry-needs-to-change/",
+        "created_at": 1501158980,
+        "updated_at": 1501158980
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "213be964d11c52b1a1a56c3733a212c8",
+      "properties":
+      {
+        "title": "Facebook beats in Q2 with $9.32B revenue despite slower user growth",
+        "author": "Josh Constine",
+        "posted_on": "2017-07-26",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/26/facebook-earnings-q2-2017/",
+        "created_at": 1501175306,
+        "updated_at": 1501175306
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b8b7521aee1ebd90e7c106fd02ba0366",
+      "properties":
+      {
+        "title": "Simon English: ITV’s had its day in the sun and the honeymoon’s over",
+        "author": "Simon English",
+        "posted_on": "2017-07-26",
+        "posted_on_trust_code": 7,
+        "url": "http://www.standard.co.uk/business/simon-english-itv-s-had-its-day-in-the-sun-and-the-honeymoon-s-over-a3596746.html",
+        "created_at": 1501204689,
+        "updated_at": 1501204689
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "46fce503f4532167e230cbce8fdbbc19",
+      "properties":
+      {
+        "title": "Crunch Report | Facebook Smart Speaker on the Way",
+        "author": "Khaled \"Tito\" Hamze",
+        "posted_on": "2017-07-26",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/25/crunch-report-facebook-smart-speaker-on-the-way/",
+        "created_at": 1501165040,
+        "updated_at": 1501165040
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "7b720258c07bee1a07419df83bf766d4",
+      "properties":
+      {
+        "title": "Facebook to Launch Paywall in Response to Publisher Pushback",
+        "author": "David Jones",
+        "posted_on": "2017-07-26",
+        "posted_on_trust_code": 7,
+        "url": "http://www.ecommercetimes.com/story/Facebook-to-Launch-Paywall-in-Response-to-Publisher-Pushback-84699.html",
+        "created_at": 1502367107,
+        "updated_at": 1502367107
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "543a97e3c02829cd5df57a6108f54eb8",
+      "properties":
+      {
+        "title": "Facebook reportedly building smart speaker with touch screen",
+        "author": "Josh Constine",
+        "posted_on": "2017-07-25",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/25/facebook-speaker/",
+        "created_at": 1500998948,
+        "updated_at": 1500998948
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "52d10e0bd7967acac3b0948b12afd620",
+      "properties":
+      {
+        "title": "Facebook is hiring a (human) AI Editor",
+        "author": "Natasha Lomas",
+        "posted_on": "2017-07-25",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/25/facebook-is-hiring-a-human-ai-editor/",
+        "created_at": 1501159608,
+        "updated_at": 1501159608
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "67b69a03df263a9112cc987b8d55d70d",
+      "properties":
+      {
+        "title": "Facebook, Twitter, Google warned over EU consumer rights",
+        "author": "Natasha Lomas",
+        "posted_on": "2017-07-25",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/25/facebook-twitter-google-warned-over-eu-consumer-rights/",
+        "created_at": 1500987006,
+        "updated_at": 1500987224
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b2299d435e2cfcbfa62e74de836d71a7",
+      "properties":
+      {
+        "title": "Facebook brings 4K support, other enhancements to Live 360",
+        "author": "Lucas Matney",
+        "posted_on": "2017-07-25",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/25/facebook-brings-4k-support-other-enhancements-to-live-360/",
+        "created_at": 1500998399,
+        "updated_at": 1500998399
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "73a6dde1588d409fee3b614bfeeb784e",
+      "properties":
+      {
+        "title": "Lean on Your Networks When Making Early Hires",
+        "author": "Cooper Harris",
+        "posted_on": "2017-07-24",
+        "posted_on_trust_code": 7,
+        "url": "https://tech.co/early-hires-startup-lean-networks-2017-07",
+        "created_at": 1501462194,
+        "updated_at": 1501462194
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d3aa8db66adf73e9cfe9607b710668ba",
+      "properties":
+      {
+        "title": "Internet Bug Bounty Project Receives $300,000 Donation",
+        "author": "Eduard Kovacs",
+        "posted_on": "2017-07-24",
+        "posted_on_trust_code": 7,
+        "url": "http://www.securityweek.com/internet-bug-bounty-project-receives-300000-donation",
+        "created_at": 1501006656,
+        "updated_at": 1501006656
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "5ef1820122f5b2821fce742878f38725",
+      "properties":
+      {
+        "title": "Facebook Wants to Build Its Own Town",
+        "author": "Conor Cawley",
+        "posted_on": "2017-07-24",
+        "posted_on_trust_code": 7,
+        "url": "https://tech.co/facebook-wants-build-town-2017-07",
+        "created_at": 1501186907,
+        "updated_at": 1501186907
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "8b0e330781e84445754e52e9ce8d496f",
+      "properties":
+      {
+        "title": "Here's what Elon Musk, Richard Branson, and 9 other successful people ask job candidates during interviews",
+        "author": "Rachel Gillett",
+        "posted_on": "2017-07-22",
+        "posted_on_trust_code": 7,
+        "url": "http://www.businessinsider.com/favorite-interview-questions-highly-successful-bosses-2017-7",
+        "created_at": 1500885873,
+        "updated_at": 1500885873
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "bda79f2b2677cec5f44de6768c4824ce",
+      "properties":
+      {
+        "title": "How to pick the right collaboration tools",
+        "author": "James A. Martin",
+        "posted_on": "2017-07-21",
+        "posted_on_trust_code": 7,
+        "url": "https://cio-asia.com/resource/applications/how-to-pick-the-right-collaboration-tools",
+        "created_at": 1501979268,
+        "updated_at": 1501979268
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "c8955763fa23593055f484dbceb2ac6f",
+      "properties":
+      {
+        "title": "What's behind Google Hire?",
+        "author": "Cliff Saran",
+        "posted_on": "2017-07-21",
+        "posted_on_trust_code": 7,
+        "url": "http://www.computerweekly.com/news/450423073/Whats-behind-Google-Hire",
+        "created_at": 1500774437,
+        "updated_at": 1500774437
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "de3fd5eb167af9bdd58f294f1df00f6c",
+      "properties":
+      {
+        "title": "How Creatives Can Earn a Living Through Patreon",
+        "author": "Adam Rowe",
+        "posted_on": "2017-07-21",
+        "posted_on_trust_code": 7,
+        "url": "https://tech.co/succeed-on-patreon-2017-07",
+        "created_at": 1501359674,
+        "updated_at": 1501359674
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "48c5891482b23f51eefa7440fba6bced",
+      "properties":
+      {
+        "title": "QC Airport: Spread the tax burden?",
+        "author": "Ed Tibbetts",
+        "posted_on": "2017-07-20",
+        "posted_on_trust_code": 7,
+        "url": "http://qctimes.com/business/qc-airport-spread-the-tax-burden/article_bc12435e-f537-5c50-a712-d3c6433d506a.html",
+        "created_at": 1500857566,
+        "updated_at": 1500857566
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "ae80919d436477e0caa8821c73b8e727",
+      "properties":
+      {
+        "title": "ALE and PGi deliver audio conferencing to maximize the UC&C experience",
+        "author": null,
+        "posted_on": "2017-07-20",
+        "posted_on_trust_code": 7,
+        "url": "http://www.acnnewswire.com/press-release/english/37545/ale-and-pgi-deliver-audio-conferencing-to-maximize-the-uc&c-experience",
+        "created_at": 1500638801,
+        "updated_at": 1500638801
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "c0e3c4af09930b28390e25bdaf797bdb",
+      "properties":
+      {
+        "title": "A huge new survey shows that teens are bullied most on Instagram and Facebook",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-07-20",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/19/ditch-the-label-2017-cyberbullying-report/",
+        "created_at": 1500554395,
+        "updated_at": 1500554524
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "785e4e5dbbc24001e9035cb9b80c4bf2",
+      "properties":
+      {
+        "title": "Tech’s 5 biggest players now worth $3 trillion",
+        "author": "Alex Wilhelm",
+        "posted_on": "2017-07-19",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/19/techs-5-biggest-players-now-worth-3-trillion/",
+        "created_at": 1500553045,
+        "updated_at": 1500553090
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "72137efa1ce99e3d13b80b74e822e24c",
+      "properties":
+      {
+        "title": "Facebook's Subscription Plan Gives Publishers Hope at Last",
+        "author": "Garett Sloane",
+        "posted_on": "2017-07-19",
+        "posted_on_trust_code": 7,
+        "url": "http://adage.com/article/digital/facebook-s-subscription-plan-publishers-hope/309819/",
+        "created_at": 1500639105,
+        "updated_at": 1500639105
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "fd6fcfebf210bf476e2ed318592b9ab9",
+      "properties":
+      {
+        "title": "Facebook launches comparison tool to prove Instant Articles beat mobile web",
+        "author": "Josh Constine",
+        "posted_on": "2017-07-19",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/19/facebook-instant-articles-comparison/",
+        "created_at": 1500496007,
+        "updated_at": 1500496007
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "41f2d37be9cc4de168d644a9e496ca9b",
+      "properties":
+      {
+        "title": "Facebook ‘Groups for Pages’ unlocks fan clubs",
+        "author": "Josh Constine",
+        "posted_on": "2017-07-19",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/19/facebook-groups-for-pages/",
+        "created_at": 1500552780,
+        "updated_at": 1500552780
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "25bcf79f68358ed20a76d4d47677c3f4",
+      "properties":
+      {
+        "title": "Facebook may begin testing a paywall for selected media stories as soon as October",
+        "author": "Jon Russell",
+        "posted_on": "2017-07-19",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/19/facebook-subscription-service-october/",
+        "created_at": 1500472542,
+        "updated_at": 1500472542
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "9f1352ccd2254f6f8676226c8b901b10",
+      "properties":
+      {
+        "title": "Lifeboat to Distribute TeamViewer’s Digital Networking and Collaboration Solutions",
+        "author": null,
+        "posted_on": "2017-07-18",
+        "posted_on_trust_code": 7,
+        "url": "http://www.prweb.com/releases/2017/07/prweb14508335.htm",
+        "created_at": 1500453558,
+        "updated_at": 1501175113
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "7761906bd6e1fb78d4c17e9b8defea09",
+      "properties":
+      {
+        "title": "Ad tech company Rocket Fuel sold for a fraction of its peak $2 billion valuation, and it marks the end of an era",
+        "author": "Mike Shields",
+        "posted_on": "2017-07-18",
+        "posted_on_trust_code": 7,
+        "url": "http://www.businessinsider.com/rocket-fuels-sale-to-sizmek-marks-the-end-of-an-era-in-ad-tech-2017-7",
+        "created_at": 1500930576,
+        "updated_at": 1500930576
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "6af0af516174d9fd09b42ede7382ced6",
+      "properties":
+      {
+        "title": "'Ad Tech Armageddon:' Sizmek Acquires Rocket Fuel In $145m Deal",
+        "author": "George Slefo",
+        "posted_on": "2017-07-18",
+        "posted_on_trust_code": 7,
+        "url": "http://adage.com/article/digital/sizmek-snags-rocket-fuel-ad-tech-armageddon-looms/309788/",
+        "created_at": 1500552307,
+        "updated_at": 1500552307
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "4ea3bf568a2542b4dd0f566e46335a2d",
+      "properties":
+      {
+        "title": "Facebook fights fake news spread via modified link previews",
+        "author": "Josh Constine",
+        "posted_on": "2017-07-18",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/18/facebook-link-preview-modification/",
+        "created_at": 1500466732,
+        "updated_at": 1500466732
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "32d6b8dcd4421d5585be69ba67db0076",
+      "properties":
+      {
+        "title": "Thousands of people willingly agree to clean toilets all for free Wi-Fi",
+        "author": "Daniela Sternitzky-Di Napoli",
+        "posted_on": "2017-07-18",
+        "posted_on_trust_code": 7,
+        "url": "http://www.chron.com/news/nation-world/article/Purple-free-WiFi-hotspot-terms-and-conditions-11297991.php",
+        "created_at": 1500725148,
+        "updated_at": 1500725148
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "35b07efdbd4203fa5ee6c028c29bdffd",
+      "properties":
+      {
+        "title": "Government 'cyber troops' manipulate Facebook, Twitter, study says",
+        "author": "Bloomberg",
+        "posted_on": "2017-07-17",
+        "posted_on_trust_code": 7,
+        "url": "http://www.nola.com/business/index.ssf/2017/07/government_cyber_troops_manipu.html",
+        "created_at": 1500509532,
+        "updated_at": 1500509532
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "90a29c06e1da36d854fd33b382c3b759",
+      "properties":
+      {
+        "title": "Wade Davis Has Tough Talk for Men in Tech",
+        "author": "Emily Hopkins",
+        "posted_on": "2017-07-17",
+        "posted_on_trust_code": 7,
+        "url": "https://women2.com/stories/2017/7/17/wade-davis-has-tough-talk-for-men-in-tech",
+        "created_at": 1500740076,
+        "updated_at": 1500740076
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "ffab3f25ba44ed5a982ab30974b0abc2",
+      "properties":
+      {
+        "title": "Telegram blocks terror content after Indonesia threatens ban",
+        "author": "STEPHEN WRIGHT",
+        "posted_on": "2017-07-16",
+        "posted_on_trust_code": 7,
+        "url": "http://www.miamiherald.com/news/business/article161639003.html",
+        "created_at": 1500308503,
+        "updated_at": 1500308503
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "f1a07343d5eb41485a746bb167bf1c3e",
+      "properties":
+      {
+        "title": "Pinterest Poaches 2 Longtime Google Execs to Develop New Ad Formats and Targeting",
+        "author": null,
+        "posted_on": "2017-07-15",
+        "posted_on_trust_code": 7,
+        "url": "http://www.adweek.com/digital/pinterest-poaches-2-longtime-google-execs-to-develop-new-ad-formats-and-targeting",
+        "created_at": 1500246706,
+        "updated_at": 1500246706
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "eee09a43527936c4fb969679c134f48d",
+      "properties":
+      {
+        "title": "Facebook really can’t decide how much VR should cost",
+        "author": "Lucas Matney",
+        "posted_on": "2017-07-14",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/14/oculus-rift-and-touch-receive-yet-another-price-cut-now-just-499/",
+        "created_at": 1500044916,
+        "updated_at": 1500044956
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "3a66295640bbdca6e701862e0610e7c9",
+      "properties":
+      {
+        "title": "Facebook’s new “Explore Feed” makes its way to the app’s main navigation",
+        "author": "Sarah Perez",
+        "posted_on": "2017-07-14",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/14/facebooks-new-explore-feed-makes-its-way-to-the-apps-main-navigation/",
+        "created_at": 1500055814,
+        "updated_at": 1500055814
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "3711ed08b8cf87a780f5cd2d02364d27",
+      "properties":
+      {
+        "title": "Facebook tests a GIF maker on iOS",
+        "author": "Sarah Perez",
+        "posted_on": "2017-07-14",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/14/facebook-tests-a-gif-maker-on-ios/",
+        "created_at": 1500065454,
+        "updated_at": 1500065454
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "a2d67be30c02beff1676a0a73f6d2135",
+      "properties":
+      {
+        "title": "Free WiFi prank clause has thousands volunteering to clean toilets",
+        "author": null,
+        "posted_on": "2017-07-14",
+        "posted_on_trust_code": 7,
+        "url": "https://www.theinquirer.net/inquirer/news/3013867/free-wifi-prank-clause-has-thousands-volunteering-to-clean-toilets-and-hug-stray-cats",
+        "created_at": 1500167219,
+        "updated_at": 1500167219
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "5319eb84114d23dd8ec06fc34d442843",
+      "properties":
+      {
+        "title": "Oculus reportedly planning $200 standalone wireless VR headset for 2018",
+        "author": "Darrell Etherington",
+        "posted_on": "2017-07-13",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/13/oculus-reportedly-planning-200-standalone-wireless-vr-headset-for-2018/",
+        "created_at": 1499956882,
+        "updated_at": 1499956910
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "73d2c07350b08b2852207334d789d37e",
+      "properties":
+      {
+        "title": "Academics 'funded by Google' tend not to mention it in their work",
+        "author": "Andrew Orlowski",
+        "posted_on": "2017-07-13",
+        "posted_on_trust_code": 7,
+        "url": "https://www.theregister.co.uk/2017/07/13/google_transparency_report_academics",
+        "created_at": 1500194309,
+        "updated_at": 1500194309
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "68a6c9c3a691569ac13bd164d874ebc6",
+      "properties":
+      {
+        "title": "Facebook brings Live broadcasting to its Spaces virtual reality app",
+        "author": "Lucas Matney",
+        "posted_on": "2017-07-12",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/12/facebook-brings-live-to-its-spaces-vr-app/",
+        "created_at": 1499880690,
+        "updated_at": 1499880690
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "49bf11b94b1206ffde07e069b99b8d1a",
+      "properties":
+      {
+        "title": "Editor’s note to our readers",
+        "author": null,
+        "posted_on": "2017-07-12",
+        "posted_on_trust_code": 7,
+        "url": "http://www.newsday.com/news/editor-s-note-to-our-readers-1.13796846",
+        "created_at": 1500078481,
+        "updated_at": 1500078481
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "9bf4298aade23e0db234b8841ca512a2",
+      "properties":
+      {
+        "title": "Facebook’s Messenger ads are bad and must be destroyed",
+        "author": "Devin Coldewey",
+        "posted_on": "2017-07-11",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/11/facebooks-messenger-ads-are-bad-and-must-be-destroyed/",
+        "created_at": 1499806206,
+        "updated_at": 1499806243
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "4e73595d8b7d5672e9a97dc83fec5315",
+      "properties":
+      {
+        "title": "How tech giants rank at protecting your privacy",
+        "author": "Alfred Ng",
+        "posted_on": "2017-07-11",
+        "posted_on_trust_code": 7,
+        "url": "http://www.cbsnews.com/news/how-tech-giants-rank-at-protecting-your-privacy/",
+        "created_at": 1499935989,
+        "updated_at": 1499935989
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "21d29affc387006838577aba6e214430",
+      "properties":
+      {
+        "title": "Facebook Messenger globally tests injecting display ads into inbox",
+        "author": "Josh Constine",
+        "posted_on": "2017-07-11",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/07/11/facebook-messenger-display-ads/",
+        "created_at": 1499802297,
+        "updated_at": 1499802326
+      }
+    }]
+  }
+}

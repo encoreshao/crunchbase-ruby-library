@@ -3,13 +3,13 @@
 module Crunchbase
   module Model
     RSpec.describe Website do
-      let(:websites_date) { parse_json('websites', 'facebook') }
+      let(:websites_data) { parse_json('websites', 'facebook') }
 
       context 'websites of facebook' do
         let(:websites) { Website.organization_lists('facebook') }
 
         before :each do
-          result = search_results(websites_date, Website)
+          result = search_results(websites_data, Website)
 
           allow(Website).to receive(:organization_lists).and_return(result)
         end

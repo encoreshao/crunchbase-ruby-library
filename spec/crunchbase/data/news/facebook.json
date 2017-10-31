@@ -1,0 +1,1426 @@
+{
+  "metadata":
+  {
+    "version": 31,
+    "www_path_prefix": "https://www.crunchbase.com",
+    "api_path_prefix": "https://api.crunchbase.com",
+    "image_path_prefix": "http://public.crunchbase.com/t_api_images/"
+  },
+  "data":
+  {
+    "paging":
+    {
+      "total_items": 263162,
+      "number_of_pages": 2632,
+      "current_page": 1,
+      "sort_order": "posted_on DESC",
+      "items_per_page": 100,
+      "next_page_url": "https://api.crunchbase.com/v3.1/organizations/facebook/news?page=2&sort_order=posted_on%20DESC&items_per_page=100",
+      "prev_page_url": null,
+      "key_set_url": null,
+      "collection_url": "https://api.crunchbase.com/v3.1/organizations/facebook/news",
+      "updated_since": null
+    },
+    "items": [
+    {
+      "type": "News",
+      "uuid": "527114a5b61a44989480eea5c4452800",
+      "properties":
+      {
+        "title": "Facebook says its ad transparency features will go live next month",
+        "author": "Anthony Ha",
+        "posted_on": "2017-10-27",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/27/facebook-says-its-ad-transparency-features-will-go-live-next-month/",
+        "created_at": 1509127897,
+        "updated_at": 1509127897
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "42714d1db0434ebfb3e6be3b96181d46",
+      "properties":
+      {
+        "title": "Facebook’s Workplace, now at 30,000 orgs, adds Chat desktop apps and group video chat",
+        "author": "Ingrid Lunden",
+        "posted_on": "2017-10-26",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/26/facebooks-workplace-now-at-30000-orgs-adds-chat-desktop-apps-and-group-video-chat/",
+        "created_at": 1509024124,
+        "updated_at": 1509024124
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "04e39c15489543829bffc423f36a0bd9",
+      "properties":
+      {
+        "title": "Facebook launches Marketplace for cars with dealers and Blue Book pricing",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-26",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/26/facebook-marketplace-cars/",
+        "created_at": 1509024530,
+        "updated_at": 1509024530
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "948c099f8e084f61a997745e41d1750f",
+      "properties":
+      {
+        "title": "Zuckerberg’s CZI donates to struggling towns near Facebook",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-25",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/25/hyper-local-giving/",
+        "created_at": 1508957953,
+        "updated_at": 1508957953
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "0863de92a14c47e789dcb0e810bfe677",
+      "properties":
+      {
+        "title": "In Europe, Facebook’s data law buffer looks to be on borrowed time",
+        "author": "Natasha Lomas",
+        "posted_on": "2017-10-24",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/24/in-europe-facebooks-data-law-buffer-looks-to-be-on-borrowed-time/",
+        "created_at": 1508870619,
+        "updated_at": 1508870619
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e0695918ca8a4c229bf7ab746ac7a1ce",
+      "properties":
+      {
+        "title": "Facebook releases new guidelines to address publisher concerns in its fight against fake news",
+        "author": "Anthony Ha",
+        "posted_on": "2017-10-24",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/24/facebook-publisher-guidelines/",
+        "created_at": 1508874715,
+        "updated_at": 1508874715
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "f1f4b618ec1c49478ca5c69161c6b905",
+      "properties":
+      {
+        "title": "Facebook finally adapts to 4K video",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-24",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/24/facebook-4k-video/",
+        "created_at": 1508870989,
+        "updated_at": 1508870989
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b9d9fd6c4a89452898ba811cd7efb0a6",
+      "properties":
+      {
+        "title": "Facebook’s F8 conference returns to San Jose May 1-2, 2018",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-24",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/24/facebook-f8-2018/",
+        "created_at": 1508871622,
+        "updated_at": 1508871622
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "129f6c64621c42c58dbf8186131f9e1e",
+      "properties":
+      {
+        "title": "Representative asks internet CEOs to explain ‘absurd’ content policies",
+        "author": "Devin Coldewey",
+        "posted_on": "2017-10-23",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/23/representative-asks-internet-ceos-to-explain-absurd-content-policies/",
+        "created_at": 1508863447,
+        "updated_at": 1508863447
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "162c1714f4a746abb8d836ca445b23fa",
+      "properties":
+      {
+        "title": "Facebook research automatically creates an avatar from a photo",
+        "author": "Devin Coldewey",
+        "posted_on": "2017-10-23",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/23/facebook-research-automatically-creates-an-avatar-from-a-photo/",
+        "created_at": 1508871351,
+        "updated_at": 1508871351
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "74912e7638214079acbf3c0685a8bda0",
+      "properties":
+      {
+        "title": "Facebook downplays test banishing all Pages to buried Explore Feed",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-23",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/23/facebook-page-feed/",
+        "created_at": 1508871490,
+        "updated_at": 1508871490
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e20ed952e4bf4dbdbe7d02e6b78b2039",
+      "properties":
+      {
+        "title": "You can now PayPal friends in Messenger and get help via chat",
+        "author": "Sarah Perez",
+        "posted_on": "2017-10-20",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/20/you-can-now-paypal-friends-in-messenger-and-get-help-via-chat/",
+        "created_at": 1508509144,
+        "updated_at": 1508509144
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e398a56ccb7c423aad4fd7e4ed9dcf0b",
+      "properties":
+      {
+        "title": "Facebook Messenger lets games monetize with purchases and ads",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-19",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/19/facebook-messenger-game-ads-in-app-purchases/",
+        "created_at": 1508436538,
+        "updated_at": 1508436538
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "5c8bad4052e14ceebc2c45fe23374df4",
+      "properties":
+      {
+        "title": "Facebook attacks Pinterest with “Sets” of posts",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-19",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/19/facebook-attacks-pinterest-with-sets-of-posts/",
+        "created_at": 1508517008,
+        "updated_at": 1508517008
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "a1a97d8ff4834892b9fe9c7b7fc8d3cb",
+      "properties":
+      {
+        "title": "Facebook is now testing paywalls and subscriptions for Instant Articles",
+        "author": "Fitz Tepper",
+        "posted_on": "2017-10-19",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/19/facebook-is-now-testing-paywalls-and-subscriptions-for-instant-articles/",
+        "created_at": 1508435333,
+        "updated_at": 1508435333
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "83f88230751d4f42b16a657231570b98",
+      "properties":
+      {
+        "title": "Facebook’s discovery-focused ‘Explore Feed’ hits the desktop",
+        "author": "Sarah Perez",
+        "posted_on": "2017-10-18",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/18/facebooks-discovery-focused-explore-feed-hits-the-desktop/",
+        "created_at": 1508344769,
+        "updated_at": 1508344769
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "8b0b2663bfa14d4eaf27adafd35dfe7d",
+      "properties":
+      {
+        "title": "AdHawk acquires Automate Ads to improve Google and Facebook ad campaigns",
+        "author": "Anthony Ha",
+        "posted_on": "2017-10-18",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/18/adhawk-acquires-automate-ads/",
+        "created_at": 1508348627,
+        "updated_at": 1508348627
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "a634405f29e54b30a07a40f62357e0ed",
+      "properties":
+      {
+        "title": "Facebook and Google competed for anti-immigration ad dollars during the 2016 election",
+        "author": "Devin Coldewey",
+        "posted_on": "2017-10-18",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/18/facebook-and-google-competed-for-anti-immigration-ad-dollars-during-the-2016-election/",
+        "created_at": 1508356004,
+        "updated_at": 1508356004
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b34c8fee6c7343d78057eea967865f18",
+      "properties":
+      {
+        "title": "“Bad things happen,” Facebook’s response to Russian election interference",
+        "author": "Katie Roof",
+        "posted_on": "2017-10-18",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/18/bad-things-happen-facebooks-response-to-russian-election-interference/",
+        "created_at": 1508356097,
+        "updated_at": 1508356097
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "2a7d7daec6a2496b9af4090a89359b75",
+      "properties":
+      {
+        "title": "Facebook tests a resume “work histories” feature to boost recruitment efforts",
+        "author": "Ingrid Lunden",
+        "posted_on": "2017-10-17",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/17/facebook-takes-another-bite-of-linkedin/",
+        "created_at": 1508246736,
+        "updated_at": 1508246736
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e9fbbf8c6261482aa3a5de31c46efeff",
+      "properties":
+      {
+        "title": "Crunch Report | TBH, Facebook Bought TBH So Snap Couldn’t",
+        "author": "Khaled \"Tito\" Hamze",
+        "posted_on": "2017-10-17",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/16/crunch-report-tbh-facebook-bought-tbh-so-snap-couldnt/",
+        "created_at": 1508242672,
+        "updated_at": 1508242672
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "c8df9d54a9d2475c8615ea3095328e27",
+      "properties":
+      {
+        "title": "Facebook’s Building 8 head, Regina Dugan, is leaving the company",
+        "author": "Lucas Matney",
+        "posted_on": "2017-10-17",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/17/facebooks-consumer-hardware-chief-regina-dugan-is-leaving-the-company/",
+        "created_at": 1508265985,
+        "updated_at": 1508265985
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b04e800c9d7944f0a8a315dee3886293",
+      "properties":
+      {
+        "title": "Silenced by “free speech”",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-16",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/16/scaling-civility/",
+        "created_at": 1508184291,
+        "updated_at": 1508184291
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "02ebe1b1f0f24361999da7e5a7dd1fc9",
+      "properties":
+      {
+        "title": "Facebook’s ‘Order Food’ feature officially launches across the U.S.",
+        "author": "Sarah Perez",
+        "posted_on": "2017-10-13",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/13/facebooks-order-food-feature-officially-launches-across-the-u-s/",
+        "created_at": 1507905367,
+        "updated_at": 1507905367
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e7f3425f0f5041e697224ca00ac748a7",
+      "properties":
+      {
+        "title": "Facebook Stories open to Pages, bringing brands to the ghost town",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-12",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/12/facebook-stories-for-pages/",
+        "created_at": 1507827500,
+        "updated_at": 1507827500
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "dfe83d42f3a347a78aea9c3d01c446af",
+      "properties":
+      {
+        "title": "South Park slams Facebook for selling fake news",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-12",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/12/south-park-vs-zuckerberg/",
+        "created_at": 1507840936,
+        "updated_at": 1507840936
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "1964263baf394fbca091901da7f3a126",
+      "properties":
+      {
+        "title": "Sandberg says Facebook allows fake news ads from legit accounts",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-12",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/12/facebook-allows-fake-news/",
+        "created_at": 1507816041,
+        "updated_at": 1507816041
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "f685da995b9649d5851c0ba421fe2799",
+      "properties":
+      {
+        "title": "After Sandberg chat, House intel plans to release Russian-bought Facebook ads to the public",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-10-12",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/11/sheryl-sandberg-house-intelligence-hpsci-release-facebook-ads/",
+        "created_at": 1507812400,
+        "updated_at": 1507812400
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "fcd3af4024724aef9960cb2c26e2fd32",
+      "properties":
+      {
+        "title": "Facebook’s ad targeting tools could be a valuable supplement to census data",
+        "author": "Devin Coldewey",
+        "posted_on": "2017-10-12",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/12/facebooks-ad-targeting-tools-could-be-a-valuable-supplement-to-census-data/",
+        "created_at": 1507901816,
+        "updated_at": 1507901816
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "ae5e2e6803654a16b357c1026e1a1f41",
+      "properties":
+      {
+        "title": "Facebook “3D Posts” let you play with VR objects in News Feed",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-11",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/11/facebook-3d-posts-let-you-play-with-vr-objects-in-news-feed/",
+        "created_at": 1507750579,
+        "updated_at": 1507750579
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "9febd4a7f17648e89150583f84f92b28",
+      "properties":
+      {
+        "title": "Oculus announces $199 ‘Oculus Go’ standalone headset",
+        "author": "Lucas Matney",
+        "posted_on": "2017-10-11",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/11/oculus-announces-199-oculus-go-standalone-headset/",
+        "created_at": 1507812512,
+        "updated_at": 1507812512
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "789c0002f7b341189515e3d65c8b7566",
+      "properties":
+      {
+        "title": "Facebook seriously needs its own Bitmoji",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-11",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/10/facemoji/",
+        "created_at": 1507725774,
+        "updated_at": 1507725774
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "741b8515855241a9b3f401e49d3bc962",
+      "properties":
+      {
+        "title": "Facebook plans “Venues” for watching concerts, sports, movies in VR",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-11",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/11/facebook-venues/",
+        "created_at": 1507744575,
+        "updated_at": 1507744575
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "168836907b164a68a1c75ba2af7a6b63",
+      "properties":
+      {
+        "title": "Facebook’s new virtual reality strategy: self-reliance",
+        "author": "Lucas Matney",
+        "posted_on": "2017-10-11",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/11/facebooks-new-virtual-reality-strategy-self-reliance/",
+        "created_at": 1507754103,
+        "updated_at": 1507754103
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "726c27d7442f40189bd9433d3de0a74c",
+      "properties":
+      {
+        "title": "VR Mark Zuckerberg discusses how Facebook is using AI to aid the Red Cross in Puerto Rico",
+        "author": "Lucas Matney",
+        "posted_on": "2017-10-10",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/09/vr-zuckerberg-shares-details-on-some-of-facebooks-ai-aid-to-the-red-cross-in-puerto-rico/?ncid=mobilenavtrend",
+        "created_at": 1507638399,
+        "updated_at": 1507638399
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "13ccf65ed3be4390bf988fd3fc331969",
+      "properties":
+      {
+        "title": "Facebook security chief rants about misguided “algorithm” backlash",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-07",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/07/alex-stamos/",
+        "created_at": 1507559686,
+        "updated_at": 1507559686
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "8e6e8d2a0a5016f602bcd5c6494d8594",
+      "properties":
+      {
+        "title": "Instagram Stories launches cross-posting to Facebook Stories",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-05",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/04/instaface/",
+        "created_at": 1507208122,
+        "updated_at": 1507208183
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "2de28b6094de1fb4310762e7b947a5e1",
+      "properties":
+      {
+        "title": "Facebook tries fighting fake news with publisher info button on links",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-05",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/05/facebook-article-information-button/",
+        "created_at": 1507227542,
+        "updated_at": 1507227542
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "db87d3a47c690eb9456385e981be3814",
+      "properties":
+      {
+        "title": "Senate Intel committee calls on Facebook to release Russian ads",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-10-04",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/04/senate-intel-committee-burr-warner-facebook-ads/",
+        "created_at": 1507143137,
+        "updated_at": 1507143137
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b226d9bfa0f5cb935b0ec8ac739b9387",
+      "properties":
+      {
+        "title": "Challenge to data transfer tool used by Facebook will go to Europe’s top court",
+        "author": "Natasha Lomas",
+        "posted_on": "2017-10-03",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/03/challenge-to-data-transfer-tool-used-by-facebook-will-go-to-europes-top-court/",
+        "created_at": 1507038565,
+        "updated_at": 1507038565
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "1b4195936fd2a1393cc0d4cd97900ac8",
+      "properties":
+      {
+        "title": "Crunch Report | Facebook Fixing Its Election Ads Problem",
+        "author": "Khaled \"Tito\" Hamze",
+        "posted_on": "2017-10-03",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/02/crunch-report-facebook-fixing-its-election-ads-problem/",
+        "created_at": 1507036534,
+        "updated_at": 1507036534
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b95eacfd731d31a6e023a7ea291324d0",
+      "properties":
+      {
+        "title": "Search and social media was filled with clickbait and propaganda in the wake of Vegas shooting",
+        "author": "Jonathan Shieber",
+        "posted_on": "2017-10-02",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/02/search-and-social-media-was-filled-with-clickbait-and-propaganda-in-the-wake-of-vegas-shooting/",
+        "created_at": 1506970406,
+        "updated_at": 1506970484
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "72db770e8f9a1769aea30015b407680e",
+      "properties":
+      {
+        "title": "Facebook will share Russian-bought election interference ads with congress tomorrow",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-02",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/01/facebook-russian-ads/",
+        "created_at": 1506948702,
+        "updated_at": 1506948702
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "2cde0dca386f22c05c49f10b8b960197",
+      "properties":
+      {
+        "title": "Facebook brings data plan-saving Messenger Lite to U.S. Androids",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-02",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/02/facebook-lite-us-uk-canada-ireland/",
+        "created_at": 1506966106,
+        "updated_at": 1507019001
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "c7e64b281cae91ecebef8802232db85a",
+      "properties":
+      {
+        "title": "Facebook will hire 1,000 and make ads visible to fight election interference",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-02",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/02/facebook-will-hire-1000-and-make-ads-visible-to-fight-election-interference/",
+        "created_at": 1506960591,
+        "updated_at": 1506960591
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "154d72ee5c084c7eb2e1fac2d843e991",
+      "properties":
+      {
+        "title": "Zuckerberg asks forgiveness, but Facebook needs change",
+        "author": "Josh Constine",
+        "posted_on": "2017-10-01",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/10/01/anticipate-the-worst/",
+        "created_at": 1506873886,
+        "updated_at": 1506950133
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "0ebb00f46f91440ab6695abe570948eb",
+      "properties":
+      {
+        "title": "Facebook tests facial recognition for account recovery",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-29",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/29/facebook-face-id/",
+        "created_at": 1506713531,
+        "updated_at": 1506713531
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "3303b5496c1c4daf7db9d081f5a9d5d1",
+      "properties":
+      {
+        "title": "Facebook helps blood donation go viral",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-28",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/27/bloodbook/",
+        "created_at": 1506607525,
+        "updated_at": 1506607525
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "81568df0f81e0379cd524bd682066125",
+      "properties":
+      {
+        "title": "Facebook partners with ZipRecruiter and more aggregators as it ramps up in jobs",
+        "author": "Ingrid Lunden",
+        "posted_on": "2017-09-28",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/28/facebook-partners-with-ziprecruiter-and-more-aggregators-as-it-ramps-up-in-jobs/",
+        "created_at": 1506620356,
+        "updated_at": 1506620502
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "321c7f181e3d9f4b57ce3baad1c1b4ee",
+      "properties":
+      {
+        "title": "Zuckerberg details Facebook’s response to Puerto Rico’s humanitarian crisis",
+        "author": "Jonathan Shieber",
+        "posted_on": "2017-09-27",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/27/zuckerberg-details-facebooks-response-to-puerto-ricos-humanitarian-crisis/",
+        "created_at": 1506605156,
+        "updated_at": 1506605372
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "a16ca11be676ef10dff23ee34c760fd8",
+      "properties":
+      {
+        "title": "Mark Zuckerberg responds to Trump’s claim that ‘Facebook has always been against him’",
+        "author": "Megan Rose Dickey",
+        "posted_on": "2017-09-27",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/27/mark-zuckerberg-responds-to-anti-trump-claim/",
+        "created_at": 1506600664,
+        "updated_at": 1506600734
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e5b79209f92194bcdbb2e1608453286b",
+      "properties":
+      {
+        "title": "Delta to offer free in-flight use of WhatsApp, Facebook Messenger and iMessage",
+        "author": "Matt Burns",
+        "posted_on": "2017-09-27",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/27/delta-to-offer-free-in-flight-use-of-whatsup-facebook-messenger-and-imessage/",
+        "created_at": 1506599979,
+        "updated_at": 1506600056
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "204414c214126e306a12ae4828c551d8",
+      "properties":
+      {
+        "title": "Facebook shows progress thwarting election interference in Germany",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-27",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/27/facebook-election-interference/",
+        "created_at": 1506534183,
+        "updated_at": 1506534183
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "349b53b96d53300ac2812aaf90ed8984",
+      "properties":
+      {
+        "title": "The NFL partners with Facebook to distribute game highlights and recaps on the social network",
+        "author": "Sarah Perez",
+        "posted_on": "2017-09-26",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/26/the-nfl-partners-with-facebook-to-distribute-game-highlights-and-recaps-on-the-social-network/",
+        "created_at": 1506442560,
+        "updated_at": 1506442638
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "ef04782148994061b99a3a53d9863b80",
+      "properties":
+      {
+        "title": "Thoughts on Facebook’s 9 plans to curb election interference",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-22",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/21/election-interference/",
+        "created_at": 1506084164,
+        "updated_at": 1506084226
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "1c5be635d98dfedf4d226c66b3f4d6e5",
+      "properties":
+      {
+        "title": "Facebook drops no-vote stock plan, Zuck will sell shares to fund philanthropy",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-22",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/22/facebook-sharing/",
+        "created_at": 1506342024,
+        "updated_at": 1506342041
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "f018961b18c0afa019e88cabadd5df2c",
+      "properties":
+      {
+        "title": "Facebook and Twitter play bigger role in Congressional election-hacking probe",
+        "author": "Jonathan Shieber",
+        "posted_on": "2017-09-21",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/21/facebook-and-twitter-play-bigger-role-in-congressional-election-hacking-probe/",
+        "created_at": 1506083820,
+        "updated_at": 1506083893
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d0ab28a139cc39ec3c733df77e4b586c",
+      "properties":
+      {
+        "title": "Facebook vows to manually review ad targeting after ‘Jew-Haters’ scandal",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-20",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/20/anticipating-the-dark-side/",
+        "created_at": 1505939811,
+        "updated_at": 1505939863
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e4e249506fa497a2fc4fbfce53ca91c5",
+      "properties":
+      {
+        "title": "Senate Intelligence Committee wants Facebook to appear in a public Russia hearing",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-09-20",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/20/facebook-ssci-russia-hearing/",
+        "created_at": 1505938808,
+        "updated_at": 1505938899
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "8969c6129713201fa47565b1c6d47141",
+      "properties":
+      {
+        "title": "You can now launch the Instagram app directly from Facebook",
+        "author": "Sarah Perez",
+        "posted_on": "2017-09-20",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/20/you-can-now-launch-the-instagram-app-directly-from-facebook/",
+        "created_at": 1505938218,
+        "updated_at": 1505938364
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "909d79ec7b90086c2cf6290cf5519030",
+      "properties":
+      {
+        "title": "Facebook design head loud on voice, silent on Alexa and hardware",
+        "author": "Ingrid Lunden",
+        "posted_on": "2017-09-19",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/18/facebook-design-head-bullish-on-voice-dodges-questions-on-voice-apps-and-hardware/",
+        "created_at": 1505828100,
+        "updated_at": 1505828100
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "5bfeb8caa7a495f460ac7ee5a6e1cb8a",
+      "properties":
+      {
+        "title": "See what Facebook ads you actually clicked in “Recent Ad Activity”",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-19",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/19/facebook-recent-ad-activity/",
+        "created_at": 1505850337,
+        "updated_at": 1505850337
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "664db901925f420cadb1672c7348b6f1",
+      "properties":
+      {
+        "title": "Facebook nabs Change.org COO Jennifer Dulski to lead Groups",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-18",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/18/jennifer-dulski/",
+        "created_at": 1505787951,
+        "updated_at": 1505825324
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "cfe1a82f60d4cd99059406b86d64a9ea",
+      "properties":
+      {
+        "title": "Facebook halts ad targeting of profile details abused by users",
+        "author": "Devin Coldewey",
+        "posted_on": "2017-09-15",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/15/facebook-halts-ad-targeting-of-profile-details-abused-by-users/",
+        "created_at": 1505480353,
+        "updated_at": 1505480353
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "5ef8c8bdf0677b6f5390419a977c116f",
+      "properties":
+      {
+        "title": "Report: Facebook gave special investigator Robert Mueller detailed info on Russian ad buys",
+        "author": "Jonathan Shieber",
+        "posted_on": "2017-09-15",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/15/report-facebook-gave-special-investigator-robert-mueller-detailed-info-on-russian-ad-buys/",
+        "created_at": 1505755582,
+        "updated_at": 1505756032
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "f4b819d7cf64b29e3dd71eb2bc2cf87c",
+      "properties":
+      {
+        "title": "WordPress to ditch React library over Facebook patent clause risk",
+        "author": "Natasha Lomas",
+        "posted_on": "2017-09-15",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/15/wordpress-to-ditch-react-library-over-facebook-patent-clause-risk/",
+        "created_at": 1505486726,
+        "updated_at": 1505486781
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "bb2bce8cc541a0d82abecb820a5b96bc",
+      "properties":
+      {
+        "title": "Facebook is the latest tech giant to hunt for AI talent in Canada",
+        "author": "John Mannes",
+        "posted_on": "2017-09-15",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/14/facebook-is-the-latest-tech-giant-to-hunt-for-ai-talent-in-canada/",
+        "created_at": 1505479441,
+        "updated_at": 1505479441
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b09679f5027a74bf88ffc052deb85c2c",
+      "properties":
+      {
+        "title": "Facebook centralizes its crisis response tools in a new hub called Crisis Response",
+        "author": "Sarah Perez",
+        "posted_on": "2017-09-14",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/14/facebook-centralizes-its-crisis-response-tools-in-a-new-hub-called-crisis-response/",
+        "created_at": 1505405619,
+        "updated_at": 1505405619
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d5ca346d067a1b2d865201c4ed9d27a4",
+      "properties":
+      {
+        "title": "Facebook “Snooze” button temporarily hides people in your feed",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-14",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/14/facebook-snooze/",
+        "created_at": 1505406302,
+        "updated_at": 1505406302
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "51389d2de82366892f486e26fe32ac44",
+      "properties":
+      {
+        "title": "Facebook’s generation of ‘Jew Hater’ and other advertising categories prompts system inspection",
+        "author": "Devin Coldewey",
+        "posted_on": "2017-09-14",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/14/facebooks-generation-of-jew-hater-and-other-advertising-categories-prompts-system-inspection/",
+        "created_at": 1505480648,
+        "updated_at": 1505481033
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "a0f86e6ee56735798a8dce1ba71d95e4",
+      "properties":
+      {
+        "title": "Facebook Messenger hits 1.3 billion monthly users, up from 1.2B in April",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-14",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/14/facebook-messenger-1-3-billion/",
+        "created_at": 1505411316,
+        "updated_at": 1505411433
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "fe4d9af31a829d8a9a89a04b0e44f52a",
+      "properties":
+      {
+        "title": "Facebook bans monetization of violence, porn, drugs, hate",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-13",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/13/facebook-monetization-2/",
+        "created_at": 1505315236,
+        "updated_at": 1505315287
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "1feb567b1beff0ee97c851a8b0616c66",
+      "properties":
+      {
+        "title": "Facebook’s Eddie O’Neil takes over Platform as Deb Liu grows Marketplace",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-13",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/13/facebook-platform/",
+        "created_at": 1505335098,
+        "updated_at": 1505335340
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "ade05986d57701f3ad68eb1c071756a5",
+      "properties":
+      {
+        "title": "Facebook tests Bonfire group video chat as app and in Messenger",
+        "author": "Sarah Perez",
+        "posted_on": "2017-09-13",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/13/facebook-tries-its-hand-at-group-video-chat-with-bonfire/",
+        "created_at": 1505316598,
+        "updated_at": 1505316598
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "36215269270b699e4ae01e0cb8a8ebf2",
+      "properties":
+      {
+        "title": "Facebook has pulled Instant Articles off Messenger",
+        "author": "Ingrid Lunden",
+        "posted_on": "2017-09-12",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/12/facebook-has-pulled-instant-articles-off-messenger/",
+        "created_at": 1505221695,
+        "updated_at": 1505221744
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d77c7d37db661b370df492a35ad3a082",
+      "properties":
+      {
+        "title": "Facebook is testing a feature for mentorships between users",
+        "author": "Ingrid Lunden",
+        "posted_on": "2017-09-12",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/11/facebook-is-testing-a-feature-for-mentorships-between-users/",
+        "created_at": 1505218122,
+        "updated_at": 1505218122
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "a722113863f65b2c718c5d0c3173a325",
+      "properties":
+      {
+        "title": "Facebook brings its Canvas ad format to Instagram Stories",
+        "author": "Anthony Ha",
+        "posted_on": "2017-09-12",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/12/facebook-brings-its-canvas-ad-format-to-instagram-stories/",
+        "created_at": 1505232528,
+        "updated_at": 1505232622
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "fe3163d55a3d690d17f7a7e7b9d9e477",
+      "properties":
+      {
+        "title": "Facebook tests pre-loaded ‘Instant Videos’",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-11",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/11/facebook-instant-video/",
+        "created_at": 1505220902,
+        "updated_at": 1505220902
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "bb84743fdcbbdde524f4db22b72bf6f1",
+      "properties":
+      {
+        "title": "Facebook fined €1.2M for privacy violations in Spain",
+        "author": "Natasha Lomas",
+        "posted_on": "2017-09-11",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/11/facebook-fined-e1-2m-for-privacy-violations-in-spain/",
+        "created_at": 1505141630,
+        "updated_at": 1505141630
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "872cec4b80313aa41b1e422acee3b751",
+      "properties":
+      {
+        "title": "Facebook plans to spend up to $1B on original shows in 2018",
+        "author": "Darrell Etherington",
+        "posted_on": "2017-09-08",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/08/facebook-plans-to-spend-up-to-1b-on-original-shows-in-2018/",
+        "created_at": 1504884182,
+        "updated_at": 1504884182
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "e9fb570e892d10929850ffef33a15a23",
+      "properties":
+      {
+        "title": "Facebook adds a dedicated ‘Movies’ section offering showtimes and ticket sales",
+        "author": "Sarah Perez",
+        "posted_on": "2017-09-08",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/08/facebook-adds-a-dedicated-movies-section-offering-showtimes-and-ticket-sales/",
+        "created_at": 1505135468,
+        "updated_at": 1505135468
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "53298eb13da84551e9c47d19d504041b",
+      "properties":
+      {
+        "title": "Facebook is testing features to help you make new friends",
+        "author": "Lucas Matney",
+        "posted_on": "2017-09-08",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/07/facebook-is-testing-features-to-help-you-make-new-friends/",
+        "created_at": 1504874110,
+        "updated_at": 1504874110
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "db2cc38b6e1515e0591dce7b3b1c93a6",
+      "properties":
+      {
+        "title": "Facebook and Microsoft collaborate to simplify conversions from PyTorch to Caffe2",
+        "author": "John Mannes",
+        "posted_on": "2017-09-07",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/07/facebook-and-microsoft-collaborate-to-simplify-conversions-from-pytorch-to-caffe2/",
+        "created_at": 1504806137,
+        "updated_at": 1504807781
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "f3d47ef12ccabf7db2ce18dd89aa91f0",
+      "properties":
+      {
+        "title": "Instagram test feature lets users share Stories straight to Facebook",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-09-06",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/06/instagram-stories-on-facebook/",
+        "created_at": 1504792005,
+        "updated_at": 1504792011
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "7caed796343616d54e46d3bc103f456e",
+      "properties":
+      {
+        "title": "Facebook sold more than $100,000 in political ads to a Russian company during the 2016 election",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-09-06",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/06/facebook-russia-ads-election/",
+        "created_at": 1504791116,
+        "updated_at": 1504791195
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "d42a6a9e54c31236b029f41aa27fada8",
+      "properties":
+      {
+        "title": "Facebook Watch original video tab launches to all U.S. users",
+        "author": "Josh Constine",
+        "posted_on": "2017-09-05",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/09/05/facebook-watch-tab/",
+        "created_at": 1504644103,
+        "updated_at": 1504644103
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "9c99dd27f4373b13263e4d6b1f476dbe",
+      "properties":
+      {
+        "title": "Facebook has a way to correct your crooked 360 photos",
+        "author": "John Mannes",
+        "posted_on": "2017-08-31",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/31/facebook-has-a-way-to-correct-your-crooked-360-photos/",
+        "created_at": 1504201431,
+        "updated_at": 1504201431
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "0d44382ed7a93684974e7907d4609f15",
+      "properties":
+      {
+        "title": "Facebook to open source LogDevice for storing logs from distributed data centers",
+        "author": "John Mannes",
+        "posted_on": "2017-08-31",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/31/facebook-to-open-source-logdevice-for-storing-logs-from-distributed-data-centers/",
+        "created_at": 1504201391,
+        "updated_at": 1504201391
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "0c96ab46d3068712b6c50d3fd38d715e",
+      "properties":
+      {
+        "title": "Facebook’s new Watch video hub rolls out to U.S. users",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-08-31",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/31/facebook-watch-launch/",
+        "created_at": 1504208144,
+        "updated_at": 1504208144
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "c99c6524f40dfc3c6011ba0c48f5f94f",
+      "properties":
+      {
+        "title": "Facebook will match Harvey relief donations up to $1 million",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-08-29",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/29/facebook-hurricane-harvey-fundraising/",
+        "created_at": 1504030064,
+        "updated_at": 1504030064
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "241ce9e03d42455821dbc49523dd0439",
+      "properties":
+      {
+        "title": "How tech companies are helping Texans affected by Hurricane Harvey",
+        "author": "Taylor Hatmaker",
+        "posted_on": "2017-08-29",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/29/tech-companies-harvey-houston-fundraising/",
+        "created_at": 1504103079,
+        "updated_at": 1504104942
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "cb04e7da0f28390c472b9608bd2fa538",
+      "properties":
+      {
+        "title": "Facebook says Pages that regularly share false news won’t be able to buy ads",
+        "author": "Anthony Ha",
+        "posted_on": "2017-08-28",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/28/facebook-fake-news-ads/",
+        "created_at": 1504024685,
+        "updated_at": 1504024685
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "1b8457eb49d6b9d952ea42347cf761af",
+      "properties":
+      {
+        "title": "Facebook faces another moderation scandal over migrant torture videos",
+        "author": "Natasha Lomas",
+        "posted_on": "2017-08-25",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/25/facebook-faces-another-moderation-scandal-over-migrant-torture-videos/",
+        "created_at": 1503672592,
+        "updated_at": 1503672592
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "52a7763c2319678dccd62c3192c29b47",
+      "properties":
+      {
+        "title": "Facebook hires former NYT public editor Liz Spayd to consult on transparency",
+        "author": "Anthony Ha",
+        "posted_on": "2017-08-25",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/25/facebook-hires-liz-spayd/",
+        "created_at": 1504009059,
+        "updated_at": 1504009928
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "ee34cac69e4aa341b0a380702a0bf8c3",
+      "properties":
+      {
+        "title": "Facebook adds new ways to revisit your memories and milestones",
+        "author": "Sarah Perez",
+        "posted_on": "2017-08-25",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/25/facebook-adds-new-ways-to-revisit-your-memories-and-milestones/",
+        "created_at": 1503671179,
+        "updated_at": 1503671179
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "74ecb6620dbc87f593559e7700ed0a39",
+      "properties":
+      {
+        "title": "Facebook’s Andrew Bosworth is taking over the company’s consumer hardware efforts",
+        "author": "Lucas Matney",
+        "posted_on": "2017-08-24",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/23/facebooks-andrew-bosworth-is-taking-over-the-companys-consumer-hardware-efforts/",
+        "created_at": 1503579637,
+        "updated_at": 1503580399
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "aacf572555f0790e38805332412e7eac",
+      "properties":
+      {
+        "title": "Facebook now lets you take 360 photos in-app, use them as Cover Photos",
+        "author": "Darrell Etherington",
+        "posted_on": "2017-08-23",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/23/facebook-now-lets-you-take-360-photos-in-app-use-them-as-cover-photos/",
+        "created_at": 1503513477,
+        "updated_at": 1503513477
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "df56641465dfeb0f8734539b62078d2e",
+      "properties":
+      {
+        "title": "Facebook will live stream over a dozen college football games this year",
+        "author": "Sarah Perez",
+        "posted_on": "2017-08-23",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/23/facebook-will-live-stream-over-a-dozen-college-football-games-this-year/",
+        "created_at": 1503511316,
+        "updated_at": 1503511316
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "b4bd58021ce601e35ce530140532acaa",
+      "properties":
+      {
+        "title": "A look back in IPO: Facebook’s trailing profit and mobile intrigue",
+        "author": "Alex Wilhelm",
+        "posted_on": "2017-08-22",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/22/a-look-back-in-ipo-facebooks-trailing-profit-and-mobile-intrigue/",
+        "created_at": 1503428618,
+        "updated_at": 1503428618
+      }
+    },
+    {
+      "type": "News",
+      "uuid": "36474c1cd9acfc2717e1974fbc7f1bdb",
+      "properties":
+      {
+        "title": "Teens favoring Snapchat and Instagram over Facebook, says eMarketer",
+        "author": "Natasha Lomas",
+        "posted_on": "2017-08-22",
+        "posted_on_trust_code": 7,
+        "url": "https://techcrunch.com/2017/08/22/teens-favoring-snapchat-and-instagram-over-facebook-says-emarketer/",
+        "created_at": 1503426171,
+        "updated_at": 1503426224
+      }
+    }]
+  }
+}
