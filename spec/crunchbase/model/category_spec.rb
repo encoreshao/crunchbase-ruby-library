@@ -14,7 +14,7 @@ module Crunchbase
           allow(Category).to receive(:organization_lists).and_return(result)
         end
 
-        it 'should return 4 of total count with categories' do
+        it 'should return 3 of total count with categories' do
           expect(categories.results.size).to eq(3)
         end
 
@@ -24,7 +24,7 @@ module Crunchbase
           expect(categories.per_page).to eq(100)
         end
 
-        it 'should return first website record' do
+        it 'should return first category record' do
           first_item = categories.results.first
 
           expect(first_item.type_name).to eq('Category')
@@ -33,7 +33,7 @@ module Crunchbase
           expect(first_item.web_path).to eq('category/social-media/5349a2f214d89727c32a19ebea5db78c')
         end
 
-        it 'should return last website record' do
+        it 'should return last category record' do
           first_item = categories.results.last
 
           expect(first_item.type_name).to eq('Category')

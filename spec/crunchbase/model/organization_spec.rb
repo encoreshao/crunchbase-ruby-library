@@ -33,6 +33,7 @@ module Crunchbase
           expect(without_organization.news.nil?).to be_truthy
           expect(without_organization.current_team.nil?).to be_truthy
           expect(without_organization.websites.nil?).to be_truthy
+          expect(without_organization.founders.nil?).to be_truthy
         end
       end
 
@@ -111,6 +112,10 @@ module Crunchbase
         it 'should return 10 of investors item and total pages count 20' do
           expect(organization.investors.size).to eq(10)
           expect(organization.investors_total_items).to eq(20)
+        end
+
+        it 'should return 5 of founders' do
+          expect(organization.founders.size).to eq(5)
         end
       end
     end
