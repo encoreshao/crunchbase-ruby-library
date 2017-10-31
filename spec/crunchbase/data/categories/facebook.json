@@ -1,0 +1,67 @@
+{
+  "metadata":
+  {
+    "version": 31,
+    "www_path_prefix": "https://www.crunchbase.com",
+    "api_path_prefix": "https://api.crunchbase.com",
+    "image_path_prefix": "http://public.crunchbase.com/t_api_images/"
+  },
+  "data":
+  {
+    "paging":
+    {
+      "total_items": 3,
+      "number_of_pages": 1,
+      "current_page": 1,
+      "sort_order": "created_at DESC",
+      "items_per_page": 100,
+      "next_page_url": null,
+      "prev_page_url": null,
+      "key_set_url": null,
+      "collection_url": "https://api.crunchbase.com/v3.1/organizations/facebook/categories",
+      "updated_since": null
+    },
+    "items": [
+    {
+      "type": "Category",
+      "uuid": "5349a2f214d89727c32a19ebea5db78c",
+      "properties":
+      {
+        "name": "Social Media",
+        "web_path": "category/social-media/5349a2f214d89727c32a19ebea5db78c",
+        "category_groups": [
+          "Internet Services",
+          "Media and Entertainment"
+        ],
+        "created_at": 1397980726,
+        "updated_at": 1507327103
+      }
+    },
+    {
+      "type": "Category",
+      "uuid": "714d833f223498bf19bf9ff70a5e2d17",
+      "properties":
+      {
+        "name": "Social Network",
+        "web_path": "category/social-network/714d833f223498bf19bf9ff70a5e2d17",
+        "category_groups": [
+          "Internet Services"
+        ],
+        "created_at": 1457032189,
+        "updated_at": 1507328020
+      }
+    },
+    {
+      "type": "Category",
+      "uuid": "80de9bf4789eb80e051cdc079493803f",
+      "properties":
+      {
+        "name": "Social",
+        "web_path": "category/social/80de9bf4789eb80e051cdc079493803f",
+        "category_groups": null,
+        "created_at": 1457032180,
+        "updated_at": 1507131447
+      }
+    }]
+  }
+}
