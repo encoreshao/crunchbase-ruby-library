@@ -1,0 +1,50 @@
+{
+  "metadata":
+  {
+    "version": 31,
+    "www_path_prefix": "https://www.crunchbase.com",
+    "api_path_prefix": "https://api.crunchbase.com",
+    "image_path_prefix": "http://public.crunchbase.com/t_api_images/"
+  },
+  "data":
+  {
+    "paging":
+    {
+      "total_items": 1,
+      "number_of_pages": 1,
+      "current_page": 1,
+      "sort_order": "created_at DESC",
+      "items_per_page": 100,
+      "next_page_url": null,
+      "prev_page_url": null,
+      "key_set_url": null,
+      "collection_url": "https://api.crunchbase.com/v3.1/organizations/facebook/offices",
+      "updated_since": null
+    },
+    "items": [
+    {
+      "type": "Address",
+      "uuid": "daebcfe0115c38af678c04603cc9f00f",
+      "properties":
+      {
+        "name": "Headquarters",
+        "street_1": "1 Hacker Way",
+        "street_2": null,
+        "postal_code": "94025",
+        "city": "Menlo Park",
+        "region": "California",
+        "country": "United States",
+        "city_web_path": "",
+        "region_code2": null,
+        "region_web_path": "",
+        "country_code2": null,
+        "country_code3": null,
+        "country_web_path": "",
+        "latitude": null,
+        "longitude": null,
+        "created_at": 1444764709,
+        "updated_at": 1474362356
+      }
+    }]
+  }
+}

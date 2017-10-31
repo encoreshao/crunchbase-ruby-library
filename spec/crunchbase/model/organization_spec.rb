@@ -23,6 +23,7 @@ module Crunchbase
         it 'should return nil when without relationships' do
           expect(without_organization.products.nil?).to be_truthy
           expect(without_organization.offices.nil?).to be_truthy
+          expect(without_organization.headquarters.nil?).to be_truthy
           expect(without_organization.funding_rounds.nil?).to be_truthy
           expect(without_organization.competitors.nil?).to be_truthy
           expect(without_organization.investments.nil?).to be_truthy
@@ -62,6 +63,11 @@ module Crunchbase
         it 'should return 1 of offices - OneToOne' do
           expect(organization.offices.class).to eq(Office)
           expect(organization.offices.nil?).to be_falsy
+        end
+
+        it 'should return 1 of headquarters - OneToOne' do
+          expect(organization.headquarters.class).to eq(Headquarter)
+          expect(organization.headquarters.nil?).to be_falsy
         end
 
         it 'should return 10 of funding_rounds' do
