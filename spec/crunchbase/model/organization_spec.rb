@@ -139,6 +139,23 @@ module Crunchbase
           expect(organization.board_members_and_advisors_total_items).to eq(10)
           expect(organization.board_members_and_advisors.size).to eq(10)
         end
+
+        context 'funding_rounds' do
+          it 'should return correctly data of the first funding round' do
+            first_funding_round = organization.funding_rounds[0]
+
+            expect(first_funding_round.uuid).to eq('37bd05f961af726ba3c1b279da842805')
+            expect(first_funding_round.funding_type).to eq('private_equity')
+            expect(first_funding_round.announced_on).to eq(Date.parse('2011-01-21'))
+            expect(first_funding_round.money_raised_currency_code).to eq('USD')
+            expect(first_funding_round.money_raised).to eq(1500000000)
+            expect(first_funding_round.money_raised_usd).to eq(1500000000)
+            expect(first_funding_round.investments.size).to eq(2)
+
+            expect(first_funding_round.investments[0].investors.name).to eq('DST Global')
+            expect(first_funding_round.investments[0].partners.size).to eq(1)
+          end
+        end
       end
     end
   end
