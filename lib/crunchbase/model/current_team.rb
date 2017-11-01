@@ -16,10 +16,5 @@ module Crunchbase::Model
         'person' => Person
       }
     end
-
-    # Factory method to return an instance from a permalink
-    def self.get(_permalink)
-      nil
-    end
   end
 end

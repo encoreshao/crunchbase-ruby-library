@@ -56,12 +56,14 @@ module Crunchbase::Model
     end
 
     def relationship_lists
-      {}
+      { }
     end
 
     def set_relationships_object(kclass_name, key, list)
       return unless list
 
+
+      one_to_one(kclass_name, key, list) if list.is_a?(Hash)
       one_to_one(kclass_name, key, list['item']) if list['item']
       one_to_many(kclass_name, key, list) if list['items']
     end

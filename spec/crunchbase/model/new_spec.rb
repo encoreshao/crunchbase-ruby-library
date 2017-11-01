@@ -45,7 +45,7 @@ module Crunchbase
       end
 
       context 'the second page news of facebook' do
-        let(:page2_news) { New.organization_lists('facebook', {page: 2}) }
+        let(:page2_news) { New.organization_lists('facebook', page: 2) }
 
         before :each do
           result = search_results(page2_news_data, New)

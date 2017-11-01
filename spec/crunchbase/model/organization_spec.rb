@@ -34,6 +34,8 @@ module Crunchbase
           expect(without_organization.current_team.nil?).to be_truthy
           expect(without_organization.websites.nil?).to be_truthy
           expect(without_organization.founders.nil?).to be_truthy
+          expect(without_organization.past_team.nil?).to be_truthy
+          expect(without_organization.board_members_and_advisors.nil?).to be_truthy
         end
       end
 
@@ -116,6 +118,26 @@ module Crunchbase
 
         it 'should return 5 of founders' do
           expect(organization.founders.size).to eq(5)
+        end
+
+        it 'should return 10 of past_team and total 416 of past team' do
+          expect(organization.past_team_total_items).to eq(400)
+          expect(organization.past_team.size).to eq(10)
+        end
+
+        it 'should return the first past_team information' do
+          first_member = organization.past_team[0]
+
+          expect(first_member.title).to eq('Software Engineer')
+          expect(first_member.uuid).to eq('009b372b0ee6bf03f60346b3a1730f41')
+          expect(first_member.person.first_name).to eq('Perry')
+          expect(first_member.person.last_name).to eq('Tam')
+          expect(first_member.person.permalink).to eq('perry-tam')
+        end
+
+        it 'should return 10 of board_members_and_advisors' do
+          expect(organization.board_members_and_advisors_total_items).to eq(10)
+          expect(organization.board_members_and_advisors.size).to eq(10)
         end
       end
     end
