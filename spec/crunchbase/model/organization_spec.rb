@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# disabled ModuleLength
 module Crunchbase
   module Model
     RSpec.describe Organization do

@@ -7,3 +7,6 @@ rvm:
 
 before_install:
   - gem install bundler
+
+after_success:
+  - coveralls --verbose
