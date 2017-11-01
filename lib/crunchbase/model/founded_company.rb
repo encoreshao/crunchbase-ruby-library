@@ -1,8 +1,8 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase::Model
-  class FoundedCompany < Crunchbase::Model::Organization
-
+  class FoundedCompany < Organization
     RESOURCE_LIST = 'founded_companies'
 
     #
@@ -25,6 +25,5 @@ module Crunchbase::Model
     #     type name path created_at updated_at
     #   ]
     # end
-
   end
 end

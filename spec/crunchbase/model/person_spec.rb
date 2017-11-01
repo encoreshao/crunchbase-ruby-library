@@ -1,25 +1,28 @@
-require File.join(File.dirname(__FILE__), "../..", "spec_helper.rb")
+# frozen_string_literal: true
 
 module Crunchbase
   module Model
+    RSpec.describe Person do
+      let(:mark_zuckerberg_json_data) { parse_json('people', 'mark-zuckerberg') }
 
-    # describe Person, "#get" do
-    #   begin
-    #     person = Person.get("li-ka-shing")
+      context 'Person - with mark zuckerberg' do
+        let(:mark_zuckerberg) { Person.get('mark-zuckerberg') }
 
-    #     puts person.inspect
+        before :each do
+          result = Person.new(mark_zuckerberg_json_data)
 
-    #   rescue Exception => e
-    #     puts e.message
-    #   end
-    # end
+          allow(Person).to receive(:get).and_return(result)
+        end
 
-    describe Person, "#list" do
-      begin
-        person = Person.list( 1 )
-        puts person.results.map {|e| [e.first_name, e.last_name].join(', ') }.inspect
-      rescue Exception => e
-        puts e.message
+        it 'should return personal information with mark zuckerberg' do
+          expect(mark_zuckerberg.type_name).to eq('Person')
+          expect(mark_zuckerberg.uuid).to eq('a01b8d46d31133337c34aa3ae9c03f22')
+          expect(mark_zuckerberg.first_name).to eq('Mark')
+          expect(mark_zuckerberg.last_name).to eq('Zuckerberg')
+          expect(mark_zuckerberg.gender).to eq('Male')
+          expect(mark_zuckerberg.born_on).to eq(Date.parse('1984-05-14'))
+          expect(mark_zuckerberg.role_investor).to eq(true)
+        end
       end
     end
   end

@@ -1,45 +1,37 @@
-require File.join(File.dirname(__FILE__), "../..", "spec_helper.rb")
+# frozen_string_literal: true
 
 module Crunchbase
   module Model
+    RSpec.describe FundingRound do
+      let(:funding_rounds_data) { parse_json('funding_rounds', 'facebook') }
 
-    describe FundingRound, "#get" do
-      round = FundingRound.get('c31e2cc41e8f30c6da0aaf6b395469e5')
-        
-      puts round.inspect
-      
-      round.investments.map {|e|
-        e.investors.each do |investor|
-          puts investor.object.inspect
-        end unless e.investors.nil?
-      } unless round.investments.nil?
-    end
+      context 'funding_rounds of facebook' do
+        let(:funding_rounds) { FundingRound.organization_lists('facebook') }
 
-    describe FundingRound, "#organization_lists" do
-      begin
-        results = FundingRound.organization_lists("xiaomi").results
-        results.collect {|e| puts e.funding_type }
+        before :each do
+          result = search_results(funding_rounds_data, FundingRound)
 
-      rescue Exception => e
-        puts e.message
+          allow(FundingRound).to receive(:organization_lists).and_return(result)
+        end
+
+        it 'should paging values from funding_rounds response' do
+          expect(funding_rounds.pages).to eq(1)
+          expect(funding_rounds.current_page).to eq(1)
+          expect(funding_rounds.per_page).to eq(100)
+        end
+
+        it 'should return 11 of total count with funding_rounds' do
+          expect(funding_rounds.results.size).to eq(11)
+          expect(funding_rounds.total_items).to eq(11)
+        end
+
+        it 'should return first funding_round record' do
+          first_item = funding_rounds.results.first
+
+          expect(first_item.uuid).to eq('37bd05f961af726ba3c1b279da842805')
+          expect(first_item.type_name).to eq('FundingRound')
+        end
       end
     end
-
-    describe FundingRound, "get news" do
-      news = New.funding_rounds_lists('c31e2cc41e8f30c6da0aaf6b395469e5').results
-      puts news.map {|e| e.title }
-    end
-
-
-    describe FundingRound, "get images" do
-      images = Image.funding_rounds_lists('c31e2cc41e8f30c6da0aaf6b395469e5').results
-      puts images.map {|e| e.inspect }
-    end
-
-    describe FundingRound, "get investments" do
-      investments = Investment.funding_rounds_lists('c31e2cc41e8f30c6da0aaf6b395469e5').results
-      puts investments.map {|e| e.inspect }
-    end
-
   end
 end

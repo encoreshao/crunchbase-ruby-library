@@ -1,0 +1,776 @@
+{
+  "metadata":
+  {
+    "version": 31,
+    "www_path_prefix": "https://www.crunchbase.com",
+    "api_path_prefix": "https://api.crunchbase.com",
+    "image_path_prefix": "http://public.crunchbase.com/t_api_images/"
+  },
+  "data":
+  {
+    "paging":
+    {
+      "total_items": 20,
+      "number_of_pages": 1,
+      "current_page": 1,
+      "sort_order": "created_at DESC",
+      "items_per_page": 100,
+      "next_page_url": null,
+      "prev_page_url": null,
+      "key_set_url": null,
+      "collection_url": "https://api.crunchbase.com/v3.1/organizations/facebook/investors",
+      "updated_since": null
+    },
+    "items": [
+    {
+      "type": "Person",
+      "uuid": "0159561fbe5d81eb7ccdb4d6efeb30fc",
+      "properties":
+      {
+        "permalink": "mark-pincus",
+        "api_path": "people/mark-pincus",
+        "web_path": "person/mark-pincus",
+        "api_url": "https://api.crunchbase.com/v3.1/people/mark-pincus",
+        "first_name": "Mark",
+        "last_name": "Pincus",
+        "gender": "Male",
+        "also_known_as": null,
+        "bio": "Mark Pincus is founder and Executive Chairman of the Board. He has served as our Chairman from April 2007 to March 2016 and our Executive Chairman since March 2016. \r\n\r\nHe previously served as Chief Executive Officer from April 2007 to July 2013 and from April 2015 to March 2016, and as Chief Product Officer from April 2007 to April 2014. In 2014, he founded superlabs, a San Francisco-based product lab focused on developing products that connect and empower people, which was acquired by Zynga in 2015. Pincus also founded Zynga.org in 2009, a non-profit organization dedicated to using social games for social good. \r\n\r\nFrom 2003 to 2007, Pincus served as Chief Executive Officer and Chairman of Tribe.net, a company he launched and one of the first social networks in the industry. \r\n\r\nFrom 1997 to 2000, he served as Chairman of Support.com, Inc. (NASDAQ: SPRT), a help desk automation software company he founded, and he served as Chief Executive Officer and President from December 1997 to July 1999. \r\n\r\nFrom 1996 to 1997, he served as Chief Executive Officer of FreeLoader, Inc., a web-based news company he founded.\r\n\r\nPincus also made founding investments in Napster, Twitter and Facebook.\r\n\r\nPincus graduated summa cum laude from University of Pennsylvania’s Wharton School of Business and earned an MBA from Harvard Business School. He is an angel investor in multiple Silicon Valley startups and regularly gives lectures to aspiring entrepreneurs.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1465651734/xnwsz1e1tzxix9ejlrnt.jpg",
+        "role_investor": true,
+        "born_on": null,
+        "born_on_trust_code": null,
+        "died_on": null,
+        "died_on_trust_code": null,
+        "created_at": 1200672503,
+        "updated_at": 1508089007
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "02f875112b760f3d7fed109aba6dd5a5",
+      "properties":
+      {
+        "permalink": "triplepoint-capital",
+        "api_path": "organizations/triplepoint-capital",
+        "web_path": "organization/triplepoint-capital",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/triplepoint-capital",
+        "name": "TriplePoint Capital",
+        "also_known_as": null,
+        "short_description": "TriplePoint Capital offers leases and loans to finance companies' equipment or growth-capital needs.",
+        "description": "TriplePoint Capital offers leases and loans to finance companies' equipment or growth-capital needs. The company offers debt-financing products, including equipment leases, equipment loans, and growth capital loans. The company's equipment leases and equipment loans are used to finance equipments, such as computers and servers, electronic test and measurement equipment, telecommunications equipment, laboratory equipment, office furniture, and software.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397179207/d3698022c131985ab0cb14507852795d.gif",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "1987-01-01",
+        "founded_on_trust_code": 5,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 65,
+        "homepage_url": null,
+        "contact_email": "info@triplepointcapital.com",
+        "phone_number": null,
+        "created_at": 1210459964,
+        "updated_at": 1508089004
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "30b3efdf6024804dea55c4d1a8dfc86c",
+      "properties":
+      {
+        "permalink": "goldman-sachs",
+        "api_path": "organizations/goldman-sachs",
+        "web_path": "organization/goldman-sachs",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/goldman-sachs",
+        "name": "Goldman Sachs",
+        "also_known_as": null,
+        "short_description": "Goldman Sachs is a multinational financial services firm providing securities, and investment banking and management services.",
+        "description": "The Goldman Sachs Group, Inc. provides investment banking, securities, and investment management services, as well as financial services to corporations, financial institutions, governments, and high-net-worth individuals worldwide.\r\n\r\nIts Investment Banking segment offers financial advisory services, including advisory assignments with respect to mergers and acquisitions, divestitures, corporate defense, risk management, and restructurings and spin-offs; and underwriting services comprising public offerings and private placements of a range of securities, loans and other financial instruments, and derivative transactions.\r\n\r\nThe company’s Institutional Client Services segment provides client execution services, such as fixed income, currency, and commodities client execution related to making markets in interest rate products, credit products, mortgages, currencies, and commodities; and equities related to making markets in equity products, as well as executes and clears institutional client transactions on stock, options, and futures exchanges.\r\n\r\nThis segment also engages in securities services business providing financing, securities lending, and other brokerage services to institutional clients, including hedge funds, mutual funds, pension funds, and foundations. Its Investing and Lending segment originates longer-term loans; and invests in debt securities, loans, public and private equity securities, real estate, consolidated investment entities, distressed assets, currencies, commodities, and power generation facilities.\r\n\r\nThe company’s Investment Management segment provides investment products and services, as well as offers wealth advisory services, including portfolio management and financial counseling, and brokerage and other transaction services.\r\n\r\nThe Goldman Sachs Group, Inc. was founded in 1869 and is headquartered in New York, New York.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1499109617/jecaowhmbuvfmpwjgouu.png",
+        "primary_role": "investor",
+        "role_company": true,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital",
+          "investment_bank"
+        ],
+        "founded_on": "1869-01-01",
+        "founded_on_trust_code": 7,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 593,
+        "homepage_url": null,
+        "contact_email": "gs-investor-relations@gs.com",
+        "phone_number": null,
+        "created_at": 1181925921,
+        "updated_at": 1509342261
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "321aaefe527ea56e85cd641bd83cd866",
+      "properties":
+      {
+        "permalink": "western-technology-investment",
+        "api_path": "organizations/western-technology-investment",
+        "web_path": "organization/western-technology-investment",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/western-technology-investment",
+        "name": "Western Technology Investment",
+        "also_known_as": [
+          "wti"
+        ],
+        "short_description": "Western Technology Investment is a venture capital firm that specializes in offering acquisition financing to revenue generating firms.",
+        "description": "Leading provider of debt and lease financing to venture capital backed technology companies.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397178875/9e0e0603cb293f725ae67f9a95ec0a09.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "1980-01-01",
+        "founded_on_trust_code": 5,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 183,
+        "homepage_url": null,
+        "contact_email": "info@westerntech.com",
+        "phone_number": null,
+        "created_at": 1195788440,
+        "updated_at": 1509212439
+      }
+    },
+    {
+      "type": "Person",
+      "uuid": "3f47be492e32811801a031685a4d0fd7",
+      "properties":
+      {
+        "permalink": "peter-thiel",
+        "api_path": "people/peter-thiel",
+        "web_path": "person/peter-thiel",
+        "api_url": "https://api.crunchbase.com/v3.1/people/peter-thiel",
+        "first_name": "Peter",
+        "last_name": "Thiel",
+        "gender": "Male",
+        "also_known_as": null,
+        "bio": "Peter Thiel is a technology entrepreneur and investor.He first gained attention for innovations in banking and startup finance. Today he is known as the mentor of the PayPal mafia of entrepreneurs, as well as for his warnings of a coming technology deficit with severe economic consequences. He works to accelerate innovation to prevent such a crisis by identifying and funding promising technology ideas and by guiding successful companies to scale and dominate their industries.\r\n\r\nIn 1998,Thiel made e-commerce easier, faster, and more secure by co-founding and leading PayPal, which now has more than 128 million active financial accounts. In 2002, he sold PayPal to eBay and founded a global macro fund, Clarium.In 2004, he co-founded Palantir Technologies, which offers platforms for finance companies and intelligence, defense, and law enforcement communities to integrate, visualize, and analyze the world’s information.\r\n\r\nIn the same year, he made the first outside investment in Facebook, a social networking hub that now has more than a billion million active members. He serves on its board.\r\nBuilding on his personal success as a venture capital investor, Thiel co-founded and manages Founders Fund, a leading Silicon Valley venture capital fund that has pioneered new methods of venture financing that benefit founders. Through Founders Fund, as well as through his private investing, he has helped the next generation of tech companies, such as SpaceX, LinkedIn, Yelp, RoboteX, and Spotify.\r\n\r\nAnd in 2012 he co-founded Mithril Capital Management, an international technology investment fund.Thiel established and funds the Thiel Foundation, which promotes freedom in all its forms. He sponsors the Committee to Protect Journalists, The Seasteading Institute, and the Human Rights Foundation. He funds the artificial intelligence research of theMachine Intelligence Research Institute. \r\n\r\nHe also aids work against violence through theOslo Freedom Forum and through the research of philosopher René Girard, which is extended and promulgated by Imitatio. He also promotes better health by funding the longevity research of Dr. Cynthia Kenyon and the SENS Research Foundation.Thiel created the 20 Under 20 Thiel Fellowship, which nurtures the tech visionaries of tomorrow. And he formed Breakout Labs to help independent scientists, engineers, and inventors advance their most radical ideas.\r\n\r\nThiel earned a B.A. in philosophy from Stanford University and a J.D. from Stanford Law School, where he occasionally teaches on globalization and technology and serves on the board of overseers of the Hoover Institution. \r\n\r\nHis articles have appeared in Policy Review and the Wall Street Journal. He co-produced the film Thank You for Smoking, was rated a master by the United States Chess Federation, and received the Innovation Award from the Economist in 2010. He lives in San Francisco.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1484563208/aznqhf1dvjis2uap2ody.png",
+        "role_investor": true,
+        "born_on": "1967-10-11",
+        "born_on_trust_code": 7,
+        "died_on": null,
+        "died_on_trust_code": null,
+        "created_at": 1200673556,
+        "updated_at": 1509341931
+      }
+    },
+    {
+      "type": "Person",
+      "uuid": "6bbee73e72cabe5f9cd2ddc54a8b237f",
+      "properties":
+      {
+        "permalink": "reid-hoffman",
+        "api_path": "people/reid-hoffman",
+        "web_path": "person/reid-hoffman",
+        "api_url": "https://api.crunchbase.com/v3.1/people/reid-hoffman",
+        "first_name": "Reid",
+        "last_name": "Hoffman",
+        "gender": "Male",
+        "also_known_as": null,
+        "bio": "Reid joined Greylock Partners as an investment partner in 2009. He focuses on building products that can reach hundreds of millions of participants and businesses that have network effects.\r\n\r\nAn accomplished entrepreneur and executive, Reid has played an integral role in building many of today’s leading consumer technology businesses, including LinkedIn and PayPal. He possesses a unique understanding of consumer behavior and the dynamics of viral businesses, as well as deep experience in driving companies from the earliest stages through periods of explosive, “blitzscale” growth.\r\n\r\nReid co-founded LinkedIn, the world’s largest professional networking service, in 2003. LinkedIn is thriving with more than 400 million members around the world and a diversified revenue model that includes subscriptions, advertising, and software licensing. He led LinkedIn through its first four years and to profitability as Chief Executive Officer.\r\n\r\nPrior to LinkedIn, Reid served as executive vice president at PayPal, where he was also a founding board member.\r\n\r\nReid is an accomplished investor. He currently serves on the boards of Airbnb, Convoy, Edmodo, Xapo, Linkedin, and a few early stage companies still in stealth. In addition, he serves on a number of not-for-profit boards, including Kiva, Mozilla Corporation, Endeavor, and Do Something. Prior to joining Greylock, he angel invested in many influential Internet companies, including Facebook, Flickr, Last.fm, and Zynga.\r\n\r\nReid is the co-author of two New York Times best-selling books: The Start-up of You and The Alliance. His next book is focused on “blitzscaling”, based on his Stanford course of the same name.\r\n\r\nReid earned a master’s degree in philosophy from Oxford University, where he was a Marshall Scholar, and a bachelor’s degree with distinction in symbolic systems from Stanford University. In 2010 he was the recipient of an SD Forum Visionary Award and named a Henry Crown Fellow by The Aspen Institute. In 2012, he was honored by the Martin Luther King center’s Salute to Greatness Award. Also in 2012, he received the David Packard Medal of Achievement from TechAmerica and an honorary doctor of law from Babson University.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1491751602/p3fjnrhgae2hkszz7id8.png",
+        "role_investor": true,
+        "born_on": "1967-08-05",
+        "born_on_trust_code": 7,
+        "died_on": null,
+        "died_on_trust_code": null,
+        "created_at": 1201290662,
+        "updated_at": 1509226003
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "87e297f853fda340cbfc6f34d3c62a86",
+      "properties":
+      {
+        "permalink": "horizons-ventures",
+        "api_path": "organizations/horizons-ventures",
+        "web_path": "organization/horizons-ventures",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/horizons-ventures",
+        "name": "Horizons Ventures",
+        "also_known_as": null,
+        "short_description": "Horizons Ventures Limited, based in Hong Kong, funds especially disruptive and technology-focused start-ups.",
+        "description": "Hong Kong based. Global footprint. Technology focused. Disrupt focused.\r\n\r\nSome of the latest exits are Skype, Siri, Facebook, Summly, and Waze.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1445527969/kxzod6he1fkmqxuwiexl.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "1999-01-01",
+        "founded_on_trust_code": 5,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 141,
+        "homepage_url": null,
+        "contact_email": null,
+        "phone_number": null,
+        "created_at": 1235739553,
+        "updated_at": 1509341839
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "8ce2fd0305ddab1d19e1826840e305f1",
+      "properties":
+      {
+        "permalink": "elevation-partners",
+        "api_path": "organizations/elevation-partners",
+        "web_path": "organization/elevation-partners",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/elevation-partners",
+        "name": "Elevation Partners",
+        "also_known_as": null,
+        "short_description": "Elevation Partners is a private equity firm focused on large-scale investments in media, entertainment and technology businesses.",
+        "description": "Elevation Partners is a newly formed private equity firm that makes large-scale investments in market-leading media, entertainment, and consumer-related businesses. Elevation focuses on investing in intellectual property and content oriented businesses, as well as traditional media and entertainment companies, \r\n\r\nElevation hopes to help media and entertainment businesses create and market great content and insure it reaches the widest audience possible.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397179671/8eea27bf07006083d918902cb6d60d0f.jpg",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "private_equity_firm"
+        ],
+        "founded_on": null,
+        "founded_on_trust_code": null,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 19,
+        "homepage_url": null,
+        "contact_email": "info@elevation.com",
+        "phone_number": null,
+        "created_at": 1230198800,
+        "updated_at": 1502461217
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "8d5c7e4882da3025dd46346a31bab86f",
+      "properties":
+      {
+        "permalink": "meritech-capital-partners",
+        "api_path": "organizations/meritech-capital-partners",
+        "web_path": "organization/meritech-capital-partners",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/meritech-capital-partners",
+        "name": "Meritech Capital Partners",
+        "also_known_as": null,
+        "short_description": "Meritech Capital is a provider of late-stage venture capital to technology companies.",
+        "description": "Meritech isn't a venture supermarket. We don’t do seed deals one day and dabble in pre-IPO rounds the next. We do one thing, period: invest in the best late stage tech companies in the universe. We have no aspirations of raising billion dollar mega funds (been there, done that) — that’s a whole ‘nother layer of people and process. And it just doesn’t scale.\r\n\r\nWhat you see is what you get. There are no armies of junior people ready to disrupt your business with invasive diligence requests and lengthy committee approvals. If you’re looking for a proctology exam, you’ve come to the wrong place. At Meritech, it’s just six partners – that’s it. Partners do all the work; partners make all the decisions. And we are prompt, transparent, and quick.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397178465/b0b77dbd1a527c355b93dbe079f87239.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "1999-01-01",
+        "founded_on_trust_code": 7,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 214,
+        "homepage_url": null,
+        "contact_email": "info@meritechcapital.com",
+        "phone_number": null,
+        "created_at": 1180211399,
+        "updated_at": 1508708517
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "902deab4ec4168ced9dfc0c959578176",
+      "properties":
+      {
+        "permalink": "sv-angel",
+        "api_path": "organizations/sv-angel",
+        "web_path": "organization/sv-angel",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/sv-angel",
+        "name": "SV Angel",
+        "also_known_as": null,
+        "short_description": "SV Angel is a San Francisco-based angel firm that helps startups with business development, financing, M&A, and other strategic advice.",
+        "description": "SV Angel is a San Francisco-based seed fund founded by [Ron Conway](/person/ron-conway). SV Angel provides seed investment and advice to early stage companies focused on Internet software.\r\n\r\nSV Angel takes a portfolio approach to seed investing. We differ from a traditional venture capital firm by not taking board seats and investing a larger number of companies. We leverage a best in class relationship network to be the valley's human router and help startups with business development, financing, M&A and other strategic advice. \r\n\r\nRon pioneered this approach over 20 years ago and SV Angel still employs it today. Over the last 20 years the firm and partners have invested and advised companies such as Facebook, Google, PayPal, Dropbox, Airbnb, Pinterest, Twitter, SnapChat, Square, Cloudera and many more.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1479914913/onckj03lxpvqzups4lq7.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "micro_vc"
+        ],
+        "founded_on": "2009-01-01",
+        "founded_on_trust_code": 5,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 755,
+        "homepage_url": null,
+        "contact_email": null,
+        "phone_number": null,
+        "created_at": 1247177750,
+        "updated_at": 1509283907
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "9bc455245c0454c1ec995afb33cd3fc4",
+      "properties":
+      {
+        "permalink": "digital-sky-technologies-fo",
+        "api_path": "organizations/digital-sky-technologies-fo",
+        "web_path": "organization/digital-sky-technologies-fo",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/digital-sky-technologies-fo",
+        "name": "DST Global",
+        "also_known_as": [
+          "DST",
+          "Digital Sky Technologies"
+        ],
+        "short_description": "DST Global is an investment company that funds late-stage ventures in the global internet industry.",
+        "description": "DST Global (Digital Sky Technologies) is a growth focused investment company specializing in late-stage, high-growth, private companies in the global Internet industry.\r\n\r\nThe company has pioneered a model to provide liquidity to founders, employees and early investors through mixed primary and secondary transactions. These transactions are often referred to as DST type deals in the Internet world.\r\n\r\nThe company was founded by Yuri Milner, and after building Mail.ru Group, DST gained international prominence through its investments in Facebook, Zynga and Groupon.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397178598/b3f58e60a53e9b113cc71c1a0d0fba8a.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "corporate_venture_capital"
+        ],
+        "founded_on": "2005-01-01",
+        "founded_on_trust_code": 7,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 57,
+        "homepage_url": null,
+        "contact_email": "info@dst-global.com",
+        "phone_number": null,
+        "created_at": 1243382220,
+        "updated_at": 1509298573
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "aefa3a84519300c35cbfec5ec2645672",
+      "properties":
+      {
+        "permalink": "global-founders-capital",
+        "api_path": "organizations/global-founders-capital",
+        "web_path": "organization/global-founders-capital",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/global-founders-capital",
+        "name": "Global Founders Capital",
+        "also_known_as": [
+          "European Founders Fund"
+        ],
+        "short_description": "GFC is a globally oriented, stage agnostic venture fund that empowers gifted entrepreneurs world-wide.",
+        "description": "GFC is a globally oriented, stage agnostic venture capital firm that empowers gifted entrepreneurs world-wide.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1469046611/ynyerohlibkf6x9ufl6r.jpg",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "2013-01-01",
+        "founded_on_trust_code": 5,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 160,
+        "homepage_url": null,
+        "contact_email": "contact@globalfounderscapital.com",
+        "phone_number": null,
+        "created_at": 1363654525,
+        "updated_at": 1509298648
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "b08efc27da40505a6f9dc9e14247bf36",
+      "properties":
+      {
+        "permalink": "accel-partners",
+        "api_path": "organizations/accel-partners",
+        "web_path": "organization/accel-partners",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/accel-partners",
+        "name": "Accel Partners",
+        "also_known_as": [
+          "Accel"
+        ],
+        "short_description": "Accel is a leading early and growth-stage venture capital firm, powering a global community of entrepreneurs.",
+        "description": "Accel is a leading early and growth-stage venture capital firm, powering a global community of entrepreneurs. Accel backs entrepreneurs who have what it takes to build a world-class, category-defining business. Founded in 1983, Accel brings more than three decades of experience building and supporting hundreds of companies. Accel’s vision for entrepreneurship and business enables it to identify and invest in the companies that will be responsible for the growth of next-generation industries.\r\n\r\nAccel-backed companies include Atlassian, Braintree, Cloudera, DJI, Dropbox, Dropcam, Etsy, Facebook, Flipkart, Lookout Security, MoPub, Qualtrics, Slack, Spotify, Supercell, Vox Media and others.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1479484816/sep6qtsto7jfh8xcn7ok.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "1983-01-01",
+        "founded_on_trust_code": 5,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 1114,
+        "homepage_url": null,
+        "contact_email": null,
+        "phone_number": null,
+        "created_at": 1180211259,
+        "updated_at": 1509356206
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "b17358c52334a1fc10248a741e35f8bc",
+      "properties":
+      {
+        "permalink": "cambrian-ventures",
+        "api_path": "organizations/cambrian-ventures",
+        "web_path": "organization/cambrian-ventures",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/cambrian-ventures",
+        "name": "Cambrian Ventures",
+        "also_known_as": null,
+        "short_description": "Cambrian Ventures is a technology research and venture capital firm. They target disruptive technologies/applications and typically get",
+        "description": "Cambrian Ventures is a technology research and venture capital firm. They target disruptive technologies/applications and typically get involved very early with such companies to help shape both the technology and the business.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1444292313/bghx5wqzgncymjtsvxvu.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "2000-01-01",
+        "founded_on_trust_code": 5,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 22,
+        "homepage_url": null,
+        "contact_email": "info@cambrianventures.com",
+        "phone_number": null,
+        "created_at": 1184338881,
+        "updated_at": 1489986209
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "b915e54033776a2a651e6fd7c0787e26",
+      "properties":
+      {
+        "permalink": "technology-crossover-ventures",
+        "api_path": "organizations/technology-crossover-ventures",
+        "web_path": "organization/technology-crossover-ventures",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/technology-crossover-ventures",
+        "name": "TCV",
+        "also_known_as": [
+          "TVC"
+        ],
+        "short_description": "Founded in 1995, TCV is a leading provider of capital to growth-stage private and public companies in the technology industry.",
+        "description": "Technology Crossover Ventures (TCV), founded in 1995, is a leading provider of capital to growth-stage private and public companies in the technology industry. TCV has invested over $9 billion in leading technology companies, include Airbnb, Believe Digital, Brillen.de, C|NET, ExactTarget, Expedia, Facebook, Fandango, FX Alliance, GoDaddy, GoFundMe, Genesys Software, HomeAway, Netflix, RealNetworks, Redback Networks, Payoneer, Rent the Runway, RiskMetrics Group, Sitecore, Splunk, Spotify, Thinkorswim, VICE Media, WorldRemit, and Zillow.\r\n\r\nTCV is headquartered in Palo Alto, California, with offices in New York and London. For more information about TCV, including a complete list of TCV investments, please visit http://www.tcv.com.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1472274733/lswbu7h2mbts4brka2tj.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "private_equity_firm"
+        ],
+        "founded_on": "1995-06-26",
+        "founded_on_trust_code": 7,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 252,
+        "homepage_url": null,
+        "contact_email": "kgagen@tcv.com",
+        "phone_number": null,
+        "created_at": 1187801055,
+        "updated_at": 1509298754
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "cbf722156a1cf4efe17f0a958eca3dac",
+      "properties":
+      {
+        "permalink": "breyer-capital",
+        "api_path": "organizations/breyer-capital",
+        "web_path": "organization/breyer-capital",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/breyer-capital",
+        "name": "Breyer Capital",
+        "also_known_as": null,
+        "short_description": "Premier global venture capital and private equity investor focused on catalyzing high-impact entrepreneurs in the US and China",
+        "description": "Breyer Capital is a premier global venture capital and private equity investor focused on catalyzing high-impact entrepreneurs in the United States and China. Founded by Jim Breyer in 2006, Breyer Capital makes long-term, idea-driven strategic investments in its chosen core areas: social media, entertainment/media, digital health, and financial technologies.\r\n\r\nBreyer Capital actively partners with a diverse set of companies including early-stage startups building breakthrough technologies, fast growing companies, and established worldwide leading corporations. Its team enjoys helping to frame strategic investments anchored by the passion of founders and owner/operator teams, the insights of its network of world-class investors, and a conviction that artificial intelligence, machine learning, and virtual reality will transform technology and investment opportunities globally.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1454378908/xboiapkvatg0jeix45k6.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "2006-07-11",
+        "founded_on_trust_code": 7,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 32,
+        "homepage_url": null,
+        "contact_email": "info@breyercapital.com",
+        "phone_number": null,
+        "created_at": 1333709591,
+        "updated_at": 1509212430
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "e20065716b7ae477002af7014f48a7e3",
+      "properties":
+      {
+        "permalink": "greylock",
+        "api_path": "organizations/greylock",
+        "web_path": "organization/greylock",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/greylock",
+        "name": "Greylock Partners",
+        "also_known_as": null,
+        "short_description": "Greylock Partners backs entrepreneurs who are building disruptive, market-transforming consumer and enterprise software companies.",
+        "description": "Greylock Partners backs entrepreneurs who are building disruptive, market-transforming consumer and enterprise software companies. We invest in companies that define new markets, including Airbnb, AppDynamics, Apptio, Arista Networks (NYSE: ANET), Cloudera, Docker, Dropbox, Facebook (Nasdaq: FB), LinkedIn (NYSE: LNKD), Medium, Nextdoor, Palo Alto Networks (NYSE: PANW), Pandora (NYSE: P), Pure Storage and Workday (NYSE: WDAY).",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1432247695/fh8vkbos6tik41wtbrpa.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "1965-10-01",
+        "founded_on_trust_code": 6,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 612,
+        "homepage_url": null,
+        "contact_email": "press@greylock.com",
+        "phone_number": null,
+        "created_at": 1402354733,
+        "updated_at": 1509299488
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "fb2f8884ec07895a48d7d9a9d4d7175c",
+      "properties":
+      {
+        "permalink": "founders-fund",
+        "api_path": "organizations/founders-fund",
+        "web_path": "organization/founders-fund",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/founders-fund",
+        "name": "Founders Fund",
+        "also_known_as": null,
+        "short_description": "Founders Fund is a San Francisco based venture capital firm investing in companies building revolutionary technologies.",
+        "description": "Founders Fund is a San Francisco based venture capital firm that invests at every stage in companies building revolutionary technologies.\r\n\r\nThe firm and its partners have been  investors, founders, and early employees of prominent technology companies including PayPal, Facebook, Space Exploration Technologies (SpaceX), and Palantir Technologies. \r\n\r\nFounders Fund was formed in 2005 and has raised five funds to date with more than $2 billion in aggregate capital under management. The firm has historically invested in a wide variety of sectors, including aerospace, artificial intelligence, advanced computing, energy, health, and consumer Internet.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1492059725/laapckobytinuv9azdps.png",
+        "primary_role": "investor",
+        "role_company": false,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": [
+          "venture_capital"
+        ],
+        "founded_on": "2005-07-01",
+        "founded_on_trust_code": 7,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": null,
+        "num_employees_max": null,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 284,
+        "homepage_url": null,
+        "contact_email": null,
+        "phone_number": null,
+        "created_at": 1402064061,
+        "updated_at": 1509255636
+      }
+    },
+    {
+      "type": "Person",
+      "uuid": "fc0714e3f453b581343bb162cc2952cf",
+      "properties":
+      {
+        "permalink": "stuart-peterson",
+        "api_path": "people/stuart-peterson",
+        "web_path": "person/stuart-peterson",
+        "api_url": "https://api.crunchbase.com/v3.1/people/stuart-peterson",
+        "first_name": "Stuart",
+        "last_name": "Peterson",
+        "gender": "Male",
+        "also_known_as": [
+          "Stu"
+        ],
+        "bio": "Stuart Peterson is the Co-Founder and Senior Partner with ARTIS Ventures, a San Francisco-based VC firm that led early-stage investments in media giant YouTube and cancer-curing Stemcentrx. Stuart currently serves on the Board of Directors for Stemcentrx, a targeted stem cell-centric cancer therapeutics company, IDbyDNA, an end-to-end and universal metagenomics platform,, Versa Networks, the leading vendor in the SD-WAN and SD-Security markets, Juicero, on a mission to help people consume more fresh produce every day and Practice Fusion, the largest cloud-based electronic health records (EHR) platform in the U.S. \r\n\r\nHe is also a Board Advisor for Fabric Genomics, a genomic interpretation platform, Cohesity, an infinitely scalable, intelligent enterprise data storage platform and Bracket Computing, a cloud workload protection platform built for the enterprise. \r\n\r\nARTIS Ventures investments include YouTube, Practice Fusion, Nimble Storage, Aruba Networks, Stemcentrx, Juicero, Versa Networks, Bracket Computing, Palantir, Cohesity, Modern Meadow, Quid and many more.\r\n\r\nStuart also currently serves on the Board of Trustees for the SFMOMA and is actively involved in the Tipping Point Community and the Human Needs Project.\r\n\r\nStuart received his B.A. in Economics from the University of California, Los Angeles and his M.B.A. in Analytic Finance from The University of Chicago’s Graduate School of Business.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1421905017/yiagrhmpcouowtxjuoot.jpg",
+        "role_investor": true,
+        "born_on": null,
+        "born_on_trust_code": null,
+        "died_on": null,
+        "died_on_trust_code": null,
+        "created_at": 1272237283,
+        "updated_at": 1503005757
+      }
+    },
+    {
+      "type": "Organization",
+      "uuid": "fd80725f53fc70099878aeecf1e9ffbb",
+      "properties":
+      {
+        "permalink": "microsoft",
+        "api_path": "organizations/microsoft",
+        "web_path": "organization/microsoft",
+        "api_url": "https://api.crunchbase.com/v3.1/organizations/microsoft",
+        "name": "Microsoft",
+        "also_known_as": [
+          "msn"
+        ],
+        "short_description": "Microsoft, a software corporation that develops, manufactures, licenses, supports, and sells a range of software products and services.",
+        "description": "Microsoft is an American multinational corporation that develops, manufactures, licenses, supports, and sells a range of software products and services.\r\n\r\nMicrosoft’s devices and consumer (D&C) licensing segment licenses Windows operating system and related software; Microsoft Office for consumers; and Windows Phone operating system. The company’s computing and gaming hardware segment provides Xbox gaming and entertainment consoles and accessories, second-party and third-party video games, and Xbox Live subscriptions; surface devices and accessories; and Microsoft PC accessories. Its phone hardware segment offers Lumia smartphones and other non-Lumia phones. Its D&C other segment provides Windows Store, Xbox Live transactions, and Windows phone store; search advertising; display advertising; Office 365 Home and Office 365 Personal; first-party video games; and other consumer products and services as well as operating retail stores.\r\n\r\nMicrosoft’s commercial licensing segments licenses server products, including Windows Server, Microsoft SQL Server, Visual Studio, System Center, and related Client Access Licenses (CALs); Windows Embedded; Windows operating system; Microsoft Office for business, including Office, Exchange, SharePoint, Lync, and related CALs; Microsoft Dynamics business solutions; and Skype. Its commercial other segment offers enterprise services, including premier support services and Microsoft consulting services; commercial cloud comprising Office 365 Commercial, other Microsoft Office online offerings, Dynamics CRM Online, and Microsoft Azure; and other commercial products and online services.\r\n\r\nThe company markets and distributes its products through original equipment manufacturers, distributors, and resellers, as well as online. Microsoft Corporation was founded by [Bill Gates](https://www.crunchbase.com/person/bill-gates) and [Paul Allen](https://www.crunchbase.com/person/paul-allen) in 1974. It is based in Redmond, Washington.",
+        "profile_image_url": "http://public.crunchbase.com/t_api_images/v1501613147/ypg7mliwmzomf9fdrkvz.png",
+        "primary_role": "company",
+        "role_company": true,
+        "role_investor": true,
+        "role_group": false,
+        "role_school": false,
+        "investor_type": null,
+        "founded_on": "1974-04-04",
+        "founded_on_trust_code": 7,
+        "is_closed": false,
+        "closed_on": null,
+        "closed_on_trust_code": null,
+        "num_employees_min": 10001,
+        "num_employees_max": 1000000,
+        "stock_exchange": null,
+        "stock_symbol": null,
+        "total_funding_usd": 0,
+        "number_of_investments": 82,
+        "homepage_url": null,
+        "contact_email": null,
+        "phone_number": null,
+        "created_at": 1399896058,
+        "updated_at": 1509355913
+      }
+    }]
+  }
+}

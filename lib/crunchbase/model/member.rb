@@ -1,9 +1,8 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase::Model
-  class Member < Crunchbase::Model::Organization
-    
+  class Member < Organization
     RESOURCE_LIST = 'members'
-
   end
 end

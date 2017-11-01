@@ -1,22 +1,22 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 module Crunchbase::Model
-  class PrimaryAffiliation < Crunchbase::Model::Job
-
+  class PrimaryAffiliation < Job
     attr_reader :organization
 
     def initialize(json)
       super
 
       unless (relationships = json['relationships']).nil?
-        set_relationships_object(Crunchbase::Model::Organization, 'organization', relationships['organization'])
+        set_relationships_object(Organization, 'organization', relationships['organization'])
       end
     end
 
-    def set_relationships_object(object_name, key, item)
+    def set_relationships_object(kclass_name, key, item)
       return unless item
 
-      instance_variable_set "@#{key}", ( object_name.new(item) || nil )
+      instance_variable_set "@#{key}", (kclass_name.new(item) || nil)
     end
   end
 end
