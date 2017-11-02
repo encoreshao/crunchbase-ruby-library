@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+require 'coveralls'
+Coveralls.wear!
+
 $LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'lib')
 
 require 'rspec'
@@ -6,8 +9,6 @@ require 'rspec/its'
 require 'crunchbase'
 require 'time'
 require 'yaml'
-require 'coveralls'
-Coveralls.wear!
 
 yaml = YAML.load_file(File.join(File.dirname(__FILE__), 'crunchbase.yml'))
 
