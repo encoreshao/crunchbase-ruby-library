@@ -1,0 +1,484 @@
+{
+  "metadata":
+  {
+    "version": 31,
+    "www_path_prefix": "https://www.crunchbase.com",
+    "api_path_prefix": "https://api.crunchbase.com",
+    "image_path_prefix": "http://public.crunchbase.com/t_api_images/"
+  },
+  "data":
+  {
+    "type": "FundingRound",
+    "uuid": "37bd05f961af726ba3c1b279da842805",
+    "properties":
+    {
+      "permalink": "37bd05f961af726ba3c1b279da842805",
+      "api_path": "funding-rounds/37bd05f961af726ba3c1b279da842805",
+      "web_path": "funding-round/37bd05f961af726ba3c1b279da842805",
+      "api_url": "https://api.crunchbase.com/v3.1/funding-rounds/37bd05f961af726ba3c1b279da842805",
+      "funding_type": "private_equity",
+      "series": null,
+      "series_qualifier": null,
+      "announced_on": "2011-01-21",
+      "announced_on_trust_code": 7,
+      "closed_on": null,
+      "closed_on_trust_code": null,
+      "money_raised": 1500000000,
+      "money_raised_currency_code": "USD",
+      "money_raised_usd": 1500000000,
+      "target_money_raised": null,
+      "target_money_raised_currency_code": null,
+      "target_money_raised_usd": null,
+      "pre_money_valuation": 48500000000,
+      "pre_money_valuation_currency_code": "USD",
+      "pre_money_valuation_usd": 48500000000,
+      "created_at": 1295843747,
+      "updated_at": 1467317211
+    },
+    "relationships":
+    {
+      "investments":
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 2,
+          "first_page_url": "https://api.crunchbase.com/v3.1/funding-rounds/37bd05f961af726ba3c1b279da842805/investments",
+          "sort_order": "announced_on DESC"
+        },
+        "items": [
+        {
+          "type": "Investment",
+          "uuid": "287934b40258a28400d119587de2a36d",
+          "properties":
+          {
+            "money_invested": null,
+            "money_invested_currency_code": null,
+            "money_invested_usd": null,
+            "is_lead_investor": true,
+            "announced_on": "2011-01-21",
+            "announced_on_trust_code": 7,
+            "created_at": 1295843748,
+            "updated_at": 1472590928
+          },
+          "relationships":
+          {
+            "investors":
+            {
+              "type": "Organization",
+              "uuid": "9bc455245c0454c1ec995afb33cd3fc4",
+              "properties":
+              {
+                "permalink": "digital-sky-technologies-fo",
+                "api_path": "organizations/digital-sky-technologies-fo",
+                "web_path": "organization/digital-sky-technologies-fo",
+                "api_url": "https://api.crunchbase.com/v3.1/organizations/digital-sky-technologies-fo",
+                "name": "DST Global",
+                "also_known_as": [
+                  "DST",
+                  "Digital Sky Technologies"
+                ],
+                "short_description": "DST Global is an investment company that funds late-stage ventures in the global internet industry.",
+                "description": "DST Global (Digital Sky Technologies) is a growth focused investment company specializing in late-stage, high-growth, private companies in the global Internet industry.\r\n\r\nThe company has pioneered a model to provide liquidity to founders, employees and early investors through mixed primary and secondary transactions. These transactions are often referred to as DST type deals in the Internet world.\r\n\r\nThe company was founded by Yuri Milner, and after building Mail.ru Group, DST gained international prominence through its investments in Facebook, Zynga and Groupon.",
+                "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397178598/b3f58e60a53e9b113cc71c1a0d0fba8a.png",
+                "primary_role": "investor",
+                "role_company": false,
+                "role_investor": true,
+                "role_group": false,
+                "role_school": false,
+                "investor_type": [
+                  "corporate_venture_capital"
+                ],
+                "founded_on": "2005-01-01",
+                "founded_on_trust_code": 7,
+                "is_closed": false,
+                "closed_on": null,
+                "closed_on_trust_code": null,
+                "num_employees_min": null,
+                "num_employees_max": null,
+                "stock_exchange": null,
+                "stock_symbol": null,
+                "total_funding_usd": 0,
+                "number_of_investments": 58,
+                "homepage_url": null,
+                "contact_email": "info@dst-global.com",
+                "phone_number": null,
+                "created_at": 1243382220,
+                "updated_at": 1509298573
+              }
+            },
+            "partners": [
+            {
+              "type": "Person",
+              "uuid": "b7e65a1a9e45c60d8b87bfbeed127319",
+              "properties":
+              {
+                "permalink": "yuri-milner",
+                "api_path": "people/yuri-milner",
+                "web_path": "person/yuri-milner",
+                "api_url": "https://api.crunchbase.com/v3.1/people/yuri-milner",
+                "first_name": "Yuri",
+                "last_name": "Milner",
+                "gender": "Male",
+                "also_known_as": null,
+                "bio": "Yuri founded Mail.ru Group in 1999 and under his leadership it became one of Europe’s leading internet companies. He took that business public in 2010 and founded DST Global to focus on global internet investments. DST Global became one of the world’s leading technology investors and its portfolio has included some of the world's most prominent internet companies, such as Facebook, Twitter, WhatsApp, Snapchat, Airbnb, Spotify,  Alibaba, and others. Yuri lives in Silicon Valley with his family.\r\nYuri graduated in 1985 with an advanced degree in theoretical physics and subsequently conducted research in quantum field theory. Yuri and his wife Julia, together with Sergey Brin and Anne Wojcicki, Mark Zuckerberg and Priscilla Chan, launched the Breakthrough Prizes - the world’s largest scientific awards, honoring important, primarily recent, achievements in Fundamental Physics, Life Sciences and Mathematics. In July 2015, together with Stephen Hawking, Yuri launched the $100 million Breakthrough Listen initiative to reinvigorate the search for extraterrestrial intelligence in the Universe, and in April 2016 they launched Breakthrough Starshot - a $100 million research and engineering program seeking to develop a technology for interstellar travel.",
+                "profile_image_url": "http://public.crunchbase.com/t_api_images/v1503003974/w5n2swvdwcmrf2sdqpe6.png",
+                "role_investor": true,
+                "born_on": null,
+                "born_on_trust_code": null,
+                "died_on": null,
+                "died_on_trust_code": null,
+                "created_at": 1243397296,
+                "updated_at": 1508665122
+              }
+            }],
+            "invested_in":
+            {
+              "type": "Organization",
+              "uuid": "df6628127f970b439d3e12f64f504fbb",
+              "properties":
+              {
+                "permalink": "facebook",
+                "api_path": "organizations/facebook",
+                "web_path": "organization/facebook",
+                "api_url": "https://api.crunchbase.com/v3.1/organizations/facebook",
+                "name": "Facebook",
+                "also_known_as": null,
+                "short_description": "Facebook is an online social networking service that enables its users to connect with friends and family as well as make new connections.!",
+                "description": "Facebook is an online social networking service that allows its users to connect with friends and family as well as make new connections. It provides its users with the ability to create a profile, update information, add images, send friend requests, and accept requests from other users. Its features include status update, photo tagging and sharing, and more.\r\n\r\n\r\nFacebook’s profile structure includes a timeline, information related to the user, images of the user, images added by friends of the user, notes, pages, groups, and more. It enables its users to create pages related to entertainment, sports, business, finance, preferences, hobbies, culture, religion, causes, organizations, and a number of other categories. It also enables its users to join or create groups related to a vast number of categories.\r\n\r\n\r\nWith millions of more users, [Friendster](http://www.crunchbase.com/organization/friendster) attempted to acquire the company for $10 million in mid-2004. Facebook turned down the offer and subsequently received $12.7 million in funding from [Accel Partners](http://www.crunchbase.com/organization/accel-partners) at a valuation of around $100 million. Facebook continued to grow opening up to high school students in September 2005 and adding a photo sharing feature the next month. The next spring, Facebook received $25 million in funding from [Greylock Partners](http://www.crunchbase.com/organization/greylock) and [Meritech Capital](http://www.crunchbase.com/organization/meritech-capital-partners) as well as previous investors [Accel Partners](http://www.crunchbase.com/organization/accel-partners) and [Peter Thiel](http://www.crunchbase.com/person/peter-thiel). The pre-money valuation for this deal was about $525 million. Facebook subsequently opened up to work networks eventually amassing over 20,000 work networks. Finally in September 2006, Facebook was opened to anyone with an email address.\r\n\r\n\r\nFacebook continued to receive funding most notably in January 2011 receiving $1.5 billion and valuing the company at $50 billion. A year later in February 2012, Facebook announced that it was filing for its long-anticipated initial public offering. The company went public on May 18, 2012 opening in [NASDAQ](http://www.crunchbase.com/organization/nasdaq-private-market) with shares trading at $42.05.\r\n\r\n\r\nFacebook announced positive numbers in February 2012 upon filing for its IPO. As of July 2013 over 1.15 billion users have logged into Facebook every month and 669 million users daily. Mobile users now make up half of Facebook’s user base with 819 million monthly actives. Facebook is one of the most trafficked sites in the United States. Additionally, Facebook is the top photo sharing site with 250 million photos uploaded per day.\r\n\r\n\r\nThe company has strategic partnership with AXA Group to develop marketing and commercial collaboration in the digital, social, and mobile sphere.\r\n\r\n\r\nFacebook is currently the owner of many applications and services such as Pagemodo Pagebuilder, [RSS Graffiti](http://www.crunchbase.com/organization/rss-graffiti), [Huddle](http://www.crunchbase.com/product/huddle), and more. It is the world’s largest social network with over 1.32 billion monthly active users.\r\n\r\n\r\nFacebook was founded by Mark Zuckerberg on February 4, 2004 in Menlo Park, California.",
+                "profile_image_url": "http://public.crunchbase.com/t_api_images/v1502744477/anzcz7nix0gjwho8mfpu.png",
+                "primary_role": "company",
+                "role_company": true,
+                "role_investor": true,
+                "role_group": false,
+                "role_school": false,
+                "investor_type": null,
+                "founded_on": "2004-02-04",
+                "founded_on_trust_code": 7,
+                "is_closed": false,
+                "closed_on": null,
+                "closed_on_trust_code": null,
+                "num_employees_min": 10001,
+                "num_employees_max": 1000000,
+                "stock_exchange": null,
+                "stock_symbol": null,
+                "total_funding_usd": 0,
+                "number_of_investments": 11,
+                "homepage_url": null,
+                "contact_email": null,
+                "phone_number": null,
+                "created_at": 1180153335,
+                "updated_at": 1509616370
+              }
+            }
+          }
+        },
+        {
+          "type": "Investment",
+          "uuid": "f105535c26380d9f19b6b21858918c0d",
+          "properties":
+          {
+            "money_invested": null,
+            "money_invested_currency_code": null,
+            "money_invested_usd": null,
+            "is_lead_investor": true,
+            "announced_on": "2011-01-21",
+            "announced_on_trust_code": 7,
+            "created_at": 1295843748,
+            "updated_at": 1472590929
+          },
+          "relationships":
+          {
+            "investors":
+            {
+              "type": "Organization",
+              "uuid": "30b3efdf6024804dea55c4d1a8dfc86c",
+              "properties":
+              {
+                "permalink": "goldman-sachs",
+                "api_path": "organizations/goldman-sachs",
+                "web_path": "organization/goldman-sachs",
+                "api_url": "https://api.crunchbase.com/v3.1/organizations/goldman-sachs",
+                "name": "Goldman Sachs",
+                "also_known_as": null,
+                "short_description": "Goldman Sachs is a multinational financial services firm providing securities, and investment banking and management services.",
+                "description": "The Goldman Sachs Group, Inc. provides investment banking, securities, and investment management services, as well as financial services to corporations, financial institutions, governments, and high-net-worth individuals worldwide.\r\n\r\nIts Investment Banking segment offers financial advisory services, including advisory assignments with respect to mergers and acquisitions, divestitures, corporate defense, risk management, and restructurings and spin-offs; and underwriting services comprising public offerings and private placements of a range of securities, loans and other financial instruments, and derivative transactions.\r\n\r\nThe company’s Institutional Client Services segment provides client execution services, such as fixed income, currency, and commodities client execution related to making markets in interest rate products, credit products, mortgages, currencies, and commodities; and equities related to making markets in equity products, as well as executes and clears institutional client transactions on stock, options, and futures exchanges.\r\n\r\nThis segment also engages in securities services business providing financing, securities lending, and other brokerage services to institutional clients, including hedge funds, mutual funds, pension funds, and foundations. Its Investing and Lending segment originates longer-term loans; and invests in debt securities, loans, public and private equity securities, real estate, consolidated investment entities, distressed assets, currencies, commodities, and power generation facilities.\r\n\r\nThe company’s Investment Management segment provides investment products and services, as well as offers wealth advisory services, including portfolio management and financial counseling, and brokerage and other transaction services.\r\n\r\nThe Goldman Sachs Group, Inc. was founded in 1869 and is headquartered in New York, New York.",
+                "profile_image_url": "http://public.crunchbase.com/t_api_images/v1499109617/jecaowhmbuvfmpwjgouu.png",
+                "primary_role": "investor",
+                "role_company": true,
+                "role_investor": true,
+                "role_group": false,
+                "role_school": false,
+                "investor_type": [
+                  "venture_capital",
+                  "investment_bank"
+                ],
+                "founded_on": "1869-01-01",
+                "founded_on_trust_code": 7,
+                "is_closed": false,
+                "closed_on": null,
+                "closed_on_trust_code": null,
+                "num_employees_min": null,
+                "num_employees_max": null,
+                "stock_exchange": null,
+                "stock_symbol": null,
+                "total_funding_usd": 0,
+                "number_of_investments": 594,
+                "homepage_url": null,
+                "contact_email": "gs-investor-relations@gs.com",
+                "phone_number": null,
+                "created_at": 1181925921,
+                "updated_at": 1509544269
+              }
+            },
+            "partners": [],
+            "invested_in":
+            {
+              "type": "Organization",
+              "uuid": "df6628127f970b439d3e12f64f504fbb",
+              "properties":
+              {
+                "permalink": "facebook",
+                "api_path": "organizations/facebook",
+                "web_path": "organization/facebook",
+                "api_url": "https://api.crunchbase.com/v3.1/organizations/facebook",
+                "name": "Facebook",
+                "also_known_as": null,
+                "short_description": "Facebook is an online social networking service that enables its users to connect with friends and family as well as make new connections.!",
+                "description": "Facebook is an online social networking service that allows its users to connect with friends and family as well as make new connections. It provides its users with the ability to create a profile, update information, add images, send friend requests, and accept requests from other users. Its features include status update, photo tagging and sharing, and more.\r\n\r\n\r\nFacebook’s profile structure includes a timeline, information related to the user, images of the user, images added by friends of the user, notes, pages, groups, and more. It enables its users to create pages related to entertainment, sports, business, finance, preferences, hobbies, culture, religion, causes, organizations, and a number of other categories. It also enables its users to join or create groups related to a vast number of categories.\r\n\r\n\r\nWith millions of more users, [Friendster](http://www.crunchbase.com/organization/friendster) attempted to acquire the company for $10 million in mid-2004. Facebook turned down the offer and subsequently received $12.7 million in funding from [Accel Partners](http://www.crunchbase.com/organization/accel-partners) at a valuation of around $100 million. Facebook continued to grow opening up to high school students in September 2005 and adding a photo sharing feature the next month. The next spring, Facebook received $25 million in funding from [Greylock Partners](http://www.crunchbase.com/organization/greylock) and [Meritech Capital](http://www.crunchbase.com/organization/meritech-capital-partners) as well as previous investors [Accel Partners](http://www.crunchbase.com/organization/accel-partners) and [Peter Thiel](http://www.crunchbase.com/person/peter-thiel). The pre-money valuation for this deal was about $525 million. Facebook subsequently opened up to work networks eventually amassing over 20,000 work networks. Finally in September 2006, Facebook was opened to anyone with an email address.\r\n\r\n\r\nFacebook continued to receive funding most notably in January 2011 receiving $1.5 billion and valuing the company at $50 billion. A year later in February 2012, Facebook announced that it was filing for its long-anticipated initial public offering. The company went public on May 18, 2012 opening in [NASDAQ](http://www.crunchbase.com/organization/nasdaq-private-market) with shares trading at $42.05.\r\n\r\n\r\nFacebook announced positive numbers in February 2012 upon filing for its IPO. As of July 2013 over 1.15 billion users have logged into Facebook every month and 669 million users daily. Mobile users now make up half of Facebook’s user base with 819 million monthly actives. Facebook is one of the most trafficked sites in the United States. Additionally, Facebook is the top photo sharing site with 250 million photos uploaded per day.\r\n\r\n\r\nThe company has strategic partnership with AXA Group to develop marketing and commercial collaboration in the digital, social, and mobile sphere.\r\n\r\n\r\nFacebook is currently the owner of many applications and services such as Pagemodo Pagebuilder, [RSS Graffiti](http://www.crunchbase.com/organization/rss-graffiti), [Huddle](http://www.crunchbase.com/product/huddle), and more. It is the world’s largest social network with over 1.32 billion monthly active users.\r\n\r\n\r\nFacebook was founded by Mark Zuckerberg on February 4, 2004 in Menlo Park, California.",
+                "profile_image_url": "http://public.crunchbase.com/t_api_images/v1502744477/anzcz7nix0gjwho8mfpu.png",
+                "primary_role": "company",
+                "role_company": true,
+                "role_investor": true,
+                "role_group": false,
+                "role_school": false,
+                "investor_type": null,
+                "founded_on": "2004-02-04",
+                "founded_on_trust_code": 7,
+                "is_closed": false,
+                "closed_on": null,
+                "closed_on_trust_code": null,
+                "num_employees_min": 10001,
+                "num_employees_max": 1000000,
+                "stock_exchange": null,
+                "stock_symbol": null,
+                "total_funding_usd": 0,
+                "number_of_investments": 11,
+                "homepage_url": null,
+                "contact_email": null,
+                "phone_number": null,
+                "created_at": 1180153335,
+                "updated_at": 1509616370
+              }
+            }
+          }
+        }]
+      },
+      "investors":
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 2,
+          "first_page_url": "https://api.crunchbase.com/v3.1/funding-rounds/37bd05f961af726ba3c1b279da842805/investors",
+          "sort_order": "not_ordered"
+        },
+        "items": [
+        {
+          "type": "Organization",
+          "uuid": "30b3efdf6024804dea55c4d1a8dfc86c",
+          "properties":
+          {
+            "permalink": "goldman-sachs",
+            "api_path": "organizations/goldman-sachs",
+            "web_path": "organization/goldman-sachs",
+            "api_url": "https://api.crunchbase.com/v3.1/organizations/goldman-sachs",
+            "name": "Goldman Sachs",
+            "also_known_as": null,
+            "short_description": "Goldman Sachs is a multinational financial services firm providing securities, and investment banking and management services.",
+            "description": "The Goldman Sachs Group, Inc. provides investment banking, securities, and investment management services, as well as financial services to corporations, financial institutions, governments, and high-net-worth individuals worldwide.\r\n\r\nIts Investment Banking segment offers financial advisory services, including advisory assignments with respect to mergers and acquisitions, divestitures, corporate defense, risk management, and restructurings and spin-offs; and underwriting services comprising public offerings and private placements of a range of securities, loans and other financial instruments, and derivative transactions.\r\n\r\nThe company’s Institutional Client Services segment provides client execution services, such as fixed income, currency, and commodities client execution related to making markets in interest rate products, credit products, mortgages, currencies, and commodities; and equities related to making markets in equity products, as well as executes and clears institutional client transactions on stock, options, and futures exchanges.\r\n\r\nThis segment also engages in securities services business providing financing, securities lending, and other brokerage services to institutional clients, including hedge funds, mutual funds, pension funds, and foundations. Its Investing and Lending segment originates longer-term loans; and invests in debt securities, loans, public and private equity securities, real estate, consolidated investment entities, distressed assets, currencies, commodities, and power generation facilities.\r\n\r\nThe company’s Investment Management segment provides investment products and services, as well as offers wealth advisory services, including portfolio management and financial counseling, and brokerage and other transaction services.\r\n\r\nThe Goldman Sachs Group, Inc. was founded in 1869 and is headquartered in New York, New York.",
+            "profile_image_url": "http://public.crunchbase.com/t_api_images/v1499109617/jecaowhmbuvfmpwjgouu.png",
+            "primary_role": "investor",
+            "role_company": true,
+            "role_investor": true,
+            "role_group": false,
+            "role_school": false,
+            "investor_type": [
+              "venture_capital",
+              "investment_bank"
+            ],
+            "founded_on": "1869-01-01",
+            "founded_on_trust_code": 7,
+            "is_closed": false,
+            "closed_on": null,
+            "closed_on_trust_code": null,
+            "num_employees_min": null,
+            "num_employees_max": null,
+            "stock_exchange": null,
+            "stock_symbol": null,
+            "total_funding_usd": 0,
+            "number_of_investments": 594,
+            "homepage_url": null,
+            "contact_email": "gs-investor-relations@gs.com",
+            "phone_number": null,
+            "created_at": 1181925921,
+            "updated_at": 1509544269
+          }
+        },
+        {
+          "type": "Organization",
+          "uuid": "9bc455245c0454c1ec995afb33cd3fc4",
+          "properties":
+          {
+            "permalink": "digital-sky-technologies-fo",
+            "api_path": "organizations/digital-sky-technologies-fo",
+            "web_path": "organization/digital-sky-technologies-fo",
+            "api_url": "https://api.crunchbase.com/v3.1/organizations/digital-sky-technologies-fo",
+            "name": "DST Global",
+            "also_known_as": [
+              "DST",
+              "Digital Sky Technologies"
+            ],
+            "short_description": "DST Global is an investment company that funds late-stage ventures in the global internet industry.",
+            "description": "DST Global (Digital Sky Technologies) is a growth focused investment company specializing in late-stage, high-growth, private companies in the global Internet industry.\r\n\r\nThe company has pioneered a model to provide liquidity to founders, employees and early investors through mixed primary and secondary transactions. These transactions are often referred to as DST type deals in the Internet world.\r\n\r\nThe company was founded by Yuri Milner, and after building Mail.ru Group, DST gained international prominence through its investments in Facebook, Zynga and Groupon.",
+            "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397178598/b3f58e60a53e9b113cc71c1a0d0fba8a.png",
+            "primary_role": "investor",
+            "role_company": false,
+            "role_investor": true,
+            "role_group": false,
+            "role_school": false,
+            "investor_type": [
+              "corporate_venture_capital"
+            ],
+            "founded_on": "2005-01-01",
+            "founded_on_trust_code": 7,
+            "is_closed": false,
+            "closed_on": null,
+            "closed_on_trust_code": null,
+            "num_employees_min": null,
+            "num_employees_max": null,
+            "stock_exchange": null,
+            "stock_symbol": null,
+            "total_funding_usd": 0,
+            "number_of_investments": 58,
+            "homepage_url": null,
+            "contact_email": "info@dst-global.com",
+            "phone_number": null,
+            "created_at": 1243382220,
+            "updated_at": 1509298573
+          }
+        }]
+      },
+      "funded_organization":
+      {
+        "cardinality": "OneToOne",
+        "paging":
+        {
+          "total_items": 1,
+          "first_page_url": "https://api.crunchbase.com/v3.1/funding-rounds/37bd05f961af726ba3c1b279da842805/funded_organization",
+          "sort_order": "not_ordered"
+        },
+        "item":
+        {
+          "type": "Organization",
+          "uuid": "df6628127f970b439d3e12f64f504fbb",
+          "properties":
+          {
+            "permalink": "facebook",
+            "api_path": "organizations/facebook",
+            "web_path": "organization/facebook",
+            "api_url": "https://api.crunchbase.com/v3.1/organizations/facebook",
+            "name": "Facebook",
+            "also_known_as": null,
+            "short_description": "Facebook is an online social networking service that enables its users to connect with friends and family as well as make new connections.!",
+            "description": "Facebook is an online social networking service that allows its users to connect with friends and family as well as make new connections. It provides its users with the ability to create a profile, update information, add images, send friend requests, and accept requests from other users. Its features include status update, photo tagging and sharing, and more.\r\n\r\n\r\nFacebook’s profile structure includes a timeline, information related to the user, images of the user, images added by friends of the user, notes, pages, groups, and more. It enables its users to create pages related to entertainment, sports, business, finance, preferences, hobbies, culture, religion, causes, organizations, and a number of other categories. It also enables its users to join or create groups related to a vast number of categories.\r\n\r\n\r\nWith millions of more users, [Friendster](http://www.crunchbase.com/organization/friendster) attempted to acquire the company for $10 million in mid-2004. Facebook turned down the offer and subsequently received $12.7 million in funding from [Accel Partners](http://www.crunchbase.com/organization/accel-partners) at a valuation of around $100 million. Facebook continued to grow opening up to high school students in September 2005 and adding a photo sharing feature the next month. The next spring, Facebook received $25 million in funding from [Greylock Partners](http://www.crunchbase.com/organization/greylock) and [Meritech Capital](http://www.crunchbase.com/organization/meritech-capital-partners) as well as previous investors [Accel Partners](http://www.crunchbase.com/organization/accel-partners) and [Peter Thiel](http://www.crunchbase.com/person/peter-thiel). The pre-money valuation for this deal was about $525 million. Facebook subsequently opened up to work networks eventually amassing over 20,000 work networks. Finally in September 2006, Facebook was opened to anyone with an email address.\r\n\r\n\r\nFacebook continued to receive funding most notably in January 2011 receiving $1.5 billion and valuing the company at $50 billion. A year later in February 2012, Facebook announced that it was filing for its long-anticipated initial public offering. The company went public on May 18, 2012 opening in [NASDAQ](http://www.crunchbase.com/organization/nasdaq-private-market) with shares trading at $42.05.\r\n\r\n\r\nFacebook announced positive numbers in February 2012 upon filing for its IPO. As of July 2013 over 1.15 billion users have logged into Facebook every month and 669 million users daily. Mobile users now make up half of Facebook’s user base with 819 million monthly actives. Facebook is one of the most trafficked sites in the United States. Additionally, Facebook is the top photo sharing site with 250 million photos uploaded per day.\r\n\r\n\r\nThe company has strategic partnership with AXA Group to develop marketing and commercial collaboration in the digital, social, and mobile sphere.\r\n\r\n\r\nFacebook is currently the owner of many applications and services such as Pagemodo Pagebuilder, [RSS Graffiti](http://www.crunchbase.com/organization/rss-graffiti), [Huddle](http://www.crunchbase.com/product/huddle), and more. It is the world’s largest social network with over 1.32 billion monthly active users.\r\n\r\n\r\nFacebook was founded by Mark Zuckerberg on February 4, 2004 in Menlo Park, California.",
+            "profile_image_url": "http://public.crunchbase.com/t_api_images/v1502744477/anzcz7nix0gjwho8mfpu.png",
+            "primary_role": "company",
+            "role_company": true,
+            "role_investor": true,
+            "role_group": false,
+            "role_school": false,
+            "investor_type": null,
+            "founded_on": "2004-02-04",
+            "founded_on_trust_code": 7,
+            "is_closed": false,
+            "closed_on": null,
+            "closed_on_trust_code": null,
+            "num_employees_min": 10001,
+            "num_employees_max": 1000000,
+            "stock_exchange": null,
+            "stock_symbol": null,
+            "total_funding_usd": 0,
+            "number_of_investments": 11,
+            "homepage_url": null,
+            "contact_email": null,
+            "phone_number": null,
+            "created_at": 1180153335,
+            "updated_at": 1509616370
+          }
+        }
+      },
+      "images":
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/funding-rounds/37bd05f961af726ba3c1b279da842805/images",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
+      "videos":
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/funding-rounds/37bd05f961af726ba3c1b279da842805/videos",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
+      "news":
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 2,
+          "first_page_url": "https://api.crunchbase.com/v3.1/funding-rounds/37bd05f961af726ba3c1b279da842805/news",
+          "sort_order": "posted_on DESC"
+        },
+        "items": [
+        {
+          "type": "News",
+          "uuid": "3b64d125176dd98d502e77600ffdd908",
+          "properties":
+          {
+            "title": "Facebook Raises $1.5 Billion -- PALO ALTO, Calif., Jan. 21, 2011 /PRNewswire/ --",
+            "author": null,
+            "posted_on": "2011-01-23",
+            "posted_on_trust_code": 7,
+            "url": "http://www.prnewswire.com/news-releases/facebook-raises-15-billion-114383494.html",
+            "created_at": 1295843747,
+            "updated_at": 1398009912
+          }
+        },
+        {
+          "type": "News",
+          "uuid": "718606db96a656ca1e9f00e49f405408",
+          "properties":
+          {
+            "title": "Facebook Raises $1.5 Billion At $50 Billion Valuation",
+            "author": "Leena Rao",
+            "posted_on": "2011-01-21",
+            "posted_on_trust_code": 7,
+            "url": "https://techcrunch.com/2011/01/21/facebook-raises-1-5-billion-at-50-billion-valuation/",
+            "created_at": 1467317210,
+            "updated_at": 1467317210
+          }
+        }]
+      }
+    }
+  }
+}
