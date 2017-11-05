@@ -11,13 +11,7 @@ module Crunchbase::Model
     attr_reader :investors, :partners
 
     def initialize(json)
-      super
-
-      relationships = json['relationships']
-      return if relationships.nil?
-
-      instance_relationships_object(Organization, 'investors', relationships['investors'])
-      instance_multi_relationship_objects(Person, 'partners', relationships['partners'])
+      super(json)
     end
 
     def property_keys
@@ -31,11 +25,11 @@ module Crunchbase::Model
       %w(announced_on)
     end
 
-    # def relationship_lists
-    #   {
-    #     'investors' => Organization,
-    #     'partners' => Person
-    #   }
-    # end
+    def relationship_lists
+      {
+        'investors' => Organization,
+        'partners' => Person
+      }
+    end
   end
 end

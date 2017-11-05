@@ -30,7 +30,7 @@ module Crunchbase::Model
                 :videos_total_items, :news_total_items
 
     def initialize(json)
-      super
+      super(json)
     end
 
     def property_keys
