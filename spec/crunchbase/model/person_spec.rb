@@ -19,6 +19,7 @@ module Crunchbase
           expect(mark_zuckerberg.uuid).to eq('a01b8d46d31133337c34aa3ae9c03f22')
           expect(mark_zuckerberg.first_name).to eq('Mark')
           expect(mark_zuckerberg.last_name).to eq('Zuckerberg')
+          expect(mark_zuckerberg.name).to eq('Mark Zuckerberg')
           expect(mark_zuckerberg.gender).to eq('Male')
           expect(mark_zuckerberg.born_on).to eq(Date.parse('1984-05-14'))
           expect(mark_zuckerberg.role_investor).to eq(true)
