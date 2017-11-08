@@ -90,7 +90,7 @@ module Crunchbase
 
         uri = api_url + "#{resource_list}?" + collect_parameters(options)
 
-        Crunchbase::Model::Search.new options, get_json_response(uri), model_name
+        Model::Search.new options, get_json_response(uri), model_name
       end
 
       def collect_parameters(options)
@@ -118,14 +118,14 @@ module Crunchbase
 
         uri = api_url + "#{classify_name}/#{permalink}/#{category}?#{collect_parameters(options)}"
 
-        Crunchbase::Model::Search.new options, get_json_response(uri), model_name
+        Model::Search.new options, get_json_response(uri), model_name
       end
 
       # Gets specified URI, then parses the returned JSON. Raises Timeout error
-      #   if request time exceeds set limit. Raises Crunchbase::Exception if returned
+      #   if request time exceeds set limit. Raises Exception if returned
       #   JSON contains an error.
       def get_json_response(uri)
-        raise Crunchbase::Exception, 'User key required, visit https://data.crunchbase.com/v3.1/docs' unless @key
+        raise Exception, 'User key required, visit https://data.crunchbase.com/v3.1/docs' unless @key
         uri += "#{uri =~ /\?/ ? '&' : '?'}user_key=#{@key}"
 
         resp = Timeout.timeout(@timeout_limit) do
@@ -133,10 +133,10 @@ module Crunchbase
         end
 
         response_data = parser.parse(resp)
-        raise Crunchbase::Exception, message: response_data['error'], code: response_data['status'].to_i unless response_data['error'].nil?
+        raise Exception, message: response_data['error'], code: response_data['status'].to_i unless response_data['error'].nil?
 
         response = response_data['data']
-        raise Crunchbase::Exception, response['error'] if response.class == Hash && response['error'] && response['error']['code'] != 500
+        raise Exception, response['error'] if response.class == Hash && response['error'] && response['error']['code'] != 500
 
         response
       end
@@ -144,7 +144,7 @@ module Crunchbase
       # Performs actual HTTP requests, recursively if a redirect response is
       # encountered. Will raise HTTP error if response is not 200, 404, or 3xx.
       def get_url_following_redirects(uri_str, limit = 10)
-        raise Crunchbase::Exception, 'HTTP redirect too deep' if limit.zero?
+        raise Exception, 'HTTP redirect too deep' if limit.zero?
 
         uri = URI.parse(URI.encode(uri_str))
 

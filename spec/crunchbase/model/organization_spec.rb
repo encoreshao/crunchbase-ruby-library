@@ -6,6 +6,7 @@ module Crunchbase
     RSpec.describe Organization do
       let(:without_relationship_json_data) { parse_json('organizations', 'facebook-without-relationships') }
       let(:with_relationship_json_data) { parse_json('organizations', 'facebook') }
+      let(:ekohe_data) { parse_json('organizations', 'ekohe') }
 
       context 'facebook without relationships data' do
         let(:without_organization) { Organization.get('facebook') }
@@ -78,8 +79,8 @@ module Crunchbase
           expect(organization.funding_rounds.size).to eq(10)
         end
 
-        it 'should return 9 of investments' do
-          expect(organization.investments.size).to eq(9)
+        it 'should return 10 of investments' do
+          expect(organization.investments.size).to eq(10)
         end
 
         it 'should return 10 of acquisitions' do
@@ -101,7 +102,7 @@ module Crunchbase
 
         it 'should return 10 of news' do
           expect(organization.news.size).to eq(10)
-          expect(organization.news_total_items).to eq(263155)
+          expect(organization.news_total_items).to eq(263177)
         end
 
         it 'should return 10 of current_team' do
@@ -121,8 +122,8 @@ module Crunchbase
           expect(organization.founders.size).to eq(5)
         end
 
-        it 'should return 10 of past_team and total 416 of past team' do
-          expect(organization.past_team_total_items).to eq(400)
+        it 'should return 10 of past_team and total 420 of past team' do
+          expect(organization.past_team_total_items).to eq(420)
           expect(organization.past_team.size).to eq(10)
         end
 
@@ -156,6 +157,25 @@ module Crunchbase
             expect(first_funding_round.investments[0].investors.name).to eq('DST Global')
             expect(first_funding_round.investments[0].partners.size).to eq(1)
           end
+        end
+      end
+
+      context 'ekohe data' do
+        let(:ekohe) { Organization.get('ekohe') }
+
+        before :each do
+          result = Organization.new(ekohe_data)
+
+          allow(Organization).to receive(:get).and_return(result)
+        end
+
+        it 'should return ekohe information' do
+          expect(ekohe.name).to eq('Ekohe')
+          expect(ekohe.permalink).to eq('ekohe')
+        end
+
+        it 'should return ekohe relationships data' do
+          expect(ekohe.acquired_by.nil?).to be_truthy
         end
       end
     end

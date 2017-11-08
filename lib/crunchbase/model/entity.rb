@@ -63,6 +63,7 @@ module Crunchbase
       end
 
       def set_relationships_object(kclass, key, list)
+        return if list.nil? || list.empty?
         return unless list
 
         if list.is_a?(Array)
@@ -77,8 +78,21 @@ module Crunchbase
       def one_to_one(kclass, key, item)
         return unless item
 
-        instance_variable_set "@#{key}", (kclass.new(item) || nil)
-        instance_variable_set "@#{key}_total_items", (item ? 1 : 0)
+        result = special_relationship(kclass, item)
+        instance_variable_set "@#{key}", result[:item]
+        instance_variable_set "@#{key}_total_items", result[:count]
+      end
+
+      # {
+      #   "cardinality"=>"OneToOne",
+      #   "paging"=>{"total_items"=>0,
+      #   "first_page_url"=>"https://api.crunchbase.com/v3.1/organizations/facebook/acquired_by",
+      #   "sort_order"=>"not_ordered"
+      # }
+      def special_relationship(kclass, item)
+        return { item: nil, count: 0 } if item['cardinality'] == 'OneToOne' && item['paging']['total_items'] == 0
+
+        { item: (kclass.new(item) || nil), count: (item ? 1 : 0) }
       end
 
       def one_to_many(kclass, key, list)
