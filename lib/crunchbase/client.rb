@@ -44,7 +44,7 @@ module Crunchbase
 
     private
     def kclass(kclass_name)
-      Object.const_get "Crunchbase::Model::#{kclass_name}"
+      Crunchbase::Model.const_get kclass_name
     end
   end
 end
