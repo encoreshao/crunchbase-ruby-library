@@ -69,10 +69,14 @@ module Crunchbase
         if list.is_a?(Array)
           set_variables(kclass, key, list)
         elsif list.is_a?(Hash)
-          one_to_one(kclass, key, list)
-          one_to_one(kclass, key, list['item']) if list['item']
-          one_to_many(kclass, key, list) if list['items']
+          parse_hash_items(kclass, key, list)
         end
+      end
+
+      def parse_hash_items(kclass, key, list)
+        one_to_one(kclass, key, list)
+        one_to_one(kclass, key, list['item']) if list['item']
+        one_to_many(kclass, key, list) if list['items']
       end
 
       def one_to_one(kclass, key, item)
@@ -90,9 +94,13 @@ module Crunchbase
       #   "sort_order"=>"not_ordered"
       # }
       def special_relationship(kclass, item)
-        return { item: nil, count: 0 } if item['cardinality'] == 'OneToOne' && item['paging']['total_items'] == 0
+        return { item: nil, count: 0 } if verify_item?(item)
 
         { item: (kclass.new(item) || nil), count: (item ? 1 : 0) }
+      end
+
+      def verify_item?(item)
+        item['cardinality'] == 'OneToOne' && (item['paging']['total_items']).zero?
       end
 
       def one_to_many(kclass, key, list)
