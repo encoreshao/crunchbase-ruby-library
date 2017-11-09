@@ -6,7 +6,7 @@ Crunchbase API v3.1 - Ruby Library [CrunchBase Data Hub](https://data.crunchbase
 [![Build Status](https://travis-ci.org/encoreshao/crunchbase-ruby-library.svg?branch=master)](https://travis-ci.org/encoreshao/crunchbase-ruby-library)
 [![Coverage Status](https://coveralls.io/repos/github/encoreshao/crunchbase-ruby-library/badge.svg)](https://coveralls.io/github/encoreshao/crunchbase-ruby-library)
 
-## How to installation
+### How to installation
 
 Add this line to your application's Gemfile:
 
@@ -20,90 +20,66 @@ Or install it yourself as:
 
     $ gem install crunchbase-ruby-library
 
-## Usage Examples
+### Certificate (User Key)
 
-Config your user_key, debug somewhere like development.rb, Recommended directory config/initializers/crunchbase.rb
+cCeate the file `config/initializers/crunchbase.rb` in your rails project and add user_key.
 
     require 'crunchbase'
 
-    Crunchbase::API.key   = 'user_key'
+    Crunchbase::API.key = 'user_key'
     Crunchbase::API.debug = false
 
-## Search Organization OR Person OR Product OR IPO OR Acquisitions OR Funding Rounds
+### Creating request client
 
-Retrieve the way, Please use Search Class. The Search Will Return a list consisting of objects of the OrganizationSummary | PersonSummary | ProductSummary | Funding Rounds type. Example:
+    client = Crunchbase::Client.new
 
-    Query Orgnization
+### Searchable items
 
-    Method 1
-    response = Crunchbase::Model::Search.search({query: "Google"}, 'organizations')
+    - Organization
+    - Person
+    - Product
+    - IPO
+    - Acquisitions
+    - Funding Rounds
 
-    Method 2
-    response = Crunchbase::Model::Search.search({name: "Google"}, 'organizations')
+#### Searching...
 
-    Method 3
-    response = Crunchbase::Model::Search.search({domain_name: "google.com"}, 'organizations')
+    * client.search({query: "Google"}, 'organizations')
+    * client.search({name: "Google"}, 'organizations')
+    * client.search({domain_name: "google.com"}, 'organizations')
+    * client.search({name: "encore"}, 'people')
+    * client.search({}, 'products')
+    * client.search({}, 'ipos')
+    * client.search({}, 'acquisitions')
+    * client.search({}, 'funding-rounds')
 
-    response.total_items || response.per_page || response.pages || response.current_page
-    response.results.each { |r| puts r.name }
+    returned response included data on below:
+        * results
+        * total_items
+        * per_page
+        * pages
+        * current_page
 
+### Get Organization && RelationShips by the permalink
 
-    Query Person
-
-    response = Crunchbase::Model::Search.search({query: "encore"}, 'people')
-
-    response.results.each { |i| [i.first_name, i.last_name] }
-
-    Query Product
-
-    response = Crunchbase::Model::Search.search({}, 'products')
-
-    response.results.each { |i| i.name }
-
-    Query IPO
-
-    response = Crunchbase::Model::Search.search({}, 'ipos')
-
-    response.results.each { |i| i.name }
-
-    Query Acquisition
-
-    response = Crunchbase::Model::Search.search({}, 'acquisitions')
-
-    Funding Rounds
-
-    response = Crunchbase::Model::Search.search({}, 'funding-rounds')
-
-## Get Organization && RelationShips
-
-Get information by the permalink, Example:
-
-    response = Crunchbase::Model::Organization.get("facebook")
+    response = client.get('Organization', 'facebook')
 
     Relationship objects [ primary_image founders current_team investors owned_by sub_organizations headquarters offices products categories customers competitors members memberships funding_rounds investments acquisitions acquired_by ipo funds websites images videos news ]
 
-    response.founders
-    response.competitors_total_items
-    response.websites
+    # Methods - Get Organization with one relationship data
 
-    NOTE: If you want all `past_team` `board_members_and_advisors` items, Please do:
-
-    # Methods
-
-    past_team = Crunchbase::Model::PastTeam.organization_lists("facebook")
+    1. response = client.get('Organization', 'facebook', 'PastTeam')
     past_team.results.collect { |p| [p.title, p.person.first_name] }
 
     ....
 
-## Person
+### Get Person by the permalink
 
-Get information by the permalink, Example:
-
-    person = Crunchbase::Model::Person.get( permalink )
+    person = client.get('Person', permalink)
 
     #<Crunchbase::Model::Person:0x007fc185215f68 @type_name="Person", @uuid="a578dcf9859ec8b52182e3aa3c383b13", ...>
 
-    people = Crunchbase::Model::Person.list( page )
+    people = client.list('Person', page)
 
     people.results
 
@@ -113,7 +89,7 @@ Get information by the permalink, Example:
     #<Crunchbase::Model::PersonSummary: ...>
     ...... ]
 
-## Contributing
+### Contributing
 
 1. Fork it ( https://github.com/encoreshao/crunchbase-ruby-library/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -121,6 +97,6 @@ Get information by the permalink, Example:
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-## Copyright
+### Copyright
 
 Copyright © 2015-05 Encore Shao. See LICENSE for details.

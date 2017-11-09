@@ -4,6 +4,8 @@
 module Crunchbase
   module Model
     class Entity
+      extend Request::Client
+
       attr_reader :type_name, :uuid
 
       def initialize(json)
@@ -126,65 +128,6 @@ module Crunchbase
         items.map { |item| multi_items << kclass.new(item || nil) }
         instance_variable_set "@#{key}", multi_items
         instance_variable_set "@#{key}_total_items", multi_items.size
-      end
-
-      class << self
-        # Factory method to return an instance from a permalink
-        def get(permalink)
-          result = API.single_entity(permalink, self::RESOURCE_NAME)
-
-          new(result)
-        end
-
-        def list(page = nil)
-          model_name = kclass_name(self::RESOURCE_LIST)
-
-          API.list({ page: page, model_name: model_name }, self::RESOURCE_LIST)
-        end
-
-        def organization_lists(permalink, options = {})
-          options = options.merge(model_name: self)
-
-          API.organization_lists(permalink, self::RESOURCE_LIST, options)
-        end
-
-        def person_lists(permalink, options = {})
-          options = options.merge(model_name: self)
-
-          API.person_lists(permalink, self::RESOURCE_LIST, options)
-        end
-
-        def funding_rounds_lists(permalink, options = {})
-          options = options.merge(model_name: self)
-
-          API.funding_rounds_lists(permalink, self::RESOURCE_LIST.tr('_', '-'), options)
-        end
-
-        def array_from_list(list)
-          return [] if list.nil?
-
-          list['items'].map do |l|
-            new l if l.is_a?(Hash)
-          end.compact
-        end
-
-        def parsing_from_list(list)
-          return [] if list.nil?
-
-          list.map do |l|
-            new l if l.is_a?(Hash)
-          end.compact
-        end
-
-        def total_items_from_list(list)
-          return 0 if list.nil?
-
-          list['paging']['total_items']
-        end
-
-        def kclass_name(resource_list)
-          API::SUPPORTED_ENTITIES[resource_list] || nil
-        end
       end
     end
   end

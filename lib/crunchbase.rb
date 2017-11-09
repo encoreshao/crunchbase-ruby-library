@@ -5,6 +5,8 @@ require 'time'
 require 'json'
 require 'crunchbase/version'
 require 'crunchbase/model'
+require 'crunchbase/request'
+require 'crunchbase/client'
 require 'crunchbase/api'
 require 'crunchbase/exception'
 
