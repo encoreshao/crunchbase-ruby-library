@@ -3,7 +3,8 @@
 
 module Crunchbase
   class Client
-    def get(kclass_name, permalink, relationship_name = nil)
+    # Get information by permalink with optional one relationship
+    def get(permalink, kclass_name, relationship_name = nil)
       case kclass_name
       when 'Person'
         person(permalink, relationship_name)
