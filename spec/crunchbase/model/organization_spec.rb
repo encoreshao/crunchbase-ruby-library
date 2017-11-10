@@ -176,6 +176,7 @@ module Crunchbase
 
         it 'should return ekohe relationships data' do
           expect(ekohe.acquired_by.nil?).to be_truthy
+          expect(ekohe.products.empty?).to be_truthy
         end
       end
     end

@@ -44,10 +44,12 @@ cCeate the file `config/initializers/crunchbase.rb` in your rails project and ad
 
 #### Searching...
 
-    * client.search({query: "Google"}, 'organizations')
-    * client.search({name: "Google"}, 'organizations')
-    * client.search({domain_name: "google.com"}, 'organizations')
-    * client.search({name: "encore"}, 'people')
+    * client.search({query: "Google"}, 'organizations') # Full text search of an Organization's name, aliases
+    * client.search({name: "Google"}, 'organizations') # Full text search limited to name and aliases
+    * client.search({domain_name: "google.com"}, 'organizations') # Text search of an Organization's domain_name
+    * client.search({name: "encore"}, 'people') # A full-text query of name only
+    * client.search({query: "encore"}, 'people') # A full-text query of name, title, and company
+    * client.search({types: "investor"}, 'people') # Filter by type (currently, either this is empty, or is simply "investor")
     * client.search({}, 'products')
     * client.search({}, 'ipos')
     * client.search({}, 'acquisitions')

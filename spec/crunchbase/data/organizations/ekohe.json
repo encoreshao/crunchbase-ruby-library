@@ -47,45 +47,470 @@
     "relationships":
     {
       "primary_image":
-      {},
+      {
+        "cardinality": "OneToOne",
+        "paging":
+        {
+          "total_items": 1,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/primary_image",
+          "sort_order": "not_ordered"
+        },
+        "item":
+        {
+          "type": "Image",
+          "uuid": "9fe491b2b6a15c870f4d226dd0cc97a9",
+          "properties":
+          {
+            "asset_path": "http://public.crunchbase.com/t_api_images/v1500646625/zhionn8nlgbkz4lj7ilz.png",
+            "asset_url": "http://public.crunchbase.com/t_api_images/v1500646625/zhionn8nlgbkz4lj7ilz.png",
+            "content_type": "png",
+            "height": null,
+            "width": null,
+            "filesize": null,
+            "created_at": 1368541718,
+            "updated_at": 1505740904
+          }
+        }
+      },
       "founders":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/founders",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "featured_team":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 1,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/featured_team",
+          "sort_order": "employee_featured_order ASC"
+        },
+        "items": [
+        {
+          "type": "Job",
+          "uuid": "85b01b9563bf2d317881df7f1505e3c1",
+          "properties":
+          {
+            "title": "CEO",
+            "started_on": "2007-02-01",
+            "started_on_trust_code": 7,
+            "ended_on": null,
+            "ended_on_trust_code": null,
+            "is_current": true,
+            "created_at": 1368516518,
+            "updated_at": 1437769586
+          },
+          "relationships":
+          {
+            "person":
+            {
+              "type": "Person",
+              "uuid": "90f4c92e34791f6e6470b2ae78805839",
+              "properties":
+              {
+                "permalink": "maxime-guilbot",
+                "api_path": "people/maxime-guilbot",
+                "web_path": "person/maxime-guilbot",
+                "api_url": "https://api.crunchbase.com/v3.1/people/maxime-guilbot",
+                "first_name": "Maxime",
+                "last_name": "Guilbot",
+                "gender": "Male",
+                "also_known_as": null,
+                "bio": "Maxime has 12 years of experience in web design and development and four years in mobile development. In early 2007, Maxime founded Ekohe, a Ruby on Rails and mobile, design and development company based in Shanghai that recently expanded to Singapore. He has consulted on more than 25 different web and mobile start-ups based in North America, Europe and Mainland China, as well as architected enterprise information systems for global companies.\r\n\r\nMaxime holds a MA in Science in Artificial Intelligence and Pattern Recognition from Shanghai Jiao Tong University and a BS from a top engineering school in France, Ecole Centrale Lille.",
+                "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397187169/a7e868611f399d1bca03b38a852a5e3a.jpg",
+                "role_investor": false,
+                "born_on": "1982-08-28",
+                "born_on_trust_code": 7,
+                "died_on": null,
+                "died_on_trust_code": null,
+                "created_at": 1368541718,
+                "updated_at": 1426100269
+              }
+            }
+          }
+        }]
+      },
       "current_team":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 1,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/current_team",
+          "sort_order": "not_ordered"
+        },
+        "items": [
+        {
+          "type": "Job",
+          "uuid": "85b01b9563bf2d317881df7f1505e3c1",
+          "properties":
+          {
+            "title": "CEO",
+            "started_on": "2007-02-01",
+            "started_on_trust_code": 7,
+            "ended_on": null,
+            "ended_on_trust_code": null,
+            "is_current": true,
+            "created_at": 1368516518,
+            "updated_at": 1437769586
+          },
+          "relationships":
+          {
+            "person":
+            {
+              "type": "Person",
+              "uuid": "90f4c92e34791f6e6470b2ae78805839",
+              "properties":
+              {
+                "permalink": "maxime-guilbot",
+                "api_path": "people/maxime-guilbot",
+                "web_path": "person/maxime-guilbot",
+                "api_url": "https://api.crunchbase.com/v3.1/people/maxime-guilbot",
+                "first_name": "Maxime",
+                "last_name": "Guilbot",
+                "gender": "Male",
+                "also_known_as": null,
+                "bio": "Maxime has 12 years of experience in web design and development and four years in mobile development. In early 2007, Maxime founded Ekohe, a Ruby on Rails and mobile, design and development company based in Shanghai that recently expanded to Singapore. He has consulted on more than 25 different web and mobile start-ups based in North America, Europe and Mainland China, as well as architected enterprise information systems for global companies.\r\n\r\nMaxime holds a MA in Science in Artificial Intelligence and Pattern Recognition from Shanghai Jiao Tong University and a BS from a top engineering school in France, Ecole Centrale Lille.",
+                "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397187169/a7e868611f399d1bca03b38a852a5e3a.jpg",
+                "role_investor": false,
+                "born_on": "1982-08-28",
+                "born_on_trust_code": 7,
+                "died_on": null,
+                "died_on_trust_code": null,
+                "created_at": 1368541718,
+                "updated_at": 1426100269
+              }
+            }
+          }
+        }]
+      },
       "past_team":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/past_team",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "board_members_and_advisors":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/board_members_and_advisors",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "investors":
-      {},
+      {
+        "cardinality": "ManyToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/investors",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "owned_by":
-      {},
+      {
+        "cardinality": "ManyToOne",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/owned_by",
+          "sort_order": "not_ordered"
+        }
+      },
       "sub_organizations":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/sub_organizations",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "offices":
-      {},
+      {
+        "cardinality": "OneToOne",
+        "paging":
+        {
+          "total_items": 1,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/offices",
+          "sort_order": "not_ordered"
+        },
+        "item":
+        {
+          "type": "Address",
+          "uuid": "b1d80e8bce7c605459f882bc9f43a18a",
+          "properties":
+          {
+            "name": "Shanghai",
+            "street_1": "Suite 3010 Jing'an China Tower Fortune Gate",
+            "street_2": "1701 West Beijing Road",
+            "postal_code": "200040",
+            "city": "Shanghai",
+            "region": "Shanghai",
+            "country": "China",
+            "city_web_path": "",
+            "region_code2": null,
+            "region_web_path": "",
+            "country_code2": null,
+            "country_code3": null,
+            "country_web_path": "",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1368629174,
+            "updated_at": 1475288380
+          }
+        }
+      },
       "headquarters":
-      {},
+      {
+        "cardinality": "OneToOne",
+        "paging":
+        {
+          "total_items": 1,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/headquarters",
+          "sort_order": "not_ordered"
+        },
+        "item":
+        {
+          "type": "Address",
+          "uuid": "b1d80e8bce7c605459f882bc9f43a18a",
+          "properties":
+          {
+            "name": "Shanghai",
+            "street_1": "Suite 3010 Jing'an China Tower Fortune Gate",
+            "street_2": "1701 West Beijing Road",
+            "postal_code": "200040",
+            "city": "Shanghai",
+            "region": "Shanghai",
+            "country": "China",
+            "city_web_path": "",
+            "region_code2": null,
+            "region_web_path": "",
+            "country_code2": null,
+            "country_code3": null,
+            "country_web_path": "",
+            "latitude": null,
+            "longitude": null,
+            "created_at": 1368629174,
+            "updated_at": 1475288380
+          }
+        }
+      },
       "products":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/products",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "categories":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 7,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/categories",
+          "sort_order": "not_ordered"
+        },
+        "items": [
+        {
+          "type": "Category",
+          "uuid": "275ddcbc27deff4f4e506dc26ebf9570",
+          "properties":
+          {
+            "name": "E-Commerce",
+            "web_path": "category/e-commerce/275ddcbc27deff4f4e506dc26ebf9570",
+            "category_groups": [
+              "Commerce and Shopping"
+            ],
+            "created_at": 1397980726,
+            "updated_at": 1507311477
+          }
+        },
+        {
+          "type": "Category",
+          "uuid": "292d82c553819717827f3122ee792e71",
+          "properties":
+          {
+            "name": "Web Development",
+            "web_path": "category/web-development/292d82c553819717827f3122ee792e71",
+            "category_groups": [
+              "Software"
+            ],
+            "created_at": 1397980727,
+            "updated_at": 1507302691
+          }
+        },
+        {
+          "type": "Category",
+          "uuid": "5349a2f214d89727c32a19ebea5db78c",
+          "properties":
+          {
+            "name": "Social Media",
+            "web_path": "category/social-media/5349a2f214d89727c32a19ebea5db78c",
+            "category_groups": [
+              "Media and Entertainment",
+              "Internet Services"
+            ],
+            "created_at": 1397980726,
+            "updated_at": 1507327103
+          }
+        },
+        {
+          "type": "Category",
+          "uuid": "9fe4b69285863baa84a49ccf4d6eb0fa",
+          "properties":
+          {
+            "name": "Infrastructure",
+            "web_path": "category/infrastructure/9fe4b69285863baa84a49ccf4d6eb0fa",
+            "category_groups": null,
+            "created_at": 1397980727,
+            "updated_at": 1507163222
+          }
+        },
+        {
+          "type": "Category",
+          "uuid": "c08b5441a05b9777b7a6012728caddd9",
+          "properties":
+          {
+            "name": "Software",
+            "web_path": "category/software/c08b5441a05b9777b7a6012728caddd9",
+            "category_groups": [
+              "Software"
+            ],
+            "created_at": 1397980727,
+            "updated_at": 1507319530
+          }
+        },
+        {
+          "type": "Category",
+          "uuid": "d38b3f26abc46f7bb29db952021a1b14",
+          "properties":
+          {
+            "name": "Enterprise Software",
+            "web_path": "category/enterprise-software/d38b3f26abc46f7bb29db952021a1b14",
+            "category_groups": [
+              "Software"
+            ],
+            "created_at": 1397980726,
+            "updated_at": 1507307319
+          }
+        },
+        {
+          "type": "Category",
+          "uuid": "e907cf2a842d8a30a0b107d9de4a8178",
+          "properties":
+          {
+            "name": "Mobile",
+            "web_path": "category/mobile/e907cf2a842d8a30a0b107d9de4a8178",
+            "category_groups": [
+              "Mobile"
+            ],
+            "created_at": 1397980726,
+            "updated_at": 1507302678
+          }
+        }]
+      },
       "competitors":
-      {},
+      {
+        "cardinality": "ManyToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/competitors",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "customers":
-      {},
+      {
+        "cardinality": "ManyToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/customers",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "memberships":
-      {},
+      {
+        "cardinality": "ManyToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/memberships",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "members":
-      {},
+      {
+        "cardinality": "ManyToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/members",
+          "sort_order": "not_ordered"
+        },
+        "items": []
+      },
       "funding_rounds":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/funding_rounds",
+          "sort_order": "announced_on DESC"
+        },
+        "items": []
+      },
       "investments":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/investments",
+          "sort_order": "announced_on DESC"
+        },
+        "items": []
+      },
       "acquisitions":
-      {},
+      {
+        "cardinality": "OneToMany",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/acquisitions",
+          "sort_order": "announced_on DESC"
+        },
+        "items": []
+      },
       "acquired_by":
       {
         "cardinality": "OneToOne",
@@ -97,7 +522,15 @@
         }
       },
       "ipo":
-      {},
+      {
+        "cardinality": "OneToOne",
+        "paging":
+        {
+          "total_items": 0,
+          "first_page_url": "https://api.crunchbase.com/v3.1/organizations/ekohe/ipo",
+          "sort_order": "not_ordered"
+        }
+      },
       "funds":
       {
         "cardinality": "OneToMany",

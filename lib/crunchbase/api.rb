@@ -40,13 +40,13 @@ module Crunchbase
     @debug = false
 
     # Must be overridden in subclasses
-    RESOURCE_NAME         = 'undefined'.freeze
-    RESOURCE_LIST         = 'undefineds'.freeze
+    RESOURCE_NAME         = 'undefined'
+    RESOURCE_LIST         = 'undefineds'
 
-    ORDER_CREATED_AT_ASC  = 'created_at asc'.freeze
-    ORDER_CREATED_AT_DESC = 'created_at desc'.freeze
-    ORDER_UPDATED_AT_ASC  = 'updated_at asc'.freeze
-    ORDER_UPDATED_AT_DESC = 'updated_at desc'.freeze
+    ORDER_CREATED_AT_ASC  = 'created_at ASC'
+    ORDER_CREATED_AT_DESC = 'created_at DESC'
+    ORDER_UPDATED_AT_ASC  = 'updated_at ASC'
+    ORDER_UPDATED_AT_DESC = 'updated_at DESC'
 
     class << self
       attr_accessor :timeout_limit, :redirect_limit, :key, :debug
