@@ -12,6 +12,7 @@ module Crunchbase
     autoload :BoardMembersAndAdvisor,       'crunchbase/model/board_members_and_advisor'
     autoload :Category,                     'crunchbase/model/category'
     autoload :Competitor,                   'crunchbase/model/competitor'
+    autoload :FeaturedTeam,                 'crunchbase/model/featured_team'
     autoload :CurrentTeam,                  'crunchbase/model/current_team'
     autoload :Customer,                     'crunchbase/model/customer'
     autoload :Degree,                       'crunchbase/model/degree'

@@ -38,6 +38,7 @@ module Crunchbase
           expect(without_organization.founders.nil?).to be_truthy
           expect(without_organization.past_team.nil?).to be_truthy
           expect(without_organization.board_members_and_advisors.nil?).to be_truthy
+          expect(without_organization.featured_team.nil?).to be_truthy
         end
       end
 
@@ -140,6 +141,11 @@ module Crunchbase
         it 'should return 10 of board_members_and_advisors' do
           expect(organization.board_members_and_advisors_total_items).to eq(10)
           expect(organization.board_members_and_advisors.size).to eq(10)
+        end
+
+        it 'should return 6 of featured_team' do
+          expect(organization.featured_team_total_items).to eq(6)
+          expect(organization.featured_team.size).to eq(6)
         end
 
         context 'funding_rounds' do

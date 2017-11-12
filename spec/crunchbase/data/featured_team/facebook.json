@@ -1,0 +1,286 @@
+{
+  "metadata":
+  {
+    "version": 31,
+    "www_path_prefix": "https://www.crunchbase.com",
+    "api_path_prefix": "https://api.crunchbase.com",
+    "image_path_prefix": "http://public.crunchbase.com/t_api_images/"
+  },
+  "data":
+  {
+    "paging":
+    {
+      "total_items": 6,
+      "number_of_pages": 1,
+      "current_page": 1,
+      "sort_order": "employee_featured_order ASC",
+      "items_per_page": 100,
+      "next_page_url": null,
+      "prev_page_url": null,
+      "key_set_url": null,
+      "collection_url": "https://api.crunchbase.com/v3.1/organizations/facebook/featured_team",
+      "updated_since": null
+    },
+    "items": [
+    {
+      "type": "Job",
+      "uuid": "befc22dec7892096e4d6919935cf4204",
+      "properties":
+      {
+        "title": "Founder & CEO",
+        "started_on": "2004-01-01",
+        "started_on_trust_code": 5,
+        "ended_on": null,
+        "ended_on_trust_code": null,
+        "is_current": true,
+        "created_at": 1180129906,
+        "updated_at": 1463234740
+      },
+      "relationships":
+      {
+        "person":
+        {
+          "type": "Person",
+          "uuid": "a01b8d46d31133337c34aa3ae9c03f22",
+          "properties":
+          {
+            "permalink": "mark-zuckerberg",
+            "api_path": "people/mark-zuckerberg",
+            "web_path": "person/mark-zuckerberg",
+            "api_url": "https://api.crunchbase.com/v3.1/people/mark-zuckerberg",
+            "first_name": "Mark",
+            "last_name": "Zuckerberg",
+            "gender": "Male",
+            "also_known_as": [
+              "Zuck"
+            ],
+            "bio": "Mark Zuckerberg is the founder and CEO of Facebook, which he started in his college dorm room in 2004 with roomates Dustin Moskovitz and Chris Hughes and from New York.\r\n\r\nZuckerberg is responsible for setting the overall direction and product strategy for the company. He leads the design of Facebook's service and development of its core technology and infrastructure. Mark studied computer science at Harvard University before moving the company to Palo Alto, California.\r\n\r\nEarlier in life, Zuckerberg developed a music recommendation system called Synapse and a peer-to-peer client called Wirehog. However, he abandoned both to pursue new projects.\r\n\r\nZuckerberg attended Harvard University and studied computer science before founding Facebook.\r\n\r\nWhile at Harvard, Zuckerberg created Facemash, a website that compared students' dorm photos side-by-side in a fashion similar to HOT or NOT. Harvard administration was not amused, and Zuckerberg faced subsequent disciplinary action. Less than three months later, he launched Facebook.\r\n\r\nIn September 2010, Zuckerberg donated $100 million to the Newark Public School System to help renovate and revamp the system.\r\n\r\nZuckerberg won the 2007 Crunchie Award for 'Best Startup CEO.' He was the Time Magazine 2010 Person Of The Year. He also won the 2012 Crunchie Award for CEO of the year.",
+            "profile_image_url": "http://public.crunchbase.com/t_api_images/v1448830269/gzcifut4c2xah95x0ewd.jpg",
+            "role_investor": true,
+            "born_on": "1984-05-14",
+            "born_on_trust_code": 7,
+            "died_on": null,
+            "died_on_trust_code": null,
+            "created_at": 1180155106,
+            "updated_at": 1510153014
+          }
+        }
+      }
+    },
+    {
+      "type": "Job",
+      "uuid": "a0e3eb89f81bc79ee797deae68e6ade7",
+      "properties":
+      {
+        "title": "COO",
+        "started_on": "2008-03-01",
+        "started_on_trust_code": 6,
+        "ended_on": null,
+        "ended_on_trust_code": null,
+        "is_current": true,
+        "created_at": 1204653519,
+        "updated_at": 1463237182
+      },
+      "relationships":
+      {
+        "person":
+        {
+          "type": "Person",
+          "uuid": "6bdcaf25865ad1e190f7330b99a4ee36",
+          "properties":
+          {
+            "permalink": "sheryl-sandberg",
+            "api_path": "people/sheryl-sandberg",
+            "web_path": "person/sheryl-sandberg",
+            "api_url": "https://api.crunchbase.com/v3.1/people/sheryl-sandberg",
+            "first_name": "Sheryl",
+            "last_name": "Sandberg",
+            "gender": "Female",
+            "also_known_as": null,
+            "bio": "Sheryl Sandberg is chief operating officer at Facebook, overseeing the firm's business operations.\r\n\r\nPrior to Facebook, Sheryl was vice president of Global Online Sales and Operations at Google, chief of staff for the United States Treasury Department under President Clinton, a management consultant with McKinsey & Company, and an economist with the World Bank.\r\n\r\nSheryl received a BA summa cum laude from Harvard University and an MBA with highest distinction from Harvard Business School.\r\n\r\nSheryl is the author of the bestsellers Lean In: Women, Work, and the Will to Lead and Lean In for Graduates and founder of LeanIn.Org, a global community committed to empowering all women to achieve their ambitions.\r\n\r\nSheryl serves on the boards of Facebook, the Walt Disney Company, Women for Women International, ONE, and SurveyMonkey.Sheryl lives in Menlo Park with her son and daughter.",
+            "profile_image_url": "http://public.crunchbase.com/t_api_images/v1398138027/uwja3xjnso2s2f8cfaqs.png",
+            "role_investor": true,
+            "born_on": null,
+            "born_on_trust_code": null,
+            "died_on": null,
+            "died_on_trust_code": null,
+            "created_at": 1204682319,
+            "updated_at": 1509980300
+          }
+        }
+      }
+    },
+    {
+      "type": "Job",
+      "uuid": "570bed9be95838b52045d84b30b80490",
+      "properties":
+      {
+        "title": "VP, Partnerships",
+        "started_on": null,
+        "started_on_trust_code": null,
+        "ended_on": null,
+        "ended_on_trust_code": null,
+        "is_current": true,
+        "created_at": 1224761067,
+        "updated_at": 1486121472
+      },
+      "relationships":
+      {
+        "person":
+        {
+          "type": "Person",
+          "uuid": "33990d62f6e76ebede9657b1719d3023",
+          "properties":
+          {
+            "permalink": "dan-rose",
+            "api_path": "people/dan-rose",
+            "web_path": "person/dan-rose",
+            "api_url": "https://api.crunchbase.com/v3.1/people/dan-rose",
+            "first_name": "Dan",
+            "last_name": "Rose",
+            "gender": "Male",
+            "also_known_as": null,
+            "bio": "Dan Rose is VP of Business Development and Monetization at Facebook.\r\n\r\nAs head of global business development and corporate development, Dan is responsible for Facebook's worldwide strategic partnerships and M&A. As head of product marketing for the company's monetization efforts, Dan leads marketing strategy for Facebook's innovative advertising products.\r\n\r\nDan joined Facebook in 2006 after seven years at Amazon.com where he held various positions in business development and general management, including his last role where he helped incubate and develop the Amazon Kindle.\r\n\r\nDan earned a bachelor's degree at Harvard University and attended the University of Michigan Business School for one year before joining Amazon.",
+            "profile_image_url": "http://public.crunchbase.com/t_api_images/v1486121425/ispxtibbg9wfgnqtigls.png",
+            "role_investor": true,
+            "born_on": null,
+            "born_on_trust_code": null,
+            "died_on": null,
+            "died_on_trust_code": null,
+            "created_at": 1224786267,
+            "updated_at": 1509072617
+          }
+        }
+      }
+    },
+    {
+      "type": "Job",
+      "uuid": "5b368f9a4c1a25c12baf383f3b2c0846",
+      "properties":
+      {
+        "title": "VP of Global Communications, Marketing and Public Policy",
+        "started_on": null,
+        "started_on_trust_code": null,
+        "ended_on": null,
+        "ended_on_trust_code": null,
+        "is_current": true,
+        "created_at": 1213898563,
+        "updated_at": 1398005461
+      },
+      "relationships":
+      {
+        "person":
+        {
+          "type": "Person",
+          "uuid": "7ec51caf5608705818c52110fb70886d",
+          "properties":
+          {
+            "permalink": "elliot-schrage",
+            "api_path": "people/elliot-schrage",
+            "web_path": "person/elliot-schrage",
+            "api_url": "https://api.crunchbase.com/v3.1/people/elliot-schrage",
+            "first_name": "Elliot",
+            "last_name": "Schrage",
+            "gender": "Male",
+            "also_known_as": null,
+            "bio": "Elliot Schrage is the Vice President of Communications, Public Policy and Platform Marketing at Facebook, where he is responsible for developing and coordinating key messages about products, corporate business and partnerships. He also oversees the companyâ€™s public policy strategy worldwide. Elliot joined Facebook from Google, where he was the Vice President of Communications and Public Affairs. He helped broaden and coordinate the companyâ€™s messaging from a focus on product PR to include all aspects of corporate, financial, policy, philanthropic and internal communications. Prior to Google, Elliot was the Bernard L. Schwarz Senior Fellow in business and foreign policy at the New York-based Council on Foreign Relations. Earlier in his career, Elliot served as the Senior Vice President of Global Affairs for Gap Inc. and an adjunct professor at Columbia University and Columbia Law School. He has been a contributor to the Harvard Business Review and the Financial Times. Elliot holds a bachelorâ€™s degree from Harvard University, a masterâ€™s degree in public policy from the Kennedy School of Government and a J.D. from Harvard Law School.",
+            "profile_image_url": "http://public.crunchbase.com/t_api_images/v1397184083/352041ba733cf5fb174d1c8fb236a34a.jpg",
+            "role_investor": false,
+            "born_on": null,
+            "born_on_trust_code": null,
+            "died_on": null,
+            "died_on_trust_code": null,
+            "created_at": 1210072888,
+            "updated_at": 1509948548
+          }
+        }
+      }
+    },
+    {
+      "type": "Job",
+      "uuid": "2cb421fa191a43a0951bc5683f4ac3fc",
+      "properties":
+      {
+        "title": "Global Head of Safety",
+        "started_on": null,
+        "started_on_trust_code": null,
+        "ended_on": null,
+        "ended_on_trust_code": null,
+        "is_current": true,
+        "created_at": 1510316768,
+        "updated_at": 1510316768
+      },
+      "relationships":
+      {
+        "person":
+        {
+          "type": "Person",
+          "uuid": "8eb759a4353a452d9be4405bce4c1e3c",
+          "properties":
+          {
+            "permalink": "antigone-davis",
+            "api_path": "people/antigone-davis",
+            "web_path": "person/antigone-davis",
+            "api_url": "https://api.crunchbase.com/v3.1/people/antigone-davis",
+            "first_name": "Antigone",
+            "last_name": "Davis",
+            "gender": "Female",
+            "also_known_as": null,
+            "bio": "Antigone Davis is global head of safety at Facebook.",
+            "profile_image_url": "http://public.crunchbase.com/t_api_images/b45pyeovm06av6ajckyw",
+            "role_investor": false,
+            "born_on": null,
+            "born_on_trust_code": null,
+            "died_on": null,
+            "died_on_trust_code": null,
+            "created_at": 1510316768,
+            "updated_at": 1510316862
+          }
+        }
+      }
+    },
+    {
+      "type": "Job",
+      "uuid": "6c9a504a98f699c12de66c61508677e2",
+      "properties":
+      {
+        "title": "Production Engineering Manager",
+        "started_on": null,
+        "started_on_trust_code": null,
+        "ended_on": null,
+        "ended_on_trust_code": null,
+        "is_current": true,
+        "created_at": 1422520215,
+        "updated_at": 1422520215
+      },
+      "relationships":
+      {
+        "person":
+        {
+          "type": "Person",
+          "uuid": "b8ce43f8ae3dcc83c0cefee8fd780412",
+          "properties":
+          {
+            "permalink": "charity-majors",
+            "api_path": "people/charity-majors",
+            "web_path": "person/charity-majors",
+            "api_url": "https://api.crunchbase.com/v3.1/people/charity-majors",
+            "first_name": "Charity",
+            "last_name": "Majors",
+            "gender": "Female",
+            "also_known_as": null,
+            "bio": "Charity Majors is a systems geek and scalability nerd. \r\n\r\nMost recently, Charity was the Production Engineering Manager at Parse/Facebook - where she managed of the biggest and most challenging MongoDB deployments in the world, with dynamic indexing and other fun goodies. Also in the mix at Parse were mysql, Cassandra, Redis, Hive, and others. Wee.\r\n\r\n\r\nBefore joining Parse she built systems for companies like Linden Lab, Shopkick and Cloudmark, and developed a passion for resilient and self-healing architecture. She reads a lot of economics and drinks a lot of whiskey. \r\n\r\nCharity went to school on a piano performance scholarship and studied philosophy, classical studies and music composition before dropping out to come play in the dotcom games. Charity's Data Day 2014 talk was one of the most frequently mentioned and highly rated.",
+            "profile_image_url": "http://public.crunchbase.com/t_api_images/v1422520108/ozn67jeo0biqx37kunvi.png",
+            "role_investor": false,
+            "born_on": null,
+            "born_on_trust_code": null,
+            "died_on": null,
+            "died_on_trust_code": null,
+            "created_at": 1422520115,
+            "updated_at": 1508651261
+          }
+        }
+      }
+    }]
+  }
+}

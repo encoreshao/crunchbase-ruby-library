@@ -14,12 +14,12 @@ module Crunchbase::Model
                 :number_of_investments, :homepage_url,
                 :created_at, :updated_at
 
-    attr_reader :primary_image, :founders, :current_team, :past_team, :board_members_and_advisors,
+    attr_reader :primary_image, :founders, :featured_team, :current_team, :past_team, :board_members_and_advisors,
                 :investors, :owned_by, :sub_organizations, :headquarters, :offices, :products,
                 :categories, :customers, :competitors, :members, :memberships, :funding_rounds, :investments,
                 :acquisitions, :acquired_by, :ipo, :funds, :websites, :images, :videos, :news
 
-    attr_reader :primary_image_total_items, :founders_total_items, :current_team_total_items,
+    attr_reader :primary_image_total_items, :founders_total_items, :featured_team_total_items, :current_team_total_items,
                 :past_team_total_items, :board_members_and_advisors_total_items, :investors_total_items,
                 :owned_by_total_items, :sub_organizations_total_items, :headquarters_total_items,
                 :offices_total_items, :products_total_items, :categories_total_items,
@@ -49,6 +49,7 @@ module Crunchbase::Model
       {
         'primary_image' => PrimaryImage,
         'founders' => Founder,
+        'featured_team' => FeaturedTeam,
         'current_team' => CurrentTeam,
         'past_team' => PastTeam,
         'board_members_and_advisors' => BoardMembersAndAdvisor,
