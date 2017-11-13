@@ -185,6 +185,14 @@ module Crunchbase
           expect(ekohe.products.empty?).to be_truthy
         end
       end
+
+      context 'mx-media-llc data' do
+        it 'should return Crunchbase::Exception with 404 as results' do
+          expect {
+            parse_json('organizations', 'mx-media-llc')
+          }.to raise_error(Crunchbase::Exception)
+        end
+      end
     end
   end
 end

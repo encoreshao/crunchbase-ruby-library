@@ -131,12 +131,13 @@ module Crunchbase
         resp = Timeout.timeout(@timeout_limit) do
           get_url_following_redirects(uri, @redirect_limit)
         end
+        resp = resp[0] if resp.is_a?(Array)
 
         response_data = parser.parse(resp)
-        raise Exception, message: response_data['error'], code: response_data['status'].to_i unless response_data['error'].nil?
+        raise Exception, message: response_data['message'], status: response_data['status'] unless response_data['message'].nil?
 
         response = response_data['data']
-        raise Exception, response['error'] if response.class == Hash && response['error'] && response['error']['code'] != 500
+        raise Exception, response['error'] if response.is_a?(Hash) && response['status'] != 500
 
         response
       end
@@ -148,7 +149,7 @@ module Crunchbase
 
         uri = URI.parse(URI.encode(uri_str))
 
-        debug_log!(uri) if debug
+        debugging(uri)
 
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true if uri.scheme == 'https'
@@ -166,10 +167,12 @@ module Crunchbase
         end
       end
 
-      def debug_log!(uri)
-        puts '*' * 120
+      def debugging(uri)
+        return unless debug
+
+        puts '*' * 140
         puts "***  #{uri}  ***"
-        puts '*' * 120
+        puts '*' * 140
       end
     end
   end
