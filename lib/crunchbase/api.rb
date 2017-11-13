@@ -132,14 +132,11 @@ module Crunchbase
           get_url_following_redirects(uri, @redirect_limit)
         end
 
-        response_data = parser.parse(resp)
-        response_data = response_data[0] if response_data.is_a?(Array)
-        raise Exception, message: response_data['message'], status: response_data['status'] unless response_data['message'].nil?
+        response = parser.parse(resp)
+        response = response[0] if response.is_a?(Array)
+        raise Exception, message: response['message'], status: response['status'] unless response['message'].nil?
 
-        response = response_data['data']
-        raise Exception, response['error'] if response.is_a?(Hash) && response['status'] != 500
-
-        response
+        response['data']
       end
 
       # Performs actual HTTP requests, recursively if a redirect response is
