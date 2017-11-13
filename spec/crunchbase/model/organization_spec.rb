@@ -188,9 +188,9 @@ module Crunchbase
 
       context 'mx-media-llc data' do
         it 'should return Crunchbase::Exception with 404 as results' do
-          expect {
+          expect do
             parse_json('organizations', 'mx-media-llc')
-          }.to raise_error(Crunchbase::Exception)
+          end.to raise_error(Crunchbase::Exception)
         end
       end
     end

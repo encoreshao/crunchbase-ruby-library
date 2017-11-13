@@ -131,9 +131,9 @@ module Crunchbase
         resp = Timeout.timeout(@timeout_limit) do
           get_url_following_redirects(uri, @redirect_limit)
         end
-        resp = resp[0] if resp.is_a?(Array)
 
         response_data = parser.parse(resp)
+        response_data = response_data[0] if response_data.is_a?(Array)
         raise Exception, message: response_data['message'], status: response_data['status'] unless response_data['message'].nil?
 
         response = response_data['data']
