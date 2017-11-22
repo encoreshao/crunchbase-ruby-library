@@ -42,7 +42,7 @@ cCeate the file `config/initializers/crunchbase.rb` in your rails project and ad
     - Acquisitions
     - Funding Rounds
 
-#### Searching...
+#### Searching by...
 
     * client.search({query: "Google"}, 'organizations') # Full text search of an Organization's name, aliases
     * client.search({name: "Google"}, 'organizations') # Full text search limited to name and aliases
@@ -62,34 +62,39 @@ cCeate the file `config/initializers/crunchbase.rb` in your rails project and ad
         * pages
         * current_page
 
-### Get Organization && RelationShips by the permalink
+### Get Organization by the permalink
 
-    response = client.get('Organization', 'facebook')
+    => response = client.get('Organization', 'facebook')
 
     Relationship objects [ primary_image founders current_team investors owned_by sub_organizations headquarters offices products categories customers competitors members memberships funding_rounds investments acquisitions acquired_by ipo funds websites images videos news ]
 
-    # Methods - Get Organization with one relationship data
+    methods: Get Organization with one relationship data
 
-    1. response = client.get('Organization', 'facebook', 'PastTeam')
+    => response = client.get('Organization', 'facebook', 'PastTeam')
     past_team.results.collect { |p| [p.title, p.person.first_name] }
 
     ....
 
 ### Get Person by the permalink
 
-    person = client.get('Person', permalink)
+    => person = client.get('Person', permalink)
+    => #<Crunchbase::Model::Person:0x007fc185215f68 @type_name="Person", @uuid="a578dcf9859ec8b52182e3aa3c383b13", ...>
 
-    #<Crunchbase::Model::Person:0x007fc185215f68 @type_name="Person", @uuid="a578dcf9859ec8b52182e3aa3c383b13", ...>
+    => people = client.list('Person', page: page)
+    => people.results
+    => [
+        #<Crunchbase::Model::PersonSummary:...>,
+        #<Crunchbase::Model::PersonSummary: ...>,
+        #<Crunchbase::Model::PersonSummary: ...>,
+        #<Crunchbase::Model::PersonSummary: ...>
+        ......
+    ]
 
-    people = client.list('Person', page)
+### How to debug in the console
 
-    people.results
-
-    [ #<Crunchbase::Model::PersonSummary:...>,
-    #<Crunchbase::Model::PersonSummary: ...>,
-    #<Crunchbase::Model::PersonSummary: ...>,
-    #<Crunchbase::Model::PersonSummary: ...>
-    ...... ]
+    $ ruby bin/console OR ./bin/console
+    => client = Crunchbase::Client.new
+    => ...
 
 ### Contributing
 
@@ -101,4 +106,4 @@ cCeate the file `config/initializers/crunchbase.rb` in your rails project and ad
 
 ### Copyright
 
-Copyright © 2015-05 Encore Shao. See LICENSE for details.
+Copyright © 2017-10 Encore Shao. See LICENSE for details.
