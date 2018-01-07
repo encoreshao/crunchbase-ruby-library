@@ -64,13 +64,13 @@ cCeate the file `config/initializers/crunchbase.rb` in your rails project and ad
 
 ### Get Organization by the permalink
 
-    => response = client.get('Organization', 'facebook')
+    => response = client.get('facebook', 'Organization')
 
     Relationship objects [ primary_image founders current_team investors owned_by sub_organizations headquarters offices products categories customers competitors members memberships funding_rounds investments acquisitions acquired_by ipo funds websites images videos news ]
 
     methods: Get Organization with one relationship data
 
-    => response = client.get('Organization', 'facebook', 'PastTeam')
+    => response = client.get('facebook', 'Organization', 'PastTeam')
     past_team.results.collect { |p| [p.title, p.person.first_name] }
 
     ....
