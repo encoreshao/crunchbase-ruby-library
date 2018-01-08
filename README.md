@@ -77,7 +77,7 @@ cCeate the file `config/initializers/crunchbase.rb` in your rails project and ad
 
 ### Get Person by the permalink
 
-    => person = client.get('Person', permalink)
+    => person = client.get(permalink, 'Person')
     => #<Crunchbase::Model::Person:0x007fc185215f68 @type_name="Person", @uuid="a578dcf9859ec8b52182e3aa3c383b13", ...>
 
     => people = client.list('Person', page: page)
