@@ -151,7 +151,7 @@ module Crunchbase
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true if uri.scheme == 'https'
         response = http.start do |h|
-          h.request Net::HTTP::Get.new(uri.request_uri)
+          h.request Net::HTTP::Get.new(uri.request_uri, {'User-Agent' => 'crunchbase-ruby-library'})
         end
 
         case response
