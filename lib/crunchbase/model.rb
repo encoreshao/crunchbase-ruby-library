@@ -9,6 +9,7 @@ module Crunchbase
     autoload :Acquisition,                  'crunchbase/model/acquisition'
     autoload :Address,                      'crunchbase/model/address'
     autoload :AdvisoryRole,                 'crunchbase/model/advisory_role'
+    autoload :BatchSearch,                  'crunchbase/model/batch_search'
     autoload :BoardMembersAndAdvisor,       'crunchbase/model/board_members_and_advisor'
     autoload :Category,                     'crunchbase/model/category'
     autoload :Competitor,                   'crunchbase/model/competitor'

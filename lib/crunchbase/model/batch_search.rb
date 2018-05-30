@@ -10,31 +10,33 @@ module Crunchbase
 
 			alias items results
 
-			def initialize(json, kclass_array)
+			def initialize(json)
 				@results = []
 
-				populate_results(json, kclass_array)
+				populate_results(json)
 			end
 
-			def populate_results(json, kclass_array)
+			def populate_results(json)
 				@results = []
-				@results = json['items'].map.with { |r, index| kclass_array[index].new(r) }
 
-				# TODO - finish populating results
+				@results = json['items'].map do |r|
+					kclass = kclass_name(r['type'])
+					kclass.new(r)
+				end
 			end
 
-			def self.batch_search(request_body)
-				raise MissingParamsException if request_body.empty?
-				model_names = request_body.collect { |request| request[:type] }
+			def self.batch_search(requests)
+				raise ConfigurationException, 'Invalid argument. Please pass in an array as an argument' unless requests.is_a?(Array)
+				raise MissingParamsException, 'Array argument empty' if requests.empty?
 
-				BatchSearch.new API.batch_search(request_body), kclass_array(model_names)
+				BatchSearch.new API.batch_search(requests)
 			end
 
 			private
 
-				def kclass_array(model_names)
-					model_names.collect { |model_name| kclass_name(model_name) }
-				end
+			def kclass_name(model_name)
+				self.class.kclass_name(model_name.downcase)
+			end
 
 		end
 	end

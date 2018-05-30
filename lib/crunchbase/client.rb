@@ -44,11 +44,11 @@ module Crunchbase
 
     # Runs a batch search and returns matched results
     # Params:
-    # +request_body+:: An array of hashes with following attributes: { 'type': String, 'uuid': String, 'relationships': String[] }
-    def batch_search(request_body)
-      return [] if request_body.nil?
+    # +requests+:: An array of hashes with following attributes: { 'type': String, 'uuid': String, 'relationships': String[] }
+    def batch_search(requests)
+      return [] if requests.nil?
 
-      kclass('BatchSearch').batch_search(request_body)
+      kclass('BatchSearch').batch_search(requests)
     end
 
     private

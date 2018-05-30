@@ -16,7 +16,9 @@ module Crunchbase
     SUPPORTED_ENTITIES = {
       'categories' => Model::Category,
       'organizations' => Model::OrganizationSummary,
+      'organization' => Model::Organization,
       'people' => Model::PersonSummary,
+      'person' => Model::Person,
       'products' => Model::ProductSummary,
       'ipos' => Model::Ipo,
       'funding_rounds' => Model::FundingRound,
@@ -83,11 +85,12 @@ module Crunchbase
         get_json_response(uri)
       end
 
-      # Fetches URI for the search interface.
+      # Fetches URI for the search interface and adapts the payload.
       def batch_search(requests_array)
-        uri = "#{api_url }/batch"
+        uri = "#{api_url}batch"
+        request_body = { requests: requests_array }
 
-        post_json_response(uri, requests_array)
+        post_json_response(uri, request_body)
       end
 
       # Fetches URI for the search interface.
@@ -174,10 +177,10 @@ module Crunchbase
       # Gets specified URI, and the array of the requests, then parses the returned JSON. Raises Timeout error
       #   if request time exceeds set limit. Raises Exception if returned
       #   JSON contains an error.
-      def post_json_response(uri, requests_array)
+      def post_json_response(uri, request_body)
         raise Exception, 'User key required, visit https://data.crunchbase.com/v3.1/docs' unless @key
 
-        body_string = requests_array.to_json
+        body_string = request_body.to_json
 
         resp = Timeout.timeout(@timeout_limit) do
           post_url_following_redirects(uri, body_string, @redirect_limit)
