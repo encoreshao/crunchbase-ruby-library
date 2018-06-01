@@ -174,7 +174,7 @@ module Crunchbase
         end
       end
 
-      # Gets specified URI, and the array of the requests, then parses the returned JSON. Raises Timeout error
+      # Gets specified URI, and the object for request's body, then parses the returned JSON. Raises Timeout error
       #   if request time exceeds set limit. Raises Exception if returned
       #   JSON contains an error.
       def post_json_response(uri, request_body)

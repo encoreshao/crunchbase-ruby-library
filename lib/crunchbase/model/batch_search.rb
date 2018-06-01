@@ -27,7 +27,9 @@ module Crunchbase
 
 			def self.batch_search(requests)
 				raise ConfigurationException, 'Invalid argument. Please pass in an array as an argument' unless requests.is_a?(Array)
-				raise MissingParamsException, 'Array argument empty' if requests.empty?
+				raise InvalidRequestException, "Too many requests(#{requests.length}) in batch, max allowed 10" if requests.length > 10
+				raise MissingParamsException, 'Missing :type or :uuid parameter in some requests' if requests.any? { |request| !request.key?(:type) || !request.key?(:uuid) }
+				return [] if requests.empty?
 
 				BatchSearch.new API.batch_search(requests)
 			end
