@@ -20,6 +20,8 @@ module Crunchbase
 				@results = []
 
 				@results = json['items'].map do |r|
+					next Error.new(r['error']) if r.key?('error')
+
 					kclass = kclass_name(r['type'])
 					kclass.new(r)
 				end

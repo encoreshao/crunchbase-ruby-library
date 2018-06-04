@@ -29,6 +29,13 @@ module Crunchbase::Model
 				results = BatchSearch.batch_search([])
 				expect(results).to be_empty
 			end
+
+			it 'should return an instance of Error for invalid uuid' do
+				invalid_request = [{ type: 'Organization', uuid: 'invalid_id' }]
+				results = BatchSearch.batch_search(invalid_request)
+
+				expect(results.results.first).to be_an_instance_of(Crunchbase::Model::Error)
+			end
 		end
 
 		context 'perform valid batch_search' do
