@@ -89,6 +89,25 @@ cCeate the file `config/initializers/crunchbase.rb` in your rails project and ad
         #<Crunchbase::Model::PersonSummary: ...>
         ......
     ]
+    
+### Batch search
+Pass in an array of requests to perform a batch search. Following parameters should be present in each request: `type`, `uuid` and `relationships` (https://data.crunchbase.com/docs/using-the-api#batch-search-capabilities).<br/>
+Max 10 requests per search allowed.
+    
+    => requests = [
+        { type: 'Organization', uuid: 'valid_uuid', relationships: ["<relationship_name>"] },
+        { type: 'Person', uuid: 'valid_uuid', relationships: ["<relationship_name>"] },
+        { type: 'Organization', uuid: 'invalid_uuid', relationships: [] },
+    ]
+    => batch_search = client.batch_search(requests)
+    => batch_search = #<Crunchbase::Model::BatchSearch:0x007f9bd7e850d8 @results=[#<Crunchbase::Model::Organization:0x007f9bd7e84f98, ...>]>
+    => batch_search.results
+    => [
+        #<Crunchbase::Model::Organization:0x007f9bd7e84f98, ...>,
+        #<Crunchbase::Model::Person:0x007f9bda0d9d78, ...>,
+        #<Crunchbase::Model::Error:0x007fd6b6818758 @code="LA404", @message="Not Found - Entity invalid_uuid doesn't exist" ...> // Error object returned due to invalid uuid passed
+    ] 
+    
 
 ### How to debug in the console
 
