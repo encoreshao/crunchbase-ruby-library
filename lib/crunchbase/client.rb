@@ -42,6 +42,15 @@ module Crunchbase
       kclass(kclass_name).organization_lists(permalink)
     end
 
+    # Runs a batch search and returns matched results
+    # Params:
+    # +requests+:: An array of hashes with following attributes: { 'type': String, 'uuid': String, 'relationships': String[] }
+    def batch_search(requests)
+      return [] if requests.nil?
+
+      kclass('BatchSearch').batch_search(requests)
+    end
+
     private
     def kclass(kclass_name)
       Crunchbase::Model.const_get kclass_name

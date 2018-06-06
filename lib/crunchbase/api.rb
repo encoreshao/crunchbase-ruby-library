@@ -16,7 +16,9 @@ module Crunchbase
     SUPPORTED_ENTITIES = {
       'categories' => Model::Category,
       'organizations' => Model::OrganizationSummary,
+      'organization' => Model::Organization,
       'people' => Model::PersonSummary,
+      'person' => Model::Person,
       'products' => Model::ProductSummary,
       'ipos' => Model::Ipo,
       'funding_rounds' => Model::FundingRound,
@@ -81,6 +83,14 @@ module Crunchbase
         uri = api_url + "#{resource_list}?" + collect_parameters(options)
 
         get_json_response(uri)
+      end
+
+      # Fetches URI for the search interface and adapts the payload.
+      def batch_search(requests_array)
+        uri = "#{api_url}batch"
+        request_body = { requests: requests_array }
+
+        post_json_response(uri, request_body)
       end
 
       # Fetches URI for the search interface.
@@ -159,6 +169,55 @@ module Crunchbase
           response.body
         when Net::HTTPRedirection
           get_url_following_redirects(response['location'], limit - 1)
+        else
+          response.error!
+        end
+      end
+
+      # Gets specified URI, and the object for request's body, then parses the returned JSON. Raises Timeout error
+      #   if request time exceeds set limit. Raises Exception if returned
+      #   JSON contains an error.
+      def post_json_response(uri, request_body)
+        raise Exception, 'User key required, visit https://data.crunchbase.com/v3.1/docs' unless @key
+
+        body_string = request_body.to_json
+
+        resp = Timeout.timeout(@timeout_limit) do
+          post_url_following_redirects(uri, body_string, @redirect_limit)
+        end
+
+        response = parser.parse(resp)
+        raise Exception, message: response['message'], status: response['status'] unless response['message'].nil?
+
+        response['data']
+      end
+
+      # Performs actual HTTP requests, recursively if a redirect response is
+      # encountered. Will raise HTTP error if response is not 200, 404, or 3xx.
+      def post_url_following_redirects(uri_str, body_string, limit = 10)
+        raise Exception, 'HTTP redirect too deep' if limit.zero?
+
+        uri = URI.parse(URI.encode(uri_str))
+
+        http = Net::HTTP.new(uri.host, uri.port)
+        http.use_ssl = true if uri.scheme == 'https'
+
+        req = Net::HTTP::Post.new(uri.request_uri)
+        req.add_field('User-Agent', 'crunchbase-ruby-library')
+        req.add_field('Content-Type', 'application/json')
+        req.add_field('X-Cb-User-Key', @key)
+
+        req.body = body_string
+
+        response = http.start do |h|
+          h.request req
+        end
+
+        case response
+        when Net::HTTPSuccess, Net::HTTPNotFound, Net::HTTPInternalServerError
+          response.body
+        when Net::HTTPRedirection
+          post_url_following_redirects(response['location'], limit - 1)
         else
           response.error!
         end
