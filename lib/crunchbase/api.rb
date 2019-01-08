@@ -144,7 +144,7 @@ module Crunchbase
 
         response = parser.parse(resp)
         response = response[0] if response.is_a?(Array)
-        raise Exception, message: response['message'], status: response['status'] unless response['message'].nil?
+        raise Exception, response['message'] unless response['message'].nil?
 
         response['data']
       end
@@ -165,7 +165,7 @@ module Crunchbase
         end
 
         case response
-        when Net::HTTPSuccess, Net::HTTPNotFound, Net::HTTPInternalServerError
+        when Net::HTTPSuccess, Net::HTTPNotFound, Net::HTTPInternalServerError, Net::HTTPConflict
           response.body
         when Net::HTTPRedirection
           get_url_following_redirects(response['location'], limit - 1)
@@ -187,7 +187,7 @@ module Crunchbase
         end
 
         response = parser.parse(resp)
-        raise Exception, message: response['message'], status: response['status'] unless response['message'].nil?
+        raise Exception, response['message'] unless response['message'].nil?
 
         response['data']
       end
@@ -214,7 +214,7 @@ module Crunchbase
         end
 
         case response
-        when Net::HTTPSuccess, Net::HTTPNotFound, Net::HTTPInternalServerError
+        when Net::HTTPSuccess, Net::HTTPNotFound, Net::HTTPInternalServerError, Net::HTTPConflict
           response.body
         when Net::HTTPRedirection
           post_url_following_redirects(response['location'], limit - 1)
