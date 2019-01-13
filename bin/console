@@ -3,9 +3,12 @@
 
 require 'bundler/setup'
 require 'crunchbase'
+require 'yaml'
 
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
+# Setup the user key for API
+yaml = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'spec', 'crunchbase.yml'))
+Crunchbase::API.key = yaml['key']
+Crunchbase::API.debug = yaml['debug']
 
 # (If you use this, don't forget to add pry to your Gemfile!)
 require "pry"

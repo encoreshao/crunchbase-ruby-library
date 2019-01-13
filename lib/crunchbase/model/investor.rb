@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Investor < Entity
-    RESOURCE_LIST = 'investors'
+    RESOURCE_LIST = 'investors'.freeze
 
     attr_reader :object
 

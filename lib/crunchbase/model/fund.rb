@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Fund < Entity
-    RESOURCE_LIST = 'funds'
+    RESOURCE_LIST = 'funds'.freeze
 
     attr_reader :api_path, :web_path, :name, :announced_on, :announced_on_trust_code,
                 :money_raised, :money_raised_currency_code, :money_raised_usd,

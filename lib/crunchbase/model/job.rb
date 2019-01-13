@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Job < Entity
-    RESOURCE_LIST = 'jobs'
+    RESOURCE_LIST = 'jobs'.freeze
 
     attr_reader :title, :started_on, :started_on_trust_code, :ended_on, :ended_on_trust_code,
                 :created_at, :updated_at

@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 require 'net/http'
@@ -42,13 +41,13 @@ module Crunchbase
     @debug = false
 
     # Must be overridden in subclasses
-    RESOURCE_NAME         = 'undefined'
-    RESOURCE_LIST         = 'undefineds'
+    RESOURCE_NAME         = 'undefined'.freeze
+    RESOURCE_LIST         = 'undefineds'.freeze
 
-    ORDER_CREATED_AT_ASC  = 'created_at ASC'
-    ORDER_CREATED_AT_DESC = 'created_at DESC'
-    ORDER_UPDATED_AT_ASC  = 'updated_at ASC'
-    ORDER_UPDATED_AT_DESC = 'updated_at DESC'
+    ORDER_CREATED_AT_ASC  = 'created_at ASC'.freeze
+    ORDER_CREATED_AT_DESC = 'created_at DESC'.freeze
+    ORDER_UPDATED_AT_ASC  = 'updated_at ASC'.freeze
+    ORDER_UPDATED_AT_DESC = 'updated_at DESC'.freeze
 
     class << self
       attr_accessor :timeout_limit, :redirect_limit, :key, :debug
@@ -104,9 +103,7 @@ module Crunchbase
       end
 
       def collect_parameters(options)
-        require 'cgi'
-
-        options.map { |k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join('&')
+        options.map { |k, v| "#{k}=#{v}" }.join('&')
       end
 
       def organization_lists(permalink, category, options)
@@ -161,7 +158,7 @@ module Crunchbase
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true if uri.scheme == 'https'
         response = http.start do |h|
-          h.request Net::HTTP::Get.new(uri.request_uri, {'User-Agent' => 'crunchbase-ruby-library'})
+          h.request Net::HTTP::Get.new(uri.request_uri, 'User-Agent' => 'crunchbase-ruby-library')
         end
 
         case response

@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Organization < Entity
-    RESOURCE_LIST = RESOURCE_NAME = 'organizations'
+    RESOURCE_LIST = RESOURCE_NAME = 'organizations'.freeze
 
     attr_reader :permalink, :api_path, :web_path, :name, :also_known_as, :short_description, :description,
                 :profile_image_url, :primary_role, :role_company, :role_investor, :role_group, :role_school,

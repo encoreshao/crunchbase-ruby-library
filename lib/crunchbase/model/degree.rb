@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Degree < Entity
-    RESOURCE_LIST = 'degrees'
+    RESOURCE_LIST = 'degrees'.freeze
 
     attr_reader :degree_type_name, :degree_subject, :started_on, :started_on_trust_code, :is_completed,
                 :completed_on, :completed_on_trust_code,

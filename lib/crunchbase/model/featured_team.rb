@@ -2,7 +2,7 @@
 
 module Crunchbase::Model
   class FeaturedTeam < Job
-    RESOURCE_LIST = 'featured_team'
+    RESOURCE_LIST = 'featured_team'.freeze
 
     attr_reader :person
 

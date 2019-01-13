@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Image < Entity
-    RESOURCE_LIST = 'images'
+    RESOURCE_LIST = 'images'.freeze
 
     attr_reader :asset_path, :asset_url, :content_type, :height, :width, :filesize, :created_at, :updated_at
 

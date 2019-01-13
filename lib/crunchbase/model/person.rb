@@ -4,7 +4,7 @@
 module Crunchbase
   module Model
     class Person < Entity
-      RESOURCE_LIST = RESOURCE_NAME = 'people'
+      RESOURCE_LIST = RESOURCE_NAME = 'people'.freeze
 
       attr_reader :permalink, :api_path, :web_path, :first_name, :last_name, :gender, :also_known_as, :bio, :profile_image_url,
                   :role_investor, :born_on, :born_on_trust_code, :is_deceased, :died_on, :died_on_trust_code, :name,

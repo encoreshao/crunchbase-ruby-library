@@ -3,6 +3,6 @@
 
 module Crunchbase::Model
   class Member < Organization
-    RESOURCE_LIST = 'members'
+    RESOURCE_LIST = 'members'.freeze
   end
 end

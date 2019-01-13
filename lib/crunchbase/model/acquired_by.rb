@@ -4,7 +4,7 @@
 module Crunchbase
   module Model
     class AcquiredBy < Entity
-      RESOURCE_LIST = 'acquired_by'
+      RESOURCE_LIST = 'acquired_by'.freeze
 
       attr_reader :uuid, :type_name, :api_path, :web_path, :price, :price_currency_code, :price_usd,
                   :payment_type, :acquisition_type, :acquisition_status, :disposition_of_acquired,

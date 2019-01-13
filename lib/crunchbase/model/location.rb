@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Location < Entity
-    RESOURCE_LIST = 'locations'
+    RESOURCE_LIST = 'locations'.freeze
 
     attr_reader :web_path, :name, :location_type, :parent_location_uuid,
                 :city, :city_web_path,

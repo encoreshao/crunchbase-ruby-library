@@ -47,6 +47,7 @@ cCeate the file `config/initializers/crunchbase.rb` in your rails project and ad
     * client.search({query: "Google"}, 'organizations') # Full text search of an Organization's name, aliases
     * client.search({name: "Google"}, 'organizations') # Full text search limited to name and aliases
     * client.search({domain_name: "google.com"}, 'organizations') # Text search of an Organization's domain_name
+    * client.search({locations: "China,Shanghai"}, 'organizations') # Filter by location names (comma separated, AND'd together)
     * client.search({name: "encore"}, 'people') # A full-text query of name only
     * client.search({query: "encore"}, 'people') # A full-text query of name, title, and company
     * client.search({types: "investor"}, 'people') # Filter by type (currently, either this is empty, or is simply "investor")
@@ -89,11 +90,11 @@ cCeate the file `config/initializers/crunchbase.rb` in your rails project and ad
         #<Crunchbase::Model::PersonSummary: ...>
         ......
     ]
-    
+
 ### Batch search
 Pass in an array of requests to perform a batch search. Following parameters should be present in each request: `type`, `uuid` and `relationships` (https://data.crunchbase.com/docs/using-the-api#batch-search-capabilities).<br/>
 Max 10 requests per search allowed.
-    
+
     => requests = [
         { type: 'Organization', uuid: 'valid_uuid', relationships: ["<relationship_name>"] },
         { type: 'Person', uuid: 'valid_uuid', relationships: ["<relationship_name>"] },
@@ -106,8 +107,8 @@ Max 10 requests per search allowed.
         #<Crunchbase::Model::Organization:0x007f9bd7e84f98, ...>,
         #<Crunchbase::Model::Person:0x007f9bda0d9d78, ...>,
         #<Crunchbase::Model::Error:0x007fd6b6818758 @code="LA404", @message="Not Found - Entity invalid_uuid doesn't exist" ...> // Error object returned due to invalid uuid passed
-    ] 
-    
+    ]
+
 
 ### How to debug in the console
 

@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Investment < Entity
-    RESOURCE_LIST = 'investments'
+    RESOURCE_LIST = 'investments'.freeze
 
     attr_reader :money_invested, :money_invested_currency_code, :money_invested_usd, :is_lead_investor,
                 :announced_on, :announced_on_trust_code, :created_at, :updated_at

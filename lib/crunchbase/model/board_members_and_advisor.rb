@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class BoardMembersAndAdvisor < Job
-    RESOURCE_LIST = 'board_members_and_advisors'
+    RESOURCE_LIST = 'board_members_and_advisors'.freeze
 
     attr_reader :person
 

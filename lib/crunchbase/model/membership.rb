@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Membership < Organization
-    RESOURCE_LIST = 'memberships'
+    RESOURCE_LIST = 'memberships'.freeze
 
     attr_reader :object
 

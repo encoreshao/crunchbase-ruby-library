@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class New < Entity
-    RESOURCE_LIST = 'news'
+    RESOURCE_LIST = 'news'.freeze
 
     attr_reader :title, :author, :posted_on, :posted_on_trust_code, :url, :created_at, :updated_at, :type
 

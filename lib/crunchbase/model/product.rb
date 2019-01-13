@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Product < Entity
-    RESOURCE_LIST = RESOURCE_NAME = 'products'
+    RESOURCE_LIST = RESOURCE_NAME = 'products'.freeze
 
     attr_reader :permalink, :api_path, :web_path, :name, :also_known_as,
                 :lifecycle_stage, :short_description, :description, :profile_image_url,

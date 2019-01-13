@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Ipo < Entity
-    RESOURCE_LIST = RESOURCE_NAME = 'ipos'
+    RESOURCE_LIST = RESOURCE_NAME = 'ipos'.freeze
 
     attr_reader :api_path, :web_path, :went_public_on, :went_public_on_trust_code,
                 :stock_exchange_symbol, :stock_symbol,

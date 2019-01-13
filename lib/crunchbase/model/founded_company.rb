@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class FoundedCompany < Organization
-    RESOURCE_LIST = 'founded_companies'
+    RESOURCE_LIST = 'founded_companies'.freeze
 
     #
     # 2015-11-03 Removed

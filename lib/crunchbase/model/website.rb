@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Website < Entity
-    RESOURCE_LIST = 'websites'
+    RESOURCE_LIST = 'websites'.freeze
 
     attr_reader :url, :created_at, :updated_at
     attr_reader :website_type, :website_name

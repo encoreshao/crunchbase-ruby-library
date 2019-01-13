@@ -3,8 +3,8 @@
 
 module Crunchbase::Model
   class FundingRound < Entity
-    RESOURCE_LIST = 'funding_rounds'
-    RESOURCE_NAME = 'funding-rounds'
+    RESOURCE_LIST = 'funding_rounds'.freeze
+    RESOURCE_NAME = 'funding-rounds'.freeze
 
     attr_reader :permalink, :api_path, :web_path, :funding_type, :series, :series_qualifier,
                 :announced_on, :announced_on_trust_code, :closed_on, :closed_on_trust_code,

@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class PastTeam < Job
-    RESOURCE_LIST = 'past_team'
+    RESOURCE_LIST = 'past_team'.freeze
 
     attr_reader :person
 

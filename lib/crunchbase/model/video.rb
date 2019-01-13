@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Video < Entity
-    RESOURCE_LIST = 'videos'
+    RESOURCE_LIST = 'videos'.freeze
 
     attr_reader :title, :service_name, :url, :created_at, :updated_at
 

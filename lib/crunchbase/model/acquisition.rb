@@ -3,8 +3,8 @@
 
 module Crunchbase::Model
   class Acquisition < Entity
-    RESOURCE_LIST = 'acquisitions'
-    RESOURCE_NAME = 'acquisitions'
+    RESOURCE_LIST = 'acquisitions'.freeze
+    RESOURCE_NAME = 'acquisitions'.freeze
 
     attr_reader :api_path, :web_path, :price, :price_currency_code, :price_usd,
                 :payment_type, :acquisition_type, :acquisition_status, :disposition_of_acquired,

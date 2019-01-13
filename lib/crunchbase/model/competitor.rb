@@ -3,6 +3,6 @@
 
 module Crunchbase::Model
   class Competitor < Organization
-    RESOURCE_LIST = 'competitors'
+    RESOURCE_LIST = 'competitors'.freeze
   end
 end

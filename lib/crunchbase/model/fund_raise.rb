@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class FundRaise < Entity
-    RESOURCE_LIST = 'funds'
+    RESOURCE_LIST = 'funds'.freeze
 
     attr_reader :name, :path, :created_at, :updated_at
 

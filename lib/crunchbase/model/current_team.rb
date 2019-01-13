@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class CurrentTeam < Job
-    RESOURCE_LIST = 'current_team'
+    RESOURCE_LIST = 'current_team'.freeze
 
     attr_reader :person
 

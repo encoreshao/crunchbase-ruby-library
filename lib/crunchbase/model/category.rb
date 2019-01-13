@@ -3,7 +3,7 @@
 
 module Crunchbase::Model
   class Category < Entity
-    RESOURCE_LIST = RESOURCE_NAME = 'categories'
+    RESOURCE_LIST = RESOURCE_NAME = 'categories'.freeze
 
     attr_reader :web_path, :name, :organizations_in_category, :products_in_category, :created_at, :updated_at
 
