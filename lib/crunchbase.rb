@@ -12,7 +12,7 @@ require 'crunchbase/api'
 require 'crunchbase/exception'
 
 module Crunchbase
-  API_VERSION     = '3.1'.freeze
+  API_VERSION     = 'v3.1'.freeze
   API_BASE_URL    = 'https://api.crunchbase.com'.freeze
   WEB_SITE_URL    = 'https://www.crunchbase.com'.freeze
   IMAGE_URL       = 'https://res.cloudinary.com/crunchbase-production/'.freeze

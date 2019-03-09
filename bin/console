@@ -7,8 +7,10 @@ require 'yaml'
 
 # Setup the user key for API
 yaml = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'spec', 'crunchbase.yml'))
+
 Crunchbase::API.key = yaml['key']
 Crunchbase::API.debug = yaml['debug']
+Crunchbase::API.timeout = yaml['timeout']
 
 # (If you use this, don't forget to add pry to your Gemfile!)
 require "pry"

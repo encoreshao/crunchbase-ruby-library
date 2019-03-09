@@ -1,4 +1,4 @@
-# Crunchbase
+# CrunchBase
 
 Crunchbase API v3.1 - Ruby Library [CrunchBase Data Hub](https://data.crunchbase.com/v3.1/docs/using-the-api).
 
@@ -22,13 +22,13 @@ Or install it yourself as:
 
 ### Certificate (User Key)
 
-Create the file `config/initializers/crunchbase.rb` in your rails project and add user_key.
+Create the file `config/initializers/crunchbase.rb` in your rails project and add user key.
 
     require 'crunchbase'
 
     Crunchbase::API.key = 'user_key'
     Crunchbase::API.debug = false
-    Crunchbase::API.timtout = 60   # Default value is 60
+    Crunchbase::API.timeout = 60 # Default value is 60
 
 ### Creating request client
 
@@ -66,14 +66,19 @@ Create the file `config/initializers/crunchbase.rb` in your rails project and ad
 
 ### Get Organization by the permalink
 
-    => response = client.get('facebook', 'Organization')
+    * response = client.get('facebook', 'Organization')
 
-    Relationship objects [ primary_image founders current_team investors owned_by sub_organizations headquarters offices products categories customers competitors members memberships funding_rounds investments acquisitions acquired_by ipo funds websites images videos news ]
+    - Relationship objects
+        [
+        primary_image founders current_team investors owned_by sub_organizations
+        headquarters offices products categories customers competitors
+        members memberships funding_rounds investments acquisitions acquired_by
+        ipo funds websites images videos news
+        ]
 
-    methods: Get Organization with one relationship data
-
-    => response = client.get('facebook', 'Organization', 'PastTeam')
-    past_team.results.collect { |p| [p.title, p.person.first_name] }
+    - Methods: Get Organization with one relationship data
+        * response = client.get('facebook', 'Organization', 'PastTeam')
+        * past_team.results.collect { |p| [p.title, p.person.first_name] }
 
     ....
 
@@ -113,7 +118,8 @@ Max 10 requests per search allowed.
 
 ### How to debug in the console
 
-    $ ruby bin/console OR ./bin/console
+    $ 1. ruby bin/console
+    $ 2. ./bin/console
     => client = Crunchbase::Client.new
     => ...
 

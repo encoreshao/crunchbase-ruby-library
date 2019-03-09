@@ -14,6 +14,7 @@ yaml = YAML.load_file(File.join(File.dirname(__FILE__), 'crunchbase.yml'))
 
 Crunchbase::API.key = yaml['key']
 Crunchbase::API.debug = yaml['debug']
+Crunchbase::API.timeout = yaml['timeout']
 
 Dir[File.dirname(__FILE__) + '/crunchbase/support/*.rb'].each { |file| require file }
 

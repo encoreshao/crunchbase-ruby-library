@@ -4,7 +4,7 @@ inherit_from: .rubocop_todo.yml
 
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.4
   Exclude:
     - '**/*.yml'
     - 'tmp/**/*'
@@ -45,11 +45,11 @@ Style/StringLiteralsInInterpolation:
 
 Style/CaseIndentation:
   # Valid values are: case, end
-  IndentWhenRelativeTo: end
+  EnforcedStyle: end
   IndentOneStep: false
 
 Lint/EndAlignment:
-  AlignWith: variable
+  EnforcedStyleAlignWith: variable
 
 Lint/UselessAssignment:
   Enabled: false

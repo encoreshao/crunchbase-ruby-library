@@ -37,7 +37,7 @@ module Crunchbase
     }.freeze
 
     @redirect_limit = 2
-    @timeout  = 60
+    @timeout = 60
     @debug = false
 
     # Must be overridden in subclasses
@@ -54,7 +54,7 @@ module Crunchbase
       attr_accessor :debug, :timeout, :redirect_limit
 
       def api_url
-        API_BASE_URL.gsub(/\/$/, '') + '/v' + API_VERSION + '/'
+        [API_BASE_URL, '/', API_VERSION, '/'].join
       end
 
       def single_entity(permalink, entity_name)
