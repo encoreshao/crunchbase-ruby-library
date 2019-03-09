@@ -22,12 +22,13 @@ Or install it yourself as:
 
 ### Certificate (User Key)
 
-cCeate the file `config/initializers/crunchbase.rb` in your rails project and add user_key.
+Create the file `config/initializers/crunchbase.rb` in your rails project and add user_key.
 
     require 'crunchbase'
 
     Crunchbase::API.key = 'user_key'
     Crunchbase::API.debug = false
+    Crunchbase::API.timtout = 60   # Default value is 60
 
 ### Creating request client
 

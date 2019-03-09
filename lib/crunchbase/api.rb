@@ -36,8 +36,8 @@ module Crunchbase
       'investors' => Model::Organization
     }.freeze
 
-    @timeout_limit  = 60
     @redirect_limit = 2
+    @timeout  = 60
     @debug = false
 
     # Must be overridden in subclasses
@@ -50,7 +50,8 @@ module Crunchbase
     ORDER_UPDATED_AT_DESC = 'updated_at DESC'.freeze
 
     class << self
-      attr_accessor :timeout_limit, :redirect_limit, :key, :debug
+      attr_accessor :key # Necessary
+      attr_accessor :debug, :timeout, :redirect_limit
 
       def api_url
         API_BASE_URL.gsub(/\/$/, '') + '/v' + API_VERSION + '/'
@@ -135,7 +136,7 @@ module Crunchbase
         raise Exception, 'User key required, visit https://data.crunchbase.com/v3.1/docs' unless @key
         uri += "#{uri =~ /\?/ ? '&' : '?'}user_key=#{@key}"
 
-        resp = Timeout.timeout(@timeout_limit) do
+        resp = Timeout.timeout(@timeout) do
           get_url_following_redirects(uri, @redirect_limit)
         end
 
@@ -179,7 +180,7 @@ module Crunchbase
 
         body_string = request_body.to_json
 
-        resp = Timeout.timeout(@timeout_limit) do
+        resp = Timeout.timeout(@timeout) do
           post_url_following_redirects(uri, body_string, @redirect_limit)
         end
 
