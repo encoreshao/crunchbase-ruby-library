@@ -2,15 +2,18 @@
 
 module ApiHelper
   def parse_json(endpoint, filename)
-    response_data = JSON.parse(load_file(endpoint, filename))
-    response_data = response_data[0] if response_data.is_a?(Array)
-    raise Crunchbase::Exception, message: response_data['message'], status: response_data['status'] unless response_data['message'].nil?
+    response = JSON.parse(load_file(endpoint, filename))
+    response = response[0] if response.is_a?(Array)
 
-    response_data['data']
+    raise Crunchbase::Exception, message: response['message'], status: response['status'] unless response['message'].nil?
+
+    response['data']
   end
 
   def load_file(endpoint, filename)
-    File.read(File.join(File.dirname(__FILE__), "../data/#{endpoint}", "#{filename}.json"))
+    json_file = File.join(File.dirname(__FILE__), "../data/#{endpoint}", "#{filename}.json")
+
+    File.read(json_file)
   end
 
   def search_results(data, kclass)

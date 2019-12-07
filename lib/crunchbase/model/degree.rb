@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 module Crunchbase::Model
@@ -14,9 +13,9 @@ module Crunchbase::Model
     def initialize(json)
       super
 
-      unless (relationships = json['relationships']).nil?
-        instance_relationships_object(Crunchbase::Model::School, 'school', relationships['school'])
-      end
+      return if (relationships = json['relationships']).nil?
+
+      instance_relationships_object(Crunchbase::Model::School, 'school', relationships['school'])
     end
 
     def property_keys

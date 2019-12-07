@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Crunchbase::Model
   class ProductSummary < Entity
     attr_reader :permalink, :api_path, :web_path, :name, :short_description,

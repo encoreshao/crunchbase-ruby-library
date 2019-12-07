@@ -2,6 +2,7 @@
 
 require 'singleton'
 require 'time'
+require 'pry'
 
 require 'json'
 require 'crunchbase/version'

@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 module Crunchbase
@@ -13,8 +12,12 @@ module Crunchbase
         instance_variable_set('@uuid',  json['uuid'] || nil)
 
         properties = json['properties'] || {}
-        property_keys.each { |v| instance_variable_set("@#{v}", properties[v]) }
-        date_keys.each { |v| instance_variable_set("@#{v}", properties[v].nil? ? nil : Date.parse(properties[v])) }
+        property_keys.each do |v|
+          instance_variable_set("@#{v}", properties[v])
+        end
+        date_keys.each do |v|
+          instance_variable_set("@#{v}", properties[v].nil? ? nil : Date.parse(properties[v]))
+        end
 
         instance_timestamps(properties)
 
@@ -40,7 +43,7 @@ module Crunchbase
         return Time.parse(date) if date.is_a?(String)
 
         Time.at(date)
-      rescue
+      rescue StandardError
         nil
       end
 
@@ -61,7 +64,7 @@ module Crunchbase
       end
 
       def relationship_lists
-        { }
+        {}
       end
 
       def set_relationships_object(kclass, key, list)

@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 module Crunchbase::Model
@@ -8,9 +7,9 @@ module Crunchbase::Model
     def initialize(json)
       super
 
-      unless (relationships = json['relationships']).nil?
-        set_relationships_object(Organization, 'organization', relationships['organization'])
-      end
+      return if (relationships = json['relationships']).nil?
+
+      set_relationships_object(Organization, 'organization', relationships['organization'])
     end
 
     def set_relationships_object(kclass_name, key, item)

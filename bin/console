@@ -13,7 +13,7 @@ Crunchbase::API.debug = yaml['debug']
 Crunchbase::API.timeout = yaml['timeout']
 
 # (If you use this, don't forget to add pry to your Gemfile!)
-require "pry"
+require 'pry'
 Pry.start
 
 # require 'irb'

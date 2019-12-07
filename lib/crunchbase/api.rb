@@ -134,6 +134,7 @@ module Crunchbase
       #   JSON contains an error.
       def get_json_response(uri)
         raise Exception, 'User key required, visit https://data.crunchbase.com/v3.1/docs' unless @key
+
         uri += "#{uri =~ /\?/ ? '&' : '?'}user_key=#{@key}"
 
         resp = Timeout.timeout(@timeout) do

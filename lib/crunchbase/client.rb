@@ -51,6 +51,7 @@ module Crunchbase
     end
 
     private
+
     def kclass(kclass_name)
       Crunchbase::Model.const_get kclass_name
     end

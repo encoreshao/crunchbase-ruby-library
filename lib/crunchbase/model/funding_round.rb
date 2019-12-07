@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 module Crunchbase::Model
@@ -22,6 +21,7 @@ module Crunchbase::Model
 
       relationships = json['relationships']
       return if relationships.nil?
+
       relationship_with_funded(relationships['funded_organization'])
     end
 

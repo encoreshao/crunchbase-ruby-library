@@ -56,8 +56,8 @@ module Crunchbase
           first_investment = funding_round.investments[0]
 
           expect(first_investment.investors.nil?).to be_falsy
-          expect(first_investment.investors.name).to eq("DST Global")
-          expect(first_investment.investors.permalink).to eq("digital-sky-technologies-fo")
+          expect(first_investment.investors.name).to eq('DST Global')
+          expect(first_investment.investors.permalink).to eq('digital-sky-technologies-fo')
         end
 
         it 'should return 2 investors of founding round' do

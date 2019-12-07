@@ -1,13 +1,13 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 module Crunchbase
   module Model
     class Person < Entity
-      RESOURCE_LIST = RESOURCE_NAME = 'people'.freeze
+      RESOURCE_LIST = RESOURCE_NAME = 'people'
 
-      attr_reader :permalink, :api_path, :web_path, :first_name, :last_name, :gender, :also_known_as, :bio, :profile_image_url,
-                  :role_investor, :born_on, :born_on_trust_code, :is_deceased, :died_on, :died_on_trust_code, :name,
+      attr_reader :permalink, :permalink_aliases, :api_path, :api_url, :web_path, :rank,
+                  :first_name, :last_name, :gender, :also_known_as, :bio, :profile_image_url,
+                  :role_investor, :born_on, :born_on_trust_code, :is_deceased, :died_on, :died_on_trust_code,
                   :created_at, :updated_at
 
       attr_reader :primary_affiliation, :primary_location, :primary_image, :websites, :degrees, :jobs,
@@ -42,15 +42,16 @@ module Crunchbase
       end
 
       def property_keys
-        %w(
-          permalink api_path web_path first_name last_name gender also_known_as bio profile_image_url
+        %w[
+          permalink permalink_aliases api_path api_url web_path rank
+          first_name last_name gender also_known_as bio profile_image_url
           role_investor born_on born_on_trust_code is_deceased died_on died_on_trust_code
           created_at updated_at
-        )
+        ]
       end
 
       def date_keys
-        %w(born_on died_on)
+        %w[born_on died_on]
       end
 
       # custom name from first name and last name

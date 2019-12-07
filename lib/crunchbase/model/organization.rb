@@ -1,17 +1,15 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 module Crunchbase::Model
   class Organization < Entity
-    RESOURCE_LIST = RESOURCE_NAME = 'organizations'.freeze
+    RESOURCE_LIST = RESOURCE_NAME = 'organizations'
 
-    attr_reader :permalink, :api_path, :web_path, :name, :also_known_as, :short_description, :description,
-                :profile_image_url, :primary_role, :role_company, :role_investor, :role_group, :role_school,
+    attr_reader :permalink, :permalink_aliases, :api_url, :api_path, :web_path,
+                :name, :also_known_as, :short_description, :description, :profile_image_url,
+                :primary_role, :role_company, :role_investor, :role_group, :role_school, :investor_type,
                 :founded_on, :founded_on_trust_code, :is_closed, :closed_on, :closed_on_trust_code,
-                :num_employees_min, :num_employees_max,
-                :total_funding_usd,
-                :stock_exchange, :stock_symbol,
-                :number_of_investments, :homepage_url,
+                :num_employees_min, :num_employees_max, :total_funding_usd, :stock_exchange, :stock_symbol,
+                :number_of_investments, :homepage_url, :contact_email, :phone_number, :rank,
                 :created_at, :updated_at
 
     attr_reader :primary_image, :founders, :featured_team, :current_team, :past_team, :board_members_and_advisors,
@@ -34,15 +32,15 @@ module Crunchbase::Model
     end
 
     def property_keys
-      %w(
-        permalink api_path web_path name also_known_as short_description description
-        profile_image_url primary_role role_company role_investor role_group role_school
+      %w[
+        permalink permalink_aliases api_url api_path web_path
+        name also_known_as short_description description profile_image_url
+        primary_role role_company role_investor role_group role_school investor_type
         founded_on founded_on_trust_code is_closed closed_on closed_on_trust_code
-        num_employees_min num_employees_max total_funding_usd
-        stock_exchange stock_symbol
-        number_of_investments homepage_url
+        num_employees_min num_employees_max total_funding_usd stock_exchange stock_symbol
+        number_of_investments homepage_url contact_email phone_number rank
         created_at updated_at
-      )
+      ]
     end
 
     def relationship_lists
@@ -77,7 +75,7 @@ module Crunchbase::Model
     end
 
     def date_keys
-      %w(founded_on closed_on)
+      %w[founded_on closed_on]
     end
   end
 end
