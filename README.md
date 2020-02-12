@@ -43,7 +43,7 @@ Create the file `config/initializers/crunchbase.rb` in your rails project and ad
     - Acquisitions
     - Funding Rounds
 
-#### Searching by...
+#### Searching By...
 
     * client.search({query: "Google"}, 'organizations') # Full text search of an Organization's name, aliases
     * client.search({name: "Google"}, 'organizations') # Full text search limited to name and aliases
@@ -64,7 +64,7 @@ Create the file `config/initializers/crunchbase.rb` in your rails project and ad
         * pages
         * current_page
 
-### Get Organization by the permalink
+### Get Organization By The Permalink
 
     * response = client.get('facebook', 'Organization')
 
@@ -82,7 +82,7 @@ Create the file `config/initializers/crunchbase.rb` in your rails project and ad
 
     ....
 
-### Get Person by the permalink
+### Get Person By The Permalink
 
     => person = client.get(permalink, 'Person')
     => #<Crunchbase::Model::Person:0x007fc185215f68 @type_name="Person", @uuid="a578dcf9859ec8b52182e3aa3c383b13", ...>
@@ -97,7 +97,7 @@ Create the file `config/initializers/crunchbase.rb` in your rails project and ad
         ......
     ]
 
-### Batch search
+### Batch Search
 Pass in an array of requests to perform a batch search. Following parameters should be present in each request: `type`, `uuid` and `relationships` (https://data.crunchbase.com/docs/using-the-api#batch-search-capabilities).<br/>
 Max 10 requests per search allowed.
 
