@@ -1,5 +1,7 @@
 # CrunchBase
 
+Build a new Gem for Crunchbase V4 API --> https://github.com/encoreshao/crunchbase4. I am working on it.
+
 Crunchbase API v3.1 - Ruby Library [CrunchBase Data Hub](https://data.crunchbase.com/v3.1/docs/using-the-api).
 
 [![Gem Version](https://badge.fury.io/rb/crunchbase-ruby-library.svg)](https://badge.fury.io/rb/crunchbase-ruby-library)
